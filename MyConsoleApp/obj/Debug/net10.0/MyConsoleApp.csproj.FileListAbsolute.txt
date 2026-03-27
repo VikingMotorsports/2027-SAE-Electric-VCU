@@ -1,0 +1,15 @@
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\bin\Debug\net10.0\MyConsoleApp.exe
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\bin\Debug\net10.0\MyConsoleApp.deps.json
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\bin\Debug\net10.0\MyConsoleApp.runtimeconfig.json
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\bin\Debug\net10.0\MyConsoleApp.dll
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\bin\Debug\net10.0\MyConsoleApp.pdb
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.AssemblyInfoInputs.cache
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.AssemblyInfo.cs
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.sourcelink.json
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.dll
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\refint\MyConsoleApp.dll
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.pdb
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\MyConsoleApp.genruntimeconfig.cache
+C:\Users\casey\OneDrive\Desktop\ECE413\2027-SAE-Electric-VCU\LightningChartGauges\MyConsoleApp\obj\Debug\net10.0\ref\MyConsoleApp.dll

@@ -8,6 +8,7 @@
 #include <inttypes.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <math.h>
 
 
 #include <zephyr/devicetree.h>
@@ -257,6 +258,8 @@ int main(void)
 	
 	//from adc_dt 
 	int err;
+	int32_t val_mv = 1000;
+	int32_t led_speed;
 	uint32_t count = 0;
 	uint32_t buf;
 	struct adc_sequence sequence = {
@@ -357,19 +360,26 @@ int main(void)
 	printf("adc channel config complete!\n");//end adc code
 	
 	while (1) {
-	
-		change_led_frame.data[0] = toggle++ & 0x01 ? SET_LED : RESET_LED;
-		/* This sending call is non blocking. */
-		can_send(can_dev, &change_led_frame, K_FOREVER,
-			 tx_irq_callback,
-			 "LED change");
-		k_sleep(SLEEP_TIME);
 		//======================================================================
 		//start adc code
 		for (int k = 0; k < 10; k++) {
 		//printk("ADC reading[%u]:\n", count++);
 		for (size_t i = 0U; i < ARRAY_SIZE(adc_channels); i++) {
-			int32_t val_mv;
+			
+			if(val_mv < 10) {
+				led_speed = 1000;
+			}
+			else { 
+				led_speed = 2000/(log2(val_mv)+1);
+			}
+			change_led_frame.data[0] = toggle++ & 0x01 ? SET_LED : RESET_LED;
+			/* This sending call is non blocking. */
+			can_send(can_dev, &change_led_frame, K_FOREVER,
+			 tx_irq_callback,
+			 "LED change");
+			k_sleep(K_MSEC(led_speed));
+			
+			
 
 			//printk("- %s, channel %d: ",
 			//       adc_channels[i].dev->name,
@@ -406,9 +416,9 @@ int main(void)
 		      (uint16_t *)&counter_frame.data[0]);
 			counter++;
 			/* This sending call is blocking until the message is sent. */
-			can_send(can_dev, &counter_frame, K_MSEC(100), NULL, NULL);
+			can_send(can_dev, &counter_frame, K_FOREVER, NULL, NULL);
 		}
-		k_sleep(K_MSEC(1000));
+		k_sleep(K_MSEC(10));
 	}
 	//end adc code
 	//===============================================================

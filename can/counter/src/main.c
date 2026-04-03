@@ -293,7 +293,7 @@ int main(void)
 			      (uint16_t *)&counter_frame.data[0]);
 		counter++;
 		/* This sending call is blocking until the message is sent. */
-		//can_send(can_dev, &counter_frame, K_MSEC(100), NULL, NULL);
+		can_send(can_dev, &counter_frame, K_MSEC(100), NULL, NULL);
 		k_sleep(SLEEP_TIME);
 	}
 }

@@ -2,7 +2,7 @@
 
 $projectname = 'zephyrproject'
 $board = 'nucleo_c092rc'
-$app = 'adcToCan' 
+$app = 'canMessageInput' 
 $dir = '2027-SAE-Electric-VCU'
 $path = 'C:\Users\casey\OneDrive\Desktop\ECE413'
 

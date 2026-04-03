@@ -367,10 +367,10 @@ int main(void)
 		for (size_t i = 0U; i < ARRAY_SIZE(adc_channels); i++) {
 			
 			if(val_mv < 10) {
-				led_speed = 1000;
+				led_speed = 500/(log2(val_mv+1)+1);
 			}
 			else { 
-				led_speed = 2000/(log2(val_mv)+1);
+				led_speed = 500/(log2(val_mv)+1);
 			}
 			change_led_frame.data[0] = toggle++ & 0x01 ? SET_LED : RESET_LED;
 			/* This sending call is non blocking. */

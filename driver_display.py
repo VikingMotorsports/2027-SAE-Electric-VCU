@@ -105,6 +105,7 @@ except KeyboardInterrupt:
 finally:
     if port: port.close()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '''
                     Driver Display
@@ -215,4 +216,6 @@ finally:
 >>>>>>> b4d640f (Driver Display via Serial)
 =======
 >>>>>>> c6e51a0 (editing serial line read)
+=======
+>>>>>>> c6e51a0fbd6301c2c3ff23b62fc89898d0940420
     plt.close()

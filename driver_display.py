@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 '''
                     Driver Display
     This code simulates a simple 6-speed gearbox 
@@ -105,6 +104,7 @@ except KeyboardInterrupt:
     pass
 finally:
     if port: port.close()
+<<<<<<< HEAD
 =======
 '''
                     Driver Display
@@ -213,4 +213,6 @@ except KeyboardInterrupt:
 finally:
     if port: port.close()
 >>>>>>> b4d640f (Driver Display via Serial)
+=======
+>>>>>>> c6e51a0 (editing serial line read)
     plt.close()

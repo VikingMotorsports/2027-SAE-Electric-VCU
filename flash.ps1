@@ -1,4 +1,4 @@
-#powershell script for building and flashing to board
+s#powershell script for building and flashing to board
 
 $projectname = 'zephyrproject'
 $board = 'nucleo_c092rc'

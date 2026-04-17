@@ -66,7 +66,7 @@ BAT_WARN,   BAT_CRIT   = 42,   55
 INV_WARN,   INV_CRIT   = 70,   90
 
 # ─────────────────────────────────────────────────────────────────────────────
-#  COLOURS  (RGB)
+#  COLORS  (RGB)
 # ─────────────────────────────────────────────────────────────────────────────
 C = {
     'bg':        (5,   5,   5),
@@ -332,7 +332,6 @@ def main():
 
         # ── DRAW ────────────────────────────────────────────────────────────
         screen.fill(C['bg'])
-
         # ── TOP BAR ─────────────────────────────────────────────────────────
         pygame.draw.rect(screen, C['topbar'], (0, 0, W, py(38)))
         pygame.draw.line(screen, C['border'], (0, py(38)), (W, py(38)), 1)
@@ -353,7 +352,6 @@ def main():
 
         # ── LEFT PANEL  x: 10..250 ──────────────────────────────────────────
         lx, lw = px(10), px(235)
-
         # Battery
         draw_rect(screen, lx, py(48), lw, py(105), C['card'], border=C['border'])
         render_text(screen, font(ps(9)),  "BATTERY",              lx+px(12), py(56),  C['text_dim'])
@@ -403,9 +401,8 @@ def main():
             draw_rect(screen, bx, by, px(100), py(22), bg_c, radius=4, border=bdr)
             render_text(screen, bold_font(ps(10)), lbl, bx+px(50), by+py(11), fg_c, anchor='center')
 
-        # ── CENTRE PANEL  x: 260..1020 ──────────────────────────────────────
+        # ── CENTER PANEL  x: 260..1020 ──────────────────────────────────────
         cx_start = px(260)
-
         # Shift lights
         for i in range(15):
             dot_x  = cx_start + px(20) + i * px(48)
@@ -420,7 +417,7 @@ def main():
             pygame.gfxdraw.filled_circle(screen, dot_x, dot_y, py(10), dc)
             pygame.gfxdraw.aacircle(screen,     dot_x, dot_y, py(10), dc)
 
-        # Big speed
+        # Big Speedometer
         render_text(screen, bold_font(ps(90)), str(kmh),
                     cx_start + px(380), py(200), C['white'], anchor='center')
         render_text(screen, font(ps(13)), "km/h",
@@ -442,7 +439,6 @@ def main():
         # ── RIGHT PANEL  x: 1030..1270 ──────────────────────────────────────
         rx = px(1030)
         rw = px(240)
-
         # Motor output
         draw_rect(screen, rx, py(48), rw, py(105), C['card'], border=C['border'])
         render_text(screen, font(ps(9)),      "MOTOR OUTPUT",  rx+px(12), py(56),  C['text_dim'])
@@ -502,7 +498,7 @@ def main():
             render_text(screen, bold_font(ps(15)),val_t, bx2 + bw//2 - px(3), bar_y + py(30),
                         col, anchor='midtop')
 
-        # Controls hint
+        # Controls (Test)
         render_text(screen, font(ps(8)),
                     "W/↑=THROTTLE  S/↓=BRAKE  D=DRS  1-4=MODE  Q=QUIT",
                     W - px(10), H - py(6), (30,30,30), anchor='bottomright')

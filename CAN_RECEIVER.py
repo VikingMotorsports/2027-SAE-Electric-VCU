@@ -1,3 +1,13 @@
+import pygame
+import pygame.gfxdraw
+import math
+import time
+import random
+import sys
+import can
+import threading
+import queue
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  CAN INPUT SETUP
 # ─────────────────────────────────────────────────────────────────────────────

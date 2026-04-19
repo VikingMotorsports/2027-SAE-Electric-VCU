@@ -6,8 +6,8 @@ import time
 # Shared CAN bus (ONE instance)
 # -------------------------
 bus = can.interface.Bus(
-    channel='COM5',
-    interface='slcan',
+    channel='can0',
+    interface='socketcan',
     bitrate=500000
 )
 

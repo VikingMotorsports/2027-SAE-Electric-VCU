@@ -19,12 +19,13 @@ can_buffer = queue.Queue(maxsize=1000)
 bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
 
 def can_listener():
-    try:
-        msg = bus.recv() #get message from CAN bus (blocking)
-        print(f"Listener_Thread: Received CAN message: {msg}")
-        can_buffer.put(msg, block=False)
-    except queue.Full:
-        print("Buffer full, dropping CAN message")
+    while True:
+        try:
+            msg = bus.recv() #get message from CAN bus (blocking)
+            print(f"Listener_Thread: Received CAN message: {msg}")
+            can_buffer.put(msg, block=False)
+        except queue.Full:
+            print("Buffer full, dropping CAN message")
 
 def get_can_message():
     try:

@@ -52,23 +52,23 @@ import queue
 #Initialize CAN bus (Linux SocketCAN example, adjust for your platform and CAN interface)
 #bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
 
-#def can_listener():
-#    try:
-#        msg = bus.recv() #get message from CAN bus (blocking)
-#        print(f"Listener_Thread: Received CAN message: {msg}")
-#        can_buffer.put(msg, block=False)
-#    except queue.Full:
-#        print("Buffer full, dropping CAN message")
+def can_listener():
+    try:
+        msg = bus.recv() #get message from CAN bus (blocking)
+        print(f"Listener_Thread: Received CAN message: {msg}")
+        can_buffer.put(msg, block=False)
+    except queue.Full:
+        print("Buffer full, dropping CAN message")
 
-#def get_can_message():
-#    try:
-#        return can_buffer.get(block=True, timeout=1) #get message from buffer (non-blocking)
-#    except queue.Empty:
-#        return None
+def get_can_message():
+    try:
+        return can_buffer.get(block=True, timeout=1) #get message from buffer (non-blocking)
+    except queue.Empty:
+        return None
 
 #start CAN listener thread
-#listener_thread = threading.Thread(target=can_listener, daemon=True)
-#listener_thread.start()
+listener_thread = threading.Thread(target=can_listener, daemon=True)
+listener_thread.start()
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  SERIAL SETUP  (uncomment to use hardware)

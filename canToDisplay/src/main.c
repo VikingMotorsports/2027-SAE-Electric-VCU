@@ -21,7 +21,7 @@
 #define COUNTER_MSG_ID 0x12345
 #define BRAKE_MSG_ID 0x008
 #define ACCELERATOR_MSG_ID 0x080
-#define STEERING_WHEEL_MSG_ID 0x800
+#define STEERING_WHEEL_MSG_ID 0x180
 #define SET_LED 1
 #define RESET_LED 0
 #define SLEEP_TIME K_MSEC(5000)
@@ -268,6 +268,21 @@ int main(void)
 	uint16_t i = 0;
 	k_tid_t rx_tid, get_state_tid;
 	int ret;
+
+	struct can_timing timing;
+
+	//configure bitrrate and samplepoint
+	ret = can_calc_timing(can_dev, &timing, 500000, 875);
+	if (ret != 0) {
+		printf("Error calculating CAN timing [%d]", ret);
+		return 0;
+	}
+	ret = can_set_timing(can_dev, &timing);
+	if (ret != 0) {
+		printf("Error setting CAN timing [%d]", ret);
+		return 0;
+	}
+
 
 	if (!device_is_ready(can_dev)) {
 		printf("CAN FUCK! Device %s not ready.\n", can_dev->name);

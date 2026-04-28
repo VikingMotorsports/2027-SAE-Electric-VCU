@@ -1,0 +1,7 @@
+This config file tells the linux system to automatically configure and initialize the can0 device on startup and/or hotplug
+
+save the .network file in this folder into /etc/systemd/network/
+
+Then run the following command:
+
+sudo systemctl restart systemd-networkd

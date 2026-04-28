@@ -21,9 +21,9 @@ bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
 def can_listener():
     while True:
         try:
-            print(bus)
+#            print(bus)
             msg = bus.recv() #get message from CAN bus (blocking)
-            print(f"Listener_Thread: Received CAN message: {msg}")
+#            print(f"Listener_Thread: Received CAN message: {msg}")
             can_buffer.put(msg, block=False)
         except queue.Full:
             print("Buffer full, dropping CAN message")
@@ -41,11 +41,11 @@ listener_thread.start()
 while True:
     msg = get_can_message()
     if msg:
-        print("ID:", msg.arbitration_id)
+        print("ID:",hex(msg.arbitration_id))
         print("DLC:", msg.dlc)
         print("DATA: 0x", msg.data.hex().upper())
-    #else:
-        #print("Main_Thread: No CAN message received, continuing with other tasks")
+#    else:
+#        print("Main_Thread: No CAN message received, continuing with other tasks")
 
 
 #    msg = parse_can_message(msg_to_process)

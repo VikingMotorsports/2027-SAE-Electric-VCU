@@ -59,16 +59,21 @@ bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
 
 
 def can_listener():
-    try:
-        msg = bus.recv() #get message from CAN bus (blocking)
-        print(f"Listener_Thread: Received CAN message: {msg}")
-        can_buffer.put(msg, block=False)
-    except queue.Full:
-        print("Buffer full, dropping CAN message")
+    while True:  # Added loop to keep thread alive
+        try:
+            msg = bus.recv(timeout=1.0) # Added timeout to allow clean exit if needed
+            if msg:
+#                print(f"Listener_Thread: Received CAN message: {msg}")
+                can_buffer.put(msg, block=False)
+        except queue.Full:
+            continue 
+        except Exception as e:
+            print(f"CAN Error: {e}")
+            break
 
 def get_can_message():
     try:
-        return can_buffer.get(block=True, timeout=1) #get message from buffer (non-blocking)
+        return can_buffer.get_nowait() # Do not block the UI thread
     except queue.Empty:
         return None
 
@@ -184,23 +189,28 @@ def update_physics():
     s = state
 
     # --- NEW CAN PROCESSING BLOCK ---
+    BRAKE_ACCEL_ID = 0x008
+    SPEED_MSG_ID   = 0x081 # Example ID for speed
+    MODE_MSG_ID    = 0x082 # Example ID for modes
     while not can_buffer.empty():
-        msg = can_buffer.get_nowait()
-        
-        if msg.arbitration_id == ACCELERATOR_MSG_ID: # Throttle/Brake Pedal ID
-            # Assuming 1st byte is throttle, 2nd byte is brake
-                s['accel'] = int(msg.data[0]) / 255.0
-                s['brake'] = int(msg.data[1]) / 255.0
+        try:
+            msg = can_buffer.get_nowait() # Non-blocking fetch
             
-        elif msg.arbitration_id == 0x102: # Vehicle Speed ID
-            # Assuming speed is sent as a 16-bit integer
-            s['velocity'] = int.from_bytes(msg.data[0:2], "big")
+            if msg.arbitration_id == ACCELERATOR_MSG_ID:
+                state['accel'] = msg.data[0] / 15.0
+                state['brake'] = msg.data[1] / 255.0
             
-        elif msg.arbitration_id == 0x103: # Mode switching
-            modes = {0: 'normal', 1: 'attack', 2: 'regen', 3: 'fan'}
-            val = msg.data[0]
-            if val in modes:
-                set_mode(modes[val])
+            elif msg.arbitration_id == SPEED_MSG_ID:
+                # Assuming speed is 16-bit
+                state['velocity'] = int.from_bytes(msg.data[0:2], "big")
+                
+            elif msg.arbitration_id == MODE_MSG_ID:
+                modes = {0: 'normal', 1: 'attack', 2: 'regen', 3: 'fan'}
+                val = msg.data[0]
+                if val in modes:
+                    set_mode(modes[val])
+        except queue.Empty:
+            break
     # ---------------------------------
 
     pm = {'normal':1.0,'attack':1.0,'fan':1.15,'regen':0.75}[s['mode']]
@@ -325,6 +335,8 @@ def main():
 
     running = True
     while running:
+        msg = get_can_message()
+        print(msg)
         # ── EVENTS ──────────────────────────────────────────────────────────
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

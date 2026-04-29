@@ -189,8 +189,8 @@ def update_physics():
         
         if msg.arbitration_id == ACCELERATOR_MSG_ID: # Throttle/Brake Pedal ID
             # Assuming 1st byte is throttle, 2nd byte is brake
-            s['accel'] = msg.data.hex()
-            s['brake'] = msg.data.hex()
+                s['accel'] = int(msg.data[0]) / 255.0
+                s['brake'] = int(msg.data[1]) / 255.0
             
         elif msg.arbitration_id == 0x102: # Vehicle Speed ID
             # Assuming speed is sent as a 16-bit integer

@@ -45,12 +45,18 @@ import queue
 # ─────────────────────────────────────────────────────────────────────────────
 #  CAN INPUT SETUP
 # ─────────────────────────────────────────────────────────────────────────────
+BRAKE_MSG_ID = 0x008
+ACCELERATOR_MSG_ID = 0x080
+
 
 #can_bus queue for receiving CAN messages from a separate thread
-#can_buffer = queue.Queue(maxsize=1000)
+can_buffer = queue.Queue(maxsize=1000)
 
-#Initialize CAN bus (Linux SocketCAN example, adjust for your platform and CAN interface)
-#bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
+# Initialize CAN bus (Linux SocketCAN example, adjust for your platform and CAN interface)
+bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
+# Below is for testing
+#bus = can.interface.Bus(interface='virtual', channel='test', bitrate=500000)
+
 
 def can_listener():
     try:
@@ -170,27 +176,32 @@ def set_mode(m):
 # ─────────────────────────────────────────────────────────────────────────────
 _last_phys = time.perf_counter()
 
-def update_physics(keys_held):
+def update_physics():
     global _last_phys
     now = time.perf_counter()
     dt  = min(now - _last_phys, 0.05)
     _last_phys = now
     s = state
 
-    # Serial override
-    if port and port.in_waiting > 0:
-        data = port.read(port.in_waiting).decode('utf-8', errors='ignore').upper()
-        keys_held['w'] = 'W' in data
-        keys_held['s'] = 'B' in data
-        if 'D' in data: s['drs_active'] = not s['drs_active']
-        if 'U' in data: set_mode('attack')
-        if 'R' in data: set_mode('regen')
-        if 'N' in data: set_mode('normal')
-        if 'F' in data: set_mode('fan')
-        if 'X' in data: return False
-
-    s['accel'] = 1.0 if keys_held.get('w') else 0.0
-    s['brake'] = 1.0 if keys_held.get('s') else 0.0
+    # --- NEW CAN PROCESSING BLOCK ---
+    while not can_buffer.empty():
+        msg = can_buffer.get_nowait()
+        
+        if msg.arbitration_id == ACCELERATOR_MSG_ID: # Throttle/Brake Pedal ID
+            # Assuming 1st byte is throttle, 2nd byte is brake
+            s['accel'] = msg.data.hex()
+            s['brake'] = msg.data.hex()
+            
+        elif msg.arbitration_id == 0x102: # Vehicle Speed ID
+            # Assuming speed is sent as a 16-bit integer
+            s['velocity'] = int.from_bytes(msg.data[0:2], "big")
+            
+        elif msg.arbitration_id == 0x103: # Mode switching
+            modes = {0: 'normal', 1: 'attack', 2: 'regen', 3: 'fan'}
+            val = msg.data[0]
+            if val in modes:
+                set_mode(modes[val])
+    # ---------------------------------
 
     pm = {'normal':1.0,'attack':1.0,'fan':1.15,'regen':0.75}[s['mode']]
     rm = 1.5 if s['mode'] == 'regen' else 1.0
@@ -335,7 +346,7 @@ def main():
             elif event.type == pygame.VIDEORESIZE:
                 W, H = event.w, event.h
 
-        if not update_physics(keys_held):
+        if not update_physics():
             running = False
             break
 
@@ -374,11 +385,11 @@ def main():
         render_text(screen, bold_font(ps(11)), f"LAP {s['lap_num']}",  px(12),  py(10), C['text_dim'])
         render_text(screen, bold_font(ps(13)), lap_str,                 px(80),  py(9),  C['yellow'])
         render_text(screen, bold_font(ps(11)), "Δ -0.182",              px(220), py(10), C['green'])
-        render_text(screen, bold_font(ps(11)), "FORMULA E · GEN3",      px(W//2),py(12), C['dim'],    anchor='midtop')
+        render_text(screen, bold_font(ps(11)), "VMS FORMULA SAE",      px(W//2),py(12), C['dim'],    anchor='midtop')
         gap_str = f"{'+' if s['gap_ahead']>=0 else ''}{s['gap_ahead']:.1f}s"
         gap_col = C['green'] if s['gap_ahead'] < 0 else C['orange']
         render_text(screen, bold_font(ps(11)), f"ATTACK ZONES: {s['attack_zones']}", px(780), py(10), C['text_dim'])
-        render_text(screen, bold_font(ps(11)), "P4",                    px(1060), py(10), C['white'])
+        render_text(screen, bold_font(ps(11)), "P1",                    px(1060), py(10), C['white'])
         render_text(screen, bold_font(ps(11)), f"GAP {gap_str}",        px(1100), py(10), gap_col)
 
         # ── LEFT PANEL  x: 10..250 ──────────────────────────────────────────
@@ -479,8 +490,7 @@ def main():
         # Temperatures
         temp_rows = [
             ("MOTOR TEMP",   s['motor_temp'], MOTOR_WARN, MOTOR_CRIT, "120°C", py(162)),
-            ("BATTERY TEMP", s['bat_temp'],   BAT_WARN,   BAT_CRIT,   "55°C",  py(237)),
-            ("INVERTER TEMP",s['inv_temp'],   INV_WARN,   INV_CRIT,   "90°C",  py(312)),
+            ("BATTERY TEMP", s['bat_temp'],   BAT_WARN,   BAT_CRIT,   "55°C",  py(237))
         ]
         for (lbl, val, warn, crit, limit_str, ty) in temp_rows:
             tc = temp_color(val, warn, crit)
@@ -516,8 +526,6 @@ def main():
         bstats = [
             ("ENERGY USED",     f"{s['energy_used']:.1f} kWh", C['white']),
             ("EFFICIENCY",      f"{eff:.1f} km/kWh",            C['green']),
-            ("STATE OF CHARGE", f"{bat_pct:.1f}%",              bc),
-            ("PRED. RANGE",     f"{pred_range:.0f} km",         C['white']),
             ("LAPS REMAIN",     str(laps_est),                  C['yellow']),
         ]
         bw = (W - px(20)) // 5

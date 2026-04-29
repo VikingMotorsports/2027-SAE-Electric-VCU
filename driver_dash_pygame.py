@@ -299,12 +299,12 @@ def main():
     clock = pygame.time.Clock()
 
     # Fonts
-    mono = pygame.font.SysFont('Courier New', 13)
+    mono = pygame.font.SysFont('Arial', 13)
 
     def font(size):
-        return pygame.font.SysFont('Courier New', size, bold=False)
+        return pygame.font.SysFont('Arial', size, bold=False)
     def bold_font(size):
-        return pygame.font.SysFont('Courier New', size, bold=True)
+        return pygame.font.SysFont('Arial', size, bold=True)
 
     # Pre-create fonts at needed sizes
     F = {s: font(s)      for s in [9, 11, 13, 15, 18, 22, 28, 36]}

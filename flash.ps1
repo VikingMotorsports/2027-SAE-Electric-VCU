@@ -1,8 +1,8 @@
-s#powershell script for building and flashing to board
+#powershell script for building and flashing to board
 
 $projectname = 'zephyrproject'
 $board = 'nucleo_c092rc'
-$app = 'canToDisplay' 
+$app = 'pedalModule' 
 $dir = '2027-SAE-Electric-VCU'
 $path = 'C:\Users\casey\OneDrive\Desktop\ECE413'
 

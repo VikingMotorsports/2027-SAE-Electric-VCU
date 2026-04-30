@@ -44,7 +44,7 @@ static const struct gpio_dt_spec in2 =
 /* Deadband around the center, in raw ADC counts. ~5% of full range.
  * Increase if your pot is noisy or has mechanical slop at center.
  */
-#define ADC_DEADBAND     200
+#define ADC_DEADBAND     20
 
 /* Update period for the control loop. */
 #define LOOP_PERIOD_MS   20
@@ -528,7 +528,7 @@ int main(void)
 		if (raw < 0) raw = 0;
 		if (raw > ADC_MAX) raw = ADC_MAX;
 
-		int32_t offset = raw - ADC_CENTER;          /* -2047 .. +2048 */
+		int32_t offset = raw;// - ADC_CENTER;          /* -2047 .. +2048 */
 		uint32_t mag   = (uint32_t)abs(offset);
 
 		enum motor_dir dir;
@@ -538,9 +538,13 @@ int main(void)
 			dir        = DIR_STOP;
 			scaled_mag = 0;
 		} else {
-			dir        = (offset > 0) ? DIR_FORWARD : DIR_REVERSE;
-			scaled_mag = mag - ADC_DEADBAND; /* 0 at edge of deadband */
+			//dir        = (offset > 0) ? DIR_FORWARD : DIR_REVERSE;
+			dir = DIR_REVERSE;
+			scaled_mag = (mag - ADC_DEADBAND); /* 0 at edge of deadband */
 		}
+
+		//printf("raw=%d\noffset=%d\nmag=%d\ndir=%d\nscaled_mag=%d\n",
+		//       raw, offset, mag, dir, scaled_mag);
 
 		(void)set_direction(dir);
 		(void)set_speed(scaled_mag, span);

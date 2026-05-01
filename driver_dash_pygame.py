@@ -245,21 +245,23 @@ def update_physics():
                     set_mode(modes[val])
         except queue.Empty:
             break
-    # ---------------------------------
 
 # ---------- MQTT OUTPUT BLOCK ----------------
-    payload = {
-        "timestamp": time.time(),
-        "accelerator": mqtt_value
-    }
+        payload = {
+            "timestamp": time.time(),
+            "accelerator": mqtt_value
+        }
 
-    result = client.publish(TOPIC, json.dumps(payload), qos=1)
+        result = client.publish(TOPIC, json.dumps(payload), qos=1)
 
-    if result.rc == mqtt.MQTT_ERR_SUCCESS:
-        print(f"Sent --{mqtt_value}--to topic `{TOPIC}`")
-    else:
-        print(f"Failed to send message to topic `{TOPIC}`")
+        if result.rc == mqtt.MQTT_ERR_SUCCESS:
+            print(f"Sent --{mqtt_value}--to topic `{TOPIC}`")
+        else:
+            print(f"Failed to send message to topic `{TOPIC}`")
     # -----------------------------------
+
+    # ---------------------------------
+
 
     pm = {'normal':1.0,'attack':1.0,'fan':1.15,'regen':0.75}[s['mode']]
     rm = 1.5 if s['mode'] == 'regen' else 1.0

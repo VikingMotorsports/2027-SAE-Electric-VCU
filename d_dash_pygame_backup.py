@@ -41,38 +41,6 @@ import sys
 import can
 import threading
 import queue
-import json
-import paho.mqtt.client as mqtt
-
-# MQTT Configuration
-BROKER = "10.42.0.1"   # e.g. "test.mosquitto.org" 
-PORT = 1883
-TOPIC = "pedal"
-CLIENT_ID = "publisher_001"
-
-# Callback when connected
-def on_connect(client, userdata, flags, rc):
-    if rc == 0:
-        print("Connected to broker")
-    else:
-        print(f"Connection failed with code {rc}")
-
-# Callback when message is published
-def on_publish(client, userdata, mid):
-    print(f"Message {mid} published")
-
-# Create client
-client = mqtt.Client(client_id=CLIENT_ID)
-
-client.on_connect = on_connect
-client.on_publish = on_publish
-
-# Connect to broker
-client.connect(BROKER, PORT, keepalive=60)
-
-# Start network loop
-client.loop_start()
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  CAN INPUT SETUP
@@ -221,7 +189,6 @@ def update_physics():
     s = state
 
     # --- NEW CAN PROCESSING BLOCK ---
-    mqtt_value = 0
     BRAKE_ACCEL_ID = 0x008
     SPEED_MSG_ID   = 0x081 # Example ID for speed
     MODE_MSG_ID    = 0x082 # Example ID for modes
@@ -232,7 +199,6 @@ def update_physics():
             if msg.arbitration_id == ACCELERATOR_MSG_ID:
                 state['accel'] = msg.data[0] / 15.0
                 state['brake'] = msg.data[1] / 255.0
-                mqtt_value = msg.data[0] / 15.0
             
             elif msg.arbitration_id == SPEED_MSG_ID:
                 # Assuming speed is 16-bit
@@ -246,20 +212,6 @@ def update_physics():
         except queue.Empty:
             break
     # ---------------------------------
-
-# ---------- MQTT OUTPUT BLOCK ----------------
-    payload = {
-        "timestamp": time.time(),
-        "accelerator": mqtt_value
-    }
-
-    result = client.publish(TOPIC, json.dumps(payload), qos=1)
-
-    if result.rc == mqtt.MQTT_ERR_SUCCESS:
-        print(f"Sent --{mqtt_value}--to topic `{TOPIC}`")
-    else:
-        print(f"Failed to send message to topic `{TOPIC}`")
-    # -----------------------------------
 
     pm = {'normal':1.0,'attack':1.0,'fan':1.15,'regen':0.75}[s['mode']]
     rm = 1.5 if s['mode'] == 'regen' else 1.0

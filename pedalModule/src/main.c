@@ -427,7 +427,7 @@ int main(void)
 	LOG_INF("Motor controller running. ADC center=%d, deadband=+/-%d",
 		ADC_CENTER, ADC_DEADBAND);
 
-	const uint32_t span = ADC_CENTER - ADC_DEADBAND; /* effective half-range */
+	const uint32_t span = ADC_MAX; /* Motor controller only likes up to around 98% duty cylve. This and dead band helps with that */
 	
 	struct can_timing timing;
 

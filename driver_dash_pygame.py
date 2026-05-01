@@ -45,7 +45,7 @@ import json
 import paho.mqtt.client as mqtt
 
 # MQTT Configuration
-BROKER = "10.42.0.1"   # e.g. "test.mosquitto.org" 
+BROKER = "localhost"   # e.g. "test.mosquitto.org" 
 PORT = 1883
 TOPIC = "pedal"
 CLIENT_ID = "publisher_001"

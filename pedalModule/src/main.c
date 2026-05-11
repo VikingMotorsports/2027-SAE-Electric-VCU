@@ -38,13 +38,13 @@ static const struct gpio_dt_spec in2 =
 /* ---------- Tunables ---------- */
 
 #define ADC_RESOLUTION   12
-#define ADC_MAX          ((1 << ADC_RESOLUTION) - 1)   /* 4095 */
+#define ADC_MAX          3150   /* 4095 */
 #define ADC_CENTER       (ADC_MAX / 2)                 /* 2047 */
 
 /* Deadband around the center, in raw ADC counts. ~5% of full range.
  * Increase if your pot is noisy or has mechanical slop at center.
  */
-#define ADC_DEADBAND     20
+#define ADC_DEADBAND     1100
 
 /* Update period for the control loop. */
 #define LOOP_PERIOD_MS   20
@@ -321,6 +321,10 @@ static int set_speed(uint32_t magnitude, uint32_t span)
 	 * Use 64-bit math to avoid overflow: period in ns can be large.
 	 */
 	uint64_t pulse = ((uint64_t)pwm_en.period * magnitude) / span;
+	printk("PWM pulse = %llu ns, period = %u ns, duty = %u%%\n",
+	    pulse,
+	    pwm_en.period,
+	    (uint32_t)((pulse * 100U) / pwm_en.period));
 	return pwm_set_pulse_dt(&pwm_en, (uint32_t)pulse);
 }
 
@@ -427,7 +431,7 @@ int main(void)
 	LOG_INF("Motor controller running. ADC center=%d, deadband=+/-%d",
 		ADC_CENTER, ADC_DEADBAND);
 
-	const uint32_t span = ADC_CENTER - ADC_DEADBAND; /* effective half-range */
+	const uint32_t span = ADC_MAX - ADC_DEADBAND; /* effective half-range */
 	
 	struct can_timing timing;
 
@@ -543,8 +547,8 @@ int main(void)
 			scaled_mag = (mag - ADC_DEADBAND); /* 0 at edge of deadband */
 		}
 
-		//printf("raw=%d\noffset=%d\nmag=%d\ndir=%d\nscaled_mag=%d\n",
-		//       raw, offset, mag, dir, scaled_mag);
+		printf("raw=%d\noffset=%d\nmag=%d\ndir=%d\nscaled_mag=%d\n",
+		       raw, offset, mag, dir, scaled_mag);
 
 		(void)set_direction(dir);
 		(void)set_speed(scaled_mag, span);
@@ -580,11 +584,11 @@ int main(void)
         accelerator_frame.data[0] = (accel_val >> 8) & 0xFF;
         accelerator_frame.data[1] = accel_val & 0xFF;
 
-        if (can_send(can_dev, &accelerator_frame, K_MSEC(100), NULL, NULL) != 0) {
+        //if (can_send(can_dev, &accelerator_frame, K_MSEC(100), NULL, NULL) != 0) {
             //printk("Failed to send accelerator message\n");
-        } else {
+        //} else {
             //printk("Sent ACCEL  ID=0x%03X  value=%u\n", frame.id, accel_val);
-        }
+        //}
 
         /* ---------------- Steering Wheel Position ---------------- */
         //steering_frame.data[0] = (steer_val >> 8) & 0xFF;

@@ -1,0 +1,32 @@
+/*
+ * Copyright (c) 2024 Henrik Brix Andersen <henrik@brixandersen.dk>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include "../app.overlay"
+
+/ {
+	cannectivity: cannectivity {
+		compatible = "cannectivity";
+		timestamp-counter = <&counter2>;
+
+		channel0 {
+			compatible = "cannectivity-channel";
+			can-controller = <&fdcan1>;
+			state-led = <&led_ready>;
+			activity-leds = <&led_rxd &led_txd>;
+		};
+	};
+};
+
+&timers2 {
+	status = "okay";
+	st,prescaler = <59>;
+
+	counter2: counter2 {
+		compatible = "st,stm32-counter";
+		status = "okay";
+	};
+};

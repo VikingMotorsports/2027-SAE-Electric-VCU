@@ -1,0 +1,22 @@
+# Copyright (c) 2024-2025 Henrik Brix Andersen <henrik@brixandersen.dk>
+# SPDX-License-Identifier: Apache-2.0
+
+config CANNECTIVITY_DFU_SUPPORT
+	bool "CANnectivity DFU support via MCUboot"
+	help
+	  Enable support for CANnectivity USB Device Firmware Upgrade (DFU) mode using the MCUboot
+	  bootloader.
+
+if CANNECTIVITY_DFU_SUPPORT
+
+choice BOOTLOADER
+	default BOOTLOADER_MCUBOOT
+endchoice # BOOTLOADER
+
+choice BOOT_SIGNATURE_TYPE
+	default BOOT_SIGNATURE_TYPE_NONE
+endchoice # BOOT_SIGNATURE_TYPE
+
+endif # CANNECTIVITY_DFU_SUPPORT
+
+source "share/sysbuild/Kconfig"

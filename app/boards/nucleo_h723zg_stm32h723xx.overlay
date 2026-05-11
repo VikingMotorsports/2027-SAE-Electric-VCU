@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) 2024 Henrik Brix Andersen <henrik@brixandersen.dk>
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include "../app.overlay"
+
+/ {
+	cannectivity: cannectivity {
+		compatible = "cannectivity";
+		timestamp-counter = <&counter2>;
+
+		channel0 {
+			compatible = "cannectivity-channel";
+			can-controller = <&fdcan1>;
+			state-led = <&green_led>;
+			activity-leds = <&yellow_led>;
+		};
+	};
+};
+
+&fdcan1 {
+	/* Allocate half of the M_CAN message RAM to FDCAN1 */
+	reg = <0x4000a000 0x400>, <0x4000ac00 0x1400>;
+	reg-names = "m_can", "message_ram";
+	bosch,mram-cfg = <0x0 1 1 10 10 0 10 10>;
+};
+
+&timers2 {
+	st,prescaler = <274>;
+	counter2: counter {
+		status = "okay";
+	};
+};

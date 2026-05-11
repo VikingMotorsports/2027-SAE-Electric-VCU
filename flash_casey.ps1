@@ -2,7 +2,7 @@
 
 $projectname = 'zephyrproject'
 $board = 'nucleo_c092rc'
-$app = 'pedalModule' 
+$app = 'VCUmodule' 
 $dir = '2027-SAE-Electric-VCU'
 $path = 'C:\Users\casey\OneDrive\Desktop\ECE413'
 

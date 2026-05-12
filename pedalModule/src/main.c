@@ -58,10 +58,10 @@ static const struct gpio_dt_spec in2 =
 #define COUNTER_MSG_ID 0x12345
 #define BRAKE_MSG_ID 0x008
 #define ACCELERATOR_MSG_ID 0x080
-#define STEERING_WHEEL_MSG_ID 0x800
+#define STEERING_WHEEL_MSG_ID 0x180
 #define SET_LED 1
 #define RESET_LED 0
-#define SLEEP_TIME K_MSEC(100)
+#define SLEEP_TIME K_MSEC(1000)
 
 K_THREAD_STACK_DEFINE(rx_thread_stack, RX_THREAD_STACK_SIZE);
 K_THREAD_STACK_DEFINE(poll_state_stack, STATE_POLL_THREAD_STACK_SIZE);
@@ -412,25 +412,9 @@ int main(void)
 	k_tid_t rx_tid, get_state_tid;
 	int ret;
 
-	rc = setup();
-	if (rc) {
-		LOG_ERR("setup failed: %d", rc);
-		return rc;
-	}
-
-	rc = adc_sequence_init_dt(&adc_pot, &sequence);
-	if (rc) {
-		LOG_ERR("adc_sequence_init_dt failed: %d", rc);
-		return rc;
-	}
-
-	LOG_INF("Motor controller running. ADC center=%d, deadband=+/-%d",
-		ADC_CENTER, ADC_DEADBAND);
-
-	const uint32_t span = ADC_MAX; /* Motor controller only likes up to around 98% duty cylve. This and dead band helps with that */
-	
 	struct can_timing timing;
 
+	//configure bitrrate and samplepoint
 	ret = can_calc_timing(can_dev, &timing, 500000, 875);
 	if (ret != 0) {
 		printf("Error calculating CAN timing [%d]", ret);
@@ -441,6 +425,7 @@ int main(void)
 		printf("Error setting CAN timing [%d]", ret);
 		return 0;
 	}
+
 
 	if (!device_is_ready(can_dev)) {
 		printf("CAN ERROR! Device %s not ready.\n", can_dev->name);

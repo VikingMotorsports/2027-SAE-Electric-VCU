@@ -28,6 +28,9 @@
 
 #include <stdint.h>
 
+
+
+
 /*
  * Motor direction states.
  *
@@ -46,6 +49,26 @@ enum motor_dir {
 	DIR_FORWARD,
 	DIR_REVERSE,
 };
+
+
+/*
+ * Initialize the motor controller hardware.
+ *
+ * This function:
+ *  - Verifies PWM readiness
+ *  - Verifies GPIO readiness
+ *  - Configures GPIO direction pins
+ *  - Stops the motor initially
+ *  - Sets PWM duty cycle to 0%
+ *
+ * Must be called before using any other motor
+ * control functions.
+ *
+ * Returns:
+ *     0 on success.
+ *     Negative Zephyr error code on failure.
+ */
+int motor_pwm_setup(void);
 
 /*
  * Set the motor rotation direction.
@@ -75,23 +98,5 @@ int set_direction(enum motor_dir d);
  */
 int set_speed(float duty_cycle);
 
-/*
- * Initialize the motor controller hardware.
- *
- * This function:
- *  - Verifies PWM readiness
- *  - Verifies GPIO readiness
- *  - Configures GPIO direction pins
- *  - Stops the motor initially
- *  - Sets PWM duty cycle to 0%
- *
- * Must be called before using any other motor
- * control functions.
- *
- * Returns:
- *     0 on success.
- *     Negative Zephyr error code on failure.
- */
-int motor_pwm_setup(void);
 
 #endif /* MOTOR_CONTROLLER_PWM_H */

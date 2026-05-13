@@ -46,26 +46,92 @@
  *  - PWM period
  *  - PWM flags
  */
-static const struct pwm_dt_spec pwm_en =
-	PWM_DT_SPEC_GET(ZEPHYR_USER);
+static const struct pwm_dt_spec pwm_en = PWM_DT_SPEC_GET(ZEPHYR_USER);
 
 /*
  * GPIO specification for motor direction input 1.
  */
-static const struct gpio_dt_spec in1 =
-	GPIO_DT_SPEC_GET(ZEPHYR_USER, in1_gpios);
+static const struct gpio_dt_spec in1 = GPIO_DT_SPEC_GET(ZEPHYR_USER, in1_gpios);
 
 /*
  * GPIO specification for motor direction input 2.
  */
-static const struct gpio_dt_spec in2 =
-	GPIO_DT_SPEC_GET(ZEPHYR_USER, in2_gpios);
+static const struct gpio_dt_spec in2 = GPIO_DT_SPEC_GET(ZEPHYR_USER, in2_gpios);
 
 /*
  * Shared return code variable used throughout
  * the module for hardware API calls.
  */
 static int rc;
+
+/*
+ * Initialize motor PWM and GPIO hardware.
+ *
+ * This function must be called before
+ * attempting to control the motor.
+ *
+ * Initialization sequence:
+ *  1. Verify PWM device readiness
+ *  2. Verify GPIO readiness
+ *  3. Configure GPIO pins as outputs
+ *  4. Stop the motor
+ *  5. Set PWM duty cycle to 0%
+ *
+ * Returns:
+ *     0 on success.
+ *     Negative Zephyr error code on failure.
+ */
+int motor_pwm_setup(void)
+{
+	/* Verify PWM hardware is ready */
+	if (!pwm_is_ready_dt(&pwm_en)) {
+		printf("PWM not ready\n");
+		return -ENODEV;
+	}
+
+	/* Verify GPIO hardware is ready */
+	if (!gpio_is_ready_dt(&in1) ||
+	    !gpio_is_ready_dt(&in2)) {
+
+		printf("Direction GPIOs not ready\n");
+		return -ENODEV;
+	}
+
+	/* Configure IN1 as output */
+	rc = gpio_pin_configure_dt(&in1,
+				   GPIO_OUTPUT_INACTIVE);
+
+	if (rc) {
+		printf("gpio_pin_configure_dt(in1) failed: %d\n",
+		       rc);
+		return rc;
+	}
+
+	/* Configure IN2 as output */
+	rc = gpio_pin_configure_dt(&in2,
+				   GPIO_OUTPUT_INACTIVE);
+
+	if (rc) {
+		printf("gpio_pin_configure_dt(in2) failed: %d\n",
+		       rc);
+		return rc;
+	}
+
+	printf("Motor initialized successfully\n");
+
+
+	/*
+	 * Ensure the motor starts in a safe state.
+	 */
+	(void)set_direction(DIR_STOP);
+
+	/*
+	 * Set PWM duty cycle to 0%.
+	 */
+	(void)pwm_set_pulse_dt(&pwm_en, 0);
+
+	return 0;
+};
 
 /*
  * Set the motor direction.
@@ -139,7 +205,7 @@ int set_direction(enum motor_dir d)
 	}
 
 	return rc;
-}
+};
 
 /*
  * Set motor speed using PWM duty cycle.
@@ -176,75 +242,10 @@ int set_speed(float duty_cycle)
 	 */
 	uint64_t pulse =
 		(uint64_t)((duty_cycle / 100.0f) * pwm_en.period);
-
+	
 	/*
 	 * Apply PWM pulse width to hardware.
 	 */
 	return pwm_set_pulse_dt(&pwm_en, (uint32_t)pulse);
-}
+};
 
-/*
- * Initialize motor PWM and GPIO hardware.
- *
- * This function must be called before
- * attempting to control the motor.
- *
- * Initialization sequence:
- *  1. Verify PWM device readiness
- *  2. Verify GPIO readiness
- *  3. Configure GPIO pins as outputs
- *  4. Stop the motor
- *  5. Set PWM duty cycle to 0%
- *
- * Returns:
- *     0 on success.
- *     Negative Zephyr error code on failure.
- */
-int motor_pwm_setup(void)
-{
-	/* Verify PWM hardware is ready */
-	if (!pwm_is_ready_dt(&pwm_en)) {
-		printk("PWM not ready\n");
-		return -ENODEV;
-	}
-
-	/* Verify GPIO hardware is ready */
-	if (!gpio_is_ready_dt(&in1) ||
-	    !gpio_is_ready_dt(&in2)) {
-
-		printk("Direction GPIOs not ready\n");
-		return -ENODEV;
-	}
-
-	/* Configure IN1 as output */
-	rc = gpio_pin_configure_dt(&in1,
-				   GPIO_OUTPUT_INACTIVE);
-
-	if (rc) {
-		printk("gpio_pin_configure_dt(in1) failed: %d\n",
-		       rc);
-		return rc;
-	}
-
-	/* Configure IN2 as output */
-	rc = gpio_pin_configure_dt(&in2,
-				   GPIO_OUTPUT_INACTIVE);
-
-	if (rc) {
-		printk("gpio_pin_configure_dt(in2) failed: %d\n",
-		       rc);
-		return rc;
-	}
-
-	/*
-	 * Ensure the motor starts in a safe state.
-	 */
-	(void)set_direction(DIR_STOP);
-
-	/*
-	 * Set PWM duty cycle to 0%.
-	 */
-	(void)pwm_set_pulse_dt(&pwm_en, 0);
-
-	return 0;
-}

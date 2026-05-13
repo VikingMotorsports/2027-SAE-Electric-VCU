@@ -94,6 +94,12 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 		.mask = CAN_STD_ID_MASK
 	};
 
+	const struct can_filter motor_duty_filter = {
+		.flags = 0U,
+		.id = MOTOR_DUTY_MSG_ID,
+		.mask = CAN_STD_ID_MASK
+	};
+
 	struct can_frame frame;
 
 	int filter_id;
@@ -108,9 +114,16 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 		&VCU_msgq,
 		&accelerator_filter
 	);
+	filter_id = can_add_rx_filter_msgq(
+		can_dev,
+		&VCU_msgq,
+		&motor_duty_filter
+	);
 
 	printf("Accelerator filter added: 0x%X\n",
 	       ACCELERATOR_MSG_ID);
+	printf("MOTOR DUTY filter added: 0x%X\n",
+	       MOTOR_DUTY_MSG_ID);
 
 	/*
 	 * Main receive loop.
@@ -136,35 +149,52 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 		 */
 		switch (frame.id) {
 
-		case ACCELERATOR_MSG_ID:
+			case ACCELERATOR_MSG_ID:
 
-			/*
-			 * Extract 16-bit big-endian accelerator value
-			 * from CAN payload.
-			 */
-			printf(
-				"ACCELERATOR: %u\n",
-				sys_be16_to_cpu(
-					UNALIGNED_GET(
-						(uint16_t *)&frame.data
+				/*
+				 * Extract 16-bit big-endian accelerator value
+				 * from CAN payload.
+				 */
+				printf(
+					"ACCELERATOR: %u\n",
+					sys_be16_to_cpu(
+						UNALIGNED_GET(
+							(uint16_t *)&frame.data
+						)
 					)
-				)
-			);
+				);
 
-			break;
+				break;
+			case MOTOR_DUTY_MSG_ID:
 
-		default:
+				/*
+				 * Extract 16-bit big-endian motor duty cycle
+				 * value from CAN payload.
+				 */
+				printf(
+					"MOTOR DUTY: %u\n",
+					sys_be16_to_cpu(
+						UNALIGNED_GET(
+							(uint16_t *)&frame.data
+						)
+					)
+				);
 
-			/*
-			 * Unknown or unhandled CAN message.
-			 */
-			printf(
-				"Unknown message received with ID: %u\n",
-				frame.id
-			);
+				break;
+			default:
+
+				/*
+				 * Unknown or unhandled CAN message.
+				 */
+				printf(
+					"Unknown message received with ID: %u\n",
+					frame.id
+				);
+				break;
 		}
 	}
 }
+
 
 /*
  * Creates and starts the CAN receive thread.

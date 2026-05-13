@@ -37,6 +37,7 @@
  * can also be added here as the VCU system grows.
  */
 #define ACCELERATOR_MSG_ID 0x080
+#define MOTOR_DUTY_MSG_ID 0x100
 
 /* ---------- Public Interface ---------- */
 

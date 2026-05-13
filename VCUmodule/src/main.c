@@ -266,7 +266,7 @@ int main(void)
 		/*
 		 * Transmit accelerator pedal position over CAN bus.
 		 */
-		if (can_send_sensor_data(
+		/*if (can_send_sensor_data(
 			can_dev,
 			acc_pedal_percent,
 			ACCELERATOR_MSG_ID)) {
@@ -275,11 +275,11 @@ int main(void)
 				"can_send_sensor_data failed: %d\n",
 				rc
 			);
-		}
+		}*/
 
 		/*
 		 * Wait until next control loop iteration.
 		 */
 		k_msleep(LOOP_PERIOD_MS);
 	}
-}
+};

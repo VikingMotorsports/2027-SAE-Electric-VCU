@@ -1,0 +1,80 @@
+/**
+ * style.css — Dashboard Visual Styling
+ *
+ * ─────────────────────────────────────────────────────────
+ * WHAT THIS FILE DOES:
+ * ─────────────────────────────────────────────────────────
+ * Controls every visual aspect of the dashboard:
+ * colors, fonts, layout, spacing, and sizing.
+ * No logic — only appearance.
+ *
+ * If something looks wrong, this is the first place to check.
+ * Use browser DevTools (F12 → Inspector) to identify which
+ * rule is affecting an element and test changes live.
+ *
+ * ─────────────────────────────────────────────────────────
+ * COLOR REFERENCE (change these to retheme the dashboard):
+ * ─────────────────────────────────────────────────────────
+ *   Background (page)    #0d0d0d   near-black
+ *   Background (cards)   #1a1a1a   dark gray
+ *   Background (log box) #111      slightly lighter black
+ *   Accent / cyan        #00ffff   headers, borders, values
+ *   Connected (green)    #00ff88   status indicator
+ *   Disconnected (red)   #ff4444   status indicator
+ *   Primary text         #e0e0e0   body text
+ *   Dim text             #888      labels, h2, status default
+ *   Very dim             #555      units below values
+ *   Borders (subtle)     #333      log box border
+ *   Dividers (cards)     #1a1a1a   separator lines in log
+ *
+ * ─────────────────────────────────────────────────────────
+ * LAYOUT OVERVIEW:
+ * ─────────────────────────────────────────────────────────
+ *   <header>         — title + connection status
+ *   .card-grid       — CSS Grid: 4 equal columns of cards
+ *     .card          — individual sensor readout panel
+ *       .label       — sensor name (e.g. "WHEEL FL")
+ *       .value       — the live number (big, cyan)
+ *       .unit        — unit label (e.g. "RPM", "V")
+ *   #log-box         — scrollable raw message log
+ *
+ * ─────────────────────────────────────────────────────────
+ * TROUBLESHOOTING:
+ * ─────────────────────────────────────────────────────────
+ *   Layout broken        → check .card-grid columns/gap
+ *   Wrong colors         → see color reference above
+ *   Status color not changing → check .connected /
+ *                          .disconnected rules + dashboard.js
+ *   Cards too wide/narrow → adjust grid-template-columns
+ *   Log box too short    → increase #log-box height
+ */
+
+
+/* ── General Reset ────────────────────────────────────────────────────────────
+   Removes default browser spacing and switches all elements to border-box
+   sizing, meaning padding and borders are included inside the declared width
+   rather than added on top of it. Keeps layout math predictable.        */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Page Body ────────────────────────────────────────────────────────────────
+   Sets the overall dark theme. Courier New gives the telemetry-terminal feel.
+   padding: 20px keeps content from touching the screen edges.            */
+body {
+    background-color: #0d0d0d;   /* near-black page background */
+    color: #e0e0e0;               /* default text color for anything not styled specifically */
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+}
+
+
+/* ── Header ───────────────────────────────────────────────────────────────────
+   The top section of the page containing the dashboard title and
+   connection status. Centered, with a cyan bottom border as a divider.  */
+header {
+    text-align: center;
+    border-bottom: 2px solid #00ffff;  /* cyan accent line under the header */
+    padding-bottom: 15px;

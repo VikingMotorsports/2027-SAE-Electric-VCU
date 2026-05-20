@@ -11,9 +11,6 @@
  * Incoming CAN messages are placed into a Zephyr CAN message queue
  * by the CAN driver. The receive thread blocks while waiting for
  * new messages and processes them as they arrive.
- *
- * This architecture separates CAN reception logic from the main
- * application loop and improves system organization.
  */
 
 #include <stdio.h>
@@ -24,6 +21,7 @@
 
 #include "can_receiver.h"
 #include "can_interface.h"
+#include "can_database.h"
 
 /*
  * Allocate stack memory for the CAN receive thread.
@@ -42,7 +40,7 @@ K_THREAD_STACK_DEFINE(rx_thread_stack, RX_THREAD_STACK_SIZE);
  * Incoming CAN messages matching configured filters are placed
  * into this queue by the CAN driver.
  */
-CAN_MSGQ_DEFINE(VCU_msgq, 2);
+CAN_MSGQ_DEFINE(VCU_msgq, 10);
 
 /*
  * Thread control structure used internally by Zephyr to manage
@@ -60,6 +58,29 @@ static struct k_thread rx_thread_data;
  *  - debugging
  */
 static k_tid_t rx_tid;
+
+/*
+ * struct containing all CAN message filters
+ * 
+ * NOTES:
+ * Message IDs should first be defined in can_database.h
+ * Add new CAN messages here if you will need to receive them
+ * Be sure to update NUM_CAN_FILTERS appropriately in can_receiver.h
+ * Receiving behavior, if desired, needs to be defined in rx_thread below
+ */
+const struct can_filter vcu_filters[NUM_CAN_FILTERS] = {
+    {
+        .flags = 0U,
+		.id = ACCELERATOR_MSG_ID,
+		.mask = CAN_STD_ID_MASK
+    },
+
+    {
+        .flags = 0U,
+		.id = MOTOR_DUTY_MSG_ID,
+		.mask = CAN_STD_ID_MASK
+    }
+};
 
 /*
  * Main CAN receive thread.
@@ -80,50 +101,24 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 	ARG_UNUSED(unused2);
 	ARG_UNUSED(unused3);
 
-	/*
-	 * CAN receive filter for accelerator pedal messages.
-	 *
-	 * Only frames matching:
-	 *   ID = ACCELERATOR_MSG_ID
-	 *
-	 * will be accepted into the receive queue.
-	 */
-	const struct can_filter accelerator_filter = {
-		.flags = 0U,
-		.id = ACCELERATOR_MSG_ID,
-		.mask = CAN_STD_ID_MASK
-	};
-
-	const struct can_filter motor_duty_filter = {
-		.flags = 0U,
-		.id = MOTOR_DUTY_MSG_ID,
-		.mask = CAN_STD_ID_MASK
-	};
-
 	struct can_frame frame;
 
-	int filter_id;
-
 	/*
+	 * Only frames matching items in the vcu_filters array
+	 * will be accepted into the receive queue.
+	 * 
 	 * Register receive filter with the CAN controller.
-	 *
+	 * 
 	 * Matching frames are automatically pushed into VCU_msgq.
 	 */
-	filter_id = can_add_rx_filter_msgq(
-		can_dev,
-		&VCU_msgq,
-		&accelerator_filter
-	);
-	filter_id = can_add_rx_filter_msgq(
-		can_dev,
-		&VCU_msgq,
-		&motor_duty_filter
-	);
-
-	printf("Accelerator filter added: 0x%X\n",
-	       ACCELERATOR_MSG_ID);
-	printf("MOTOR DUTY filter added: 0x%X\n",
-	       MOTOR_DUTY_MSG_ID);
+	for (int i = 0; i < NUM_CAN_FILTERS; i++) {
+		can_add_rx_filter_msgq(
+			can_dev,
+			&VCU_msgq,
+			&vcu_filters[i]
+		);
+		printf("Filter added: 0x%x\n", vcu_filters[i].id);
+	}
 
 	/*
 	 * Main receive loop.
@@ -144,52 +139,20 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 			continue;
 		}
 
-		/*
-		 * Process received message based on CAN ID.
-		 */
+		//Process received message based on CAN ID.
+		//add case to define receiving behavior for new messages
 		switch (frame.id) {
-
 			case ACCELERATOR_MSG_ID:
-
-				/*
-				 * Extract 16-bit big-endian accelerator value
-				 * from CAN payload.
-				 */
-				printf(
-					"ACCELERATOR: %u\n",
-					sys_be16_to_cpu(
-						UNALIGNED_GET(
-							(uint16_t *)&frame.data
-						)
-					)
-				);
-
+				printf("ACCELERATOR: %u\n", sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data)));
 				break;
 			case MOTOR_DUTY_MSG_ID:
-
-				/*
-				 * Extract 16-bit big-endian motor duty cycle
-				 * value from CAN payload.
-				 */
-				printf(
-					"MOTOR DUTY: %u\n",
-					sys_be16_to_cpu(
-						UNALIGNED_GET(
-							(uint16_t *)&frame.data
-						)
-					)
-				);
-
+				printf("MOTOR DUTY: %u\n",sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data)));
 				break;
 			default:
-
 				/*
 				 * Unknown or unhandled CAN message.
 				 */
-				printf(
-					"Unknown message received with ID: %u\n",
-					frame.id
-				);
+				printf("Unknown message received with ID: %u\n",frame.id);
 				break;
 		}
 	}
@@ -227,13 +190,9 @@ int rx_thread_create(const struct device *can_dev)
 		K_NO_WAIT
 	);
 
-	/*
-	 * Verify thread creation succeeded.
-	 */
+	//Verify thread creation succeeded.
 	if (!rx_tid) {
-
 		printf("ERROR spawning RX thread\n");
-
 		return -ENOENT;
 	}
 

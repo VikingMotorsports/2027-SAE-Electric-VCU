@@ -45,6 +45,19 @@
  */
 #define RX_THREAD_PRIORITY 2
 
+#define NUM_CAN_FILTERS 2
+
+/*
+ * struct containing all CAN message filters
+ * 
+ * NOTES:
+ * Message IDs should first be defined in can_database.h
+ * Add new CAN messages here if you will need to receive them
+ * Be sure to update NUM_CAN_FILTERS appropriately in can_receiver.h
+ * Receiving behavior, if desired, needs to be defined in rx_thread below
+ */
+//const struct can_filter vcu_filters[NUM_CAN_FILTERS];
+
 /* ---------- Public Interface ---------- */
 
 /*

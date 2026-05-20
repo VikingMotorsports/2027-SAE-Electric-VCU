@@ -46,17 +46,19 @@
  *  - PWM period
  *  - PWM flags
  */
-static const struct pwm_dt_spec pwm_en = PWM_DT_SPEC_GET(ZEPHYR_USER);
+static const struct pwm_dt_spec pwm_en1 = PWM_DT_SPEC_GET(ZEPHYR_USER);
+
+static const struct pwm_dt_spec pwm_en2 = PWM_DT_SPEC_GET(ZEPHYR_USER);
 
 /*
  * GPIO specification for motor direction input 1.
  */
-static const struct gpio_dt_spec in1 = GPIO_DT_SPEC_GET(ZEPHYR_USER, in1_gpios);
+//static const struct gpio_dt_spec in1 = GPIO_DT_SPEC_GET(ZEPHYR_USER, in1_gpios);
 
 /*
  * GPIO specification for motor direction input 2.
  */
-static const struct gpio_dt_spec in2 = GPIO_DT_SPEC_GET(ZEPHYR_USER, in2_gpios);
+//static const struct gpio_dt_spec in2 = GPIO_DT_SPEC_GET(ZEPHYR_USER, in2_gpios);
 
 /*
  * Shared return code variable used throughout
@@ -84,38 +86,44 @@ static int rc;
 int motor_pwm_setup(void)
 {
 	/* Verify PWM hardware is ready */
-	if (!pwm_is_ready_dt(&pwm_en)) {
-		printf("PWM not ready\n");
+	if (!pwm_is_ready_dt(&pwm_en1)) {
+		printf("PWM1 not ready\n");
+		return -ENODEV;
+	}
+
+	/* Verify PWM hardware is ready */
+	if (!pwm_is_ready_dt(&pwm_en2)) {
+		printf("PWM2 not ready\n");
 		return -ENODEV;
 	}
 
 	/* Verify GPIO hardware is ready */
-	if (!gpio_is_ready_dt(&in1) ||
+	/*if (!gpio_is_ready_dt(&in1) ||
 	    !gpio_is_ready_dt(&in2)) {
 
 		printf("Direction GPIOs not ready\n");
 		return -ENODEV;
-	}
+	}*/
 
 	/* Configure IN1 as output */
-	rc = gpio_pin_configure_dt(&in1,
+	/*rc = gpio_pin_configure_dt(&in1,
 				   GPIO_OUTPUT_INACTIVE);
 
 	if (rc) {
 		printf("gpio_pin_configure_dt(in1) failed: %d\n",
 		       rc);
 		return rc;
-	}
+	}*/
 
 	/* Configure IN2 as output */
-	rc = gpio_pin_configure_dt(&in2,
+	/*rc = gpio_pin_configure_dt(&in2,
 				   GPIO_OUTPUT_INACTIVE);
 
 	if (rc) {
 		printf("gpio_pin_configure_dt(in2) failed: %d\n",
 		       rc);
 		return rc;
-	}
+	}*/
 
 	printf("Motor initialized successfully\n");
 
@@ -128,7 +136,9 @@ int motor_pwm_setup(void)
 	/*
 	 * Set PWM duty cycle to 0%.
 	 */
-	(void)pwm_set_pulse_dt(&pwm_en, 0);
+	(void)pwm_set_pulse_dt(&pwm_en1, 0);
+
+	(void)pwm_set_pulse_dt(&pwm_en2, 0);
 
 	return 0;
 };
@@ -165,24 +175,24 @@ int set_direction(enum motor_dir d)
 	case DIR_FORWARD:
 
 		/* Drive motor forward */
-		rc = gpio_pin_set_dt(&in1, 1);
+		/*rc = gpio_pin_set_dt(&in1, 1);
 		if (rc) {
 			return rc;
 		}
 
 		rc = gpio_pin_set_dt(&in2, 0);
-		break;
+		break;*/
 
 	case DIR_REVERSE:
 
 		/* Drive motor in reverse */
-		rc = gpio_pin_set_dt(&in1, 0);
+		/*rc = gpio_pin_set_dt(&in1, 0);
 		if (rc) {
 			return rc;
 		}
 
 		rc = gpio_pin_set_dt(&in2, 1);
-		break;
+		break;*/
 
 	case DIR_STOP:
 	default:
@@ -195,13 +205,13 @@ int set_direction(enum motor_dir d)
 		 * Active braking could be implemented
 		 * by setting both inputs HIGH instead.
 		 */
-		rc = gpio_pin_set_dt(&in1, 0);
+		/*rc = gpio_pin_set_dt(&in1, 0);
 		if (rc) {
 			return rc;
 		}
 
 		rc = gpio_pin_set_dt(&in2, 0);
-		break;
+		break;*/
 	}
 
 	return rc;
@@ -241,11 +251,11 @@ int set_speed(float duty_cycle)
 	 * PWM pulse width in nanoseconds.
 	 */
 	uint64_t pulse =
-		(uint64_t)((duty_cycle / 100.0f) * pwm_en.period);
+		(uint64_t)((duty_cycle / 100.0f) * pwm_en1.period);
 	
 	/*
 	 * Apply PWM pulse width to hardware.
 	 */
-	return pwm_set_pulse_dt(&pwm_en, (uint32_t)pulse);
+	return pwm_set_pulse_dt(&pwm_en1, (uint32_t)pulse);
 };
 

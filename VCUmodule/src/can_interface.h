@@ -6,14 +6,12 @@
  *  - Initializing the CAN peripheral
  *  - Configuring CAN bus timing and operating mode
  *  - Starting the CAN controller
+ *  - defining CAN message IDs
  *
  * The purpose of this module is to isolate all low-level CAN hardware
  * configuration from the application layer. Other modules should access
  * the CAN device through the provided interface functions rather than
  * directly declaring or configuring CAN hardware themselves.
- *
- * This creates a cleaner architecture and makes the CAN subsystem easier
- * to maintain, debug, and expand in the future.
  */
 
 #ifndef CAN_INTERFACE_H
@@ -21,23 +19,6 @@
 
 #include <stdint.h>
 #include <zephyr/drivers/can.h>
-
-/* ---------- CAN Message IDs ---------- */
-
-/*
- * Standard CAN identifier used for accelerator pedal messages.
- *
- * Additional message IDs for:
- *  - brake pedal
- *  - steering wheel
- *  - dashboard
- *  - battery management
- *  - inverter communication
- *
- * can also be added here as the VCU system grows.
- */
-#define ACCELERATOR_MSG_ID 0x080
-#define MOTOR_DUTY_MSG_ID 0x100
 
 /* ---------- Public Interface ---------- */
 

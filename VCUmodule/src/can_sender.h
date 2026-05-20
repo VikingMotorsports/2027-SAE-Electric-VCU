@@ -32,6 +32,18 @@
 
 #include <zephyr/device.h>
 
+//Number of frames to be created for sending data
+#define NUM_CAN_FRAMES 2
+
+/* OPTIONAL
+ * Define can frame specs here such as payload size, msg id, etc.
+ * 
+ * Update NUM_CAN_FRAMES in can_sender.h
+ * 
+ * If not added here, generic frames will be used
+*/
+//const struct can_frame vcu_frames[NUM_CAN_FRAMES];
+
 /* ---------- Public Interface ---------- */
 
 /*

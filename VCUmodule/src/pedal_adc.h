@@ -62,10 +62,8 @@
  */
 #define ADC_DEADBAND     1100
 
-/*
- * Effective usable pedal range after deadband
- * removal.
- */
+ //Effective usable pedal range after deadband
+ //removal.
 #define ADC_SPAN         (ADC_MAX - ADC_DEADBAND)
 
 /*

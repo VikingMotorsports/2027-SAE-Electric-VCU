@@ -51,28 +51,15 @@
 static const struct adc_dt_spec acc_pot =
 	ADC_DT_SPEC_GET(ZEPHYR_USER);
 
-/*
- * Shared return code variable used for
- * ADC driver function results.
- */
 static int rc;
 
 /*
- * Buffer used to store the most recent
- * accelerator pedal ADC sample.
- *
  * Additional buffers can be added here
  * for future sensor inputs.
  */
 static int16_t acc_buffer;
 
 /*
- * ADC sequence structure used during
- * ADC conversion operations.
- *
- * The ADC driver stores conversion
- * results into the configured buffer.
- *
  * Additional ADC sequences may be added
  * for future sensors.
  */
@@ -98,42 +85,27 @@ static struct adc_sequence sequence = {
  */
 int pedal_adc_setup(void)
 {
-	/*
-	 * Verify ADC device readiness.
-	 */
+	//Verify ADC device readiness.
 	if (!adc_is_ready_dt(&acc_pot)) {
-
 		printf("ADC not ready\n");
 		return -ENODEV;
 	}
 
-	/*
-	 * Configure ADC channel settings.
-	 */
+	//Configure ADC channel settings.
 	rc = adc_channel_setup_dt(&acc_pot);
 
 	if (rc) {
-
-		printk("adc_channel_setup_dt failed: %d\n",
-		       rc);
-
+		printk("adc_channel_setup_dt failed: %d\n", rc);
 		return rc;
 	}
 
-	/*
-	 * Initialize ADC conversion sequence.
-	 */
-	rc = adc_sequence_init_dt(&acc_pot,
-				  &sequence);
+	//Initialize ADC conversion sequence.
+	rc = adc_sequence_init_dt(&acc_pot, &sequence);
 
 	if (rc) {
-
-		printf("adc_sequence_init_dt failed: %d\n",
-		       rc);
-
+		printf("adc_sequence_init_dt failed: %d\n", rc);
 		return rc;
 	}
-
 	return 0;
 }
 
@@ -161,43 +133,21 @@ int pedal_adc_setup(void)
  */
 int pedal_adc_read(int32_t *raw)
 {
-	/*
-	 * Start ADC conversion and store
-	 * result into the configured buffer.
-	 */
-	rc = adc_read_dt(&acc_pot,
-			 &sequence);
+	//Read ADC into buffer
+	rc = adc_read_dt(&acc_pot, &sequence);
 
 	if (rc) {
-
-		printk("adc_read_dt failed: %d\n",
-		       rc);
-
-		/*
-		 * Delay briefly before allowing
-		 * another conversion attempt.
-		 */
+		printk("adc_read_dt failed: %d\n", rc);
+		//small delay after failed reading
 		k_msleep(20);
-
 		return rc;
 	}
-
-	/*
-	 * Copy ADC sample into user-provided
-	 * storage location.
-	 */
+	//copy data to location passed in
 	*raw = acc_buffer;
 
-	/*
-	 * Clamp ADC result to valid range.
-	 */
-	if (*raw < 0) {
-		*raw = 0;
-	}
-
-	if (*raw > ADC_MAX) {
-		*raw = ADC_MAX;
-	}
+	//Clamp ADC result to valid range.
+	if (*raw < 0) *raw = 0;
+	if (*raw > ADC_MAX) *raw = ADC_MAX;
 
 	return 0;
 }

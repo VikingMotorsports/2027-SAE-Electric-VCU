@@ -8,15 +8,6 @@
  *  - Configuring CAN bus timing
  *  - Setting CAN operating modes
  *  - Starting the CAN controller
- *
- * By separating this functionality into its own module, the application
- * layer does not need to directly manage CAN hardware configuration.
- *
- * This improves:
- *  - modularity
- *  - code readability
- *  - maintainability
- *  - portability
  */
 
 #include <stdio.h>
@@ -26,16 +17,13 @@
 #include <zephyr/drivers/can.h>
 
 #include "can_interface.h"
+#include "can_database.h"
 
 /*
  * Global CAN device handle.
  *
  * DEVICE_DT_GET() retrieves the CAN peripheral specified by the
  * zephyr_canbus entry in the Zephyr devicetree configuration.
- *
- * This pointer is constant because:
- *  - the CAN device itself should never change at runtime
- *  - ownership of the CAN hardware belongs to this module
  */
 const struct device *const can_dev =
 	DEVICE_DT_GET(DT_CHOSEN(zephyr_canbus));
@@ -49,8 +37,7 @@ const struct device *const can_dev =
  * Returns:
  *  Pointer to CAN device structure.
  */
-const struct device *can_interface_get_device(void)
-{
+const struct device *can_interface_get_device(void) {
 	return can_dev;
 }
 
@@ -75,8 +62,7 @@ const struct device *can_interface_get_device(void)
  *   0  -> Initialization successful
  *  <0  -> Initialization failed
  */
-int can_interface_init(const struct device *can_dev)
-{
+int can_interface_init(const struct device *can_dev) {
 	int ret;
 
 	/*
@@ -85,7 +71,7 @@ int can_interface_init(const struct device *can_dev)
 	 */
 	struct can_timing timing;
 
-	/* Calculate CAN timing configuration */
+	//set bitrate to 500K and sample point to 87.5%
 	ret = can_calc_timing(can_dev, &timing, 500000, 875);
 
 	if (ret != 0) {
@@ -103,8 +89,7 @@ int can_interface_init(const struct device *can_dev)
 
 	/* Verify CAN hardware is initialized and ready */
 	if (!device_is_ready(can_dev)) {
-		printf("CAN ERROR! Device %s not ready.\n",
-		       can_dev->name);
+		printf("CAN ERROR! Device %s not ready.\n", can_dev->name);
 		return -ENODEV;
 	}
 
@@ -116,11 +101,6 @@ int can_interface_init(const struct device *can_dev)
 	 * In loopback mode:
 	 *  - transmitted messages are immediately received locally
 	 *  - no external CAN transceiver or bus is required
-	 *
-	 * Useful for:
-	 *  - debugging
-	 *  - testing
-	 *  - software validation
 	 */
 	ret = can_set_mode(can_dev, CAN_MODE_LOOPBACK);
 

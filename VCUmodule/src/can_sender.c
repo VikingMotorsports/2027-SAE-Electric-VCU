@@ -27,6 +27,31 @@
 
 #include "can_interface.h"
 #include "can_sender.h"
+#include "can_database.h"
+
+/* OPTIONAL
+
+ * 
+ * Define can frame specs here such as payload size, msg id, etc.
+ * 
+ * Update NUM_CAN_FRAMES in can_sender.h
+ * 
+ * If not added here, generic frames will be used
+ *
+ * MSG IDs should be defined in can_database.h first
+*/
+const struct can_frame vcu_frames[NUM_CAN_FRAMES] = {
+	{
+		.flags = 0U,
+		.id = ACCELERATOR_MSG_ID,
+		.dlc = 2
+	},
+	{
+		.flags = 0U,
+		.id = MOTOR_DUTY_MSG_ID,
+		.dlc = 2
+	}
+};
 
 /*
  * CAN transmit completion callback.
@@ -51,30 +76,14 @@
 void tx_irq_callback(
 	const struct device *dev,
 	int error,
-	void *arg
-)
-{
+	void *arg) {
+
 	ARG_UNUSED(dev);
 
-	/*
-	 * User-provided argument passed from can_send().
-	 *
-	 * Typically used to identify which message
-	 * completed transmission.
-	 */
 	char *sender = (char *)arg;
 
-	/*
-	 * Only print information if transmission failed.
-	 */
 	if (error != 0) {
-
-		printf(
-			"CAN TX callback error [%d]\n"
-			"Sender: %s\n",
-			error,
-			sender
-		);
+		printf("CAN TX callback error [%d]\nSender: %s\n", error, sender);
 	}
 }
 
@@ -99,28 +108,30 @@ void tx_irq_callback(
 int can_send_sensor_data(
 	const struct device *can_dev,
 	uint16_t sensor_value,
-	uint32_t sensor_id
-)
-{
+	uint32_t sensor_id) {
+	
 	/*
-	 * Create CAN frame structure.
+	 * CAN frame struct
 	 *
-	 * Current configuration:
+	 * generic configuration:
 	 *  - standard 11-bit CAN identifier
-	 *  - 2-byte payload
+	 *  - 8-byte payload
 	 */
 	struct can_frame sensor_frame = {
 		.flags = 0U,
 		.id = sensor_id,
-		.dlc = 2
+		.dlc = 8
 	};
 
-	/*
-	 * Store sensor value into CAN payload.
-	 *
-	 * Data is converted to big-endian format to ensure
-	 * consistent communication across devices.
-	 */
+	// If frame for msg id defined above, inherit frame configuration
+	for (int i = 0; i < NUM_CAN_FRAMES; i++) {
+		if (sensor_id == vcu_frames[i].id) {
+			sensor_frame = vcu_frames[i];
+			break;
+		}
+	}
+
+	// Store sensor value into CAN payload.
 	UNALIGNED_PUT(
 		sys_cpu_to_be16(sensor_value),
 		(uint16_t *)&sensor_frame.data[0]

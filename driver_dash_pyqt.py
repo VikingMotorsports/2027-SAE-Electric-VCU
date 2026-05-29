@@ -1,3 +1,13 @@
+#---------------------------------------------------------------------------------------#
+#                           VMS Formula SAE Dashboard                                   #
+#                                                                                       #
+#               This is the display module that is finalized using PyQt6                #
+#                                                                                       #
+#  Author:     Allen Paul (VMS VCU Capstone Team 2026)                                  #
+#  Version:     1.0 (May 2026)                                                          #
+#  Description: A high-performance, visually rich dashboard for the Formula SAE         #
+#                                                                                       #
+#---------------------------------------------------------------------------------------#
 import sys
 import random
 import time

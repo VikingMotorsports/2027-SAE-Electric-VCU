@@ -12,6 +12,12 @@ import sys
 import random
 import time
 import math
+import can
+import threading
+import queue
+import json
+import paho.mqtt.client as mqtt
+
 
 try:
     from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
@@ -26,6 +32,77 @@ except ImportError:
         from PySide6.QtGui import QPainter, QColor, QFont, QPen, QBrush, QLinearGradient
     except ImportError:
         raise ImportError('Requires PyQt6 or PySide6')
+    
+# ─────────────────────────────────────────────────────────────────────────────
+#  CAN INPUT SETUP
+# ─────────────────────────────────────────────────────────────────────────────
+BRAKE_MSG_ID = 0x008
+ACCELERATOR_MSG_ID = 0x080
+
+
+#can_bus queue for receiving CAN messages from a separate thread
+can_buffer = queue.Queue(maxsize=1000)
+
+# Initialize CAN bus (Linux SocketCAN example, adjust for your platform and CAN interface)
+bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
+# Below is for testing
+#bus = can.interface.Bus(interface='virtual', channel='test', bitrate=500000)
+
+
+def can_listener():
+    while True:  # Added loop to keep thread alive
+        try:
+            msg = bus.recv(timeout=1.0) # Added timeout to allow clean exit if needed
+            if msg:
+#                print(f"Listener_Thread: Received CAN message: {msg}")
+                can_buffer.put(msg, block=False)
+        except queue.Full:
+            continue 
+        except Exception as e:
+            print(f"CAN Error: {e}")
+            break
+
+def get_can_message():
+    try:
+        return can_buffer.get_nowait() # Do not block the UI thread
+    except queue.Empty:
+        return None
+
+#start CAN listener thread
+listener_thread = threading.Thread(target=can_listener, daemon=True)
+listener_thread.start()
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  MQTT CONFIGURATION
+# ─────────────────────────────────────────────────────────────────────────────
+# MQTT Configuration
+BROKER = "localhost"   # e.g. "test.mosquitto.org" 
+PORT = 1883
+TOPIC = "pedal"
+CLIENT_ID = "publisher_001"
+
+# Callback when connected
+def on_connect(client, userdata, flags, rc):
+    if rc == 0:
+        print("Connected to broker")
+    else:
+        print(f"Connection failed with code {rc}")
+
+# Callback when message is published
+def on_publish(client, userdata, mid):
+    print(f"Message {mid} published")
+
+# Create client
+client = mqtt.Client(client_id=CLIENT_ID)
+
+client.on_connect = on_connect
+client.on_publish = on_publish
+
+# Connect to broker
+client.connect(BROKER, PORT, keepalive=60)
+
+# Start network loop
+client.loop_start()
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  SERIAL SETUP

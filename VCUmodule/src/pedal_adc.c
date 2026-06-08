@@ -49,7 +49,10 @@
  *  - acquisition settings
  */
 static const struct adc_dt_spec acc_pot =
-	ADC_DT_SPEC_GET(ZEPHYR_USER);
+	ADC_DT_SPEC_GET_BY_IDX(ZEPHYR_USER, 0);
+
+static const struct adc_dt_spec brake_pot =
+	ADC_DT_SPEC_GET_BY_IDX(ZEPHYR_USER, 1);
 
 static int rc;
 
@@ -57,13 +60,18 @@ static int rc;
  * Additional buffers can be added here
  * for future sensor inputs.
  */
+static int16_t brake_buffer;
 static int16_t acc_buffer;
 
 /*
  * Additional ADC sequences may be added
  * for future sensors.
  */
-static struct adc_sequence sequence = {
+static struct adc_sequence brake_sequence = {
+	.buffer      = &brake_buffer,
+	.buffer_size = sizeof(brake_buffer),
+};
+static struct adc_sequence acc_sequence = {
 	.buffer      = &acc_buffer,
 	.buffer_size = sizeof(acc_buffer),
 };
@@ -90,22 +98,35 @@ int pedal_adc_setup(void)
 		printf("ADC not ready\n");
 		return -ENODEV;
 	}
+	if (!adc_is_ready_dt(&brake_pot)) {
+		printf("ADC not ready\n");
+		return -ENODEV;
+	}
 
 	//Configure ADC channel settings.
 	rc = adc_channel_setup_dt(&acc_pot);
-
+	if (rc) {
+		printk("adc_channel_setup_dt failed: %d\n", rc);
+		return rc;
+	}
+	rc = adc_channel_setup_dt(&brake_pot);
 	if (rc) {
 		printk("adc_channel_setup_dt failed: %d\n", rc);
 		return rc;
 	}
 
 	//Initialize ADC conversion sequence.
-	rc = adc_sequence_init_dt(&acc_pot, &sequence);
-
+	rc = adc_sequence_init_dt(&acc_pot, &acc_sequence);
 	if (rc) {
 		printf("adc_sequence_init_dt failed: %d\n", rc);
 		return rc;
 	}
+	rc = adc_sequence_init_dt(&brake_pot, &brake_sequence);
+	if (rc) {
+		printf("adc_sequence_init_dt failed: %d\n", rc);
+		return rc;
+	}
+
 	return 0;
 }
 
@@ -131,23 +152,34 @@ int pedal_adc_setup(void)
  *     0 on success.
  *     Negative Zephyr error code on failure.
  */
-int pedal_adc_read(int32_t *raw)
+int pedal_adc_read(int32_t *acc_raw, int32_t *brake_raw)
 {
 	//Read ADC into buffer
-	rc = adc_read_dt(&acc_pot, &sequence);
-
+	rc = adc_read_dt(&acc_pot, &acc_sequence);
 	if (rc) {
 		printk("adc_read_dt failed: %d\n", rc);
 		//small delay after failed reading
 		k_msleep(20);
 		return rc;
 	}
+	rc = adc_read_dt(&brake_pot, &brake_sequence);
+	if (rc) {
+		printk("adc_read_dt failed: %d\n", rc);
+		//small delay after failed reading
+		k_msleep(20);
+		return rc;
+	}
+
 	//copy data to location passed in
-	*raw = acc_buffer;
+	*acc_raw = acc_buffer;
+	*brake_raw = brake_buffer;
 
 	//Clamp ADC result to valid range.
-	if (*raw < 0) *raw = 0;
-	if (*raw > ADC_MAX) *raw = ADC_MAX;
+	if (*acc_raw < 0) *acc_raw = 0;
+	if (*acc_raw > ADC_MAX) *acc_raw = ADC_MAX;
+
+	if (*brake_raw < 0) *brake_raw = 0;
+	if (*brake_raw > ADC_MAX) *brake_raw = ADC_MAX;
 
 	return 0;
 }

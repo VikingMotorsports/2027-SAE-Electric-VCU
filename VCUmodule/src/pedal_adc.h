@@ -102,6 +102,6 @@ int pedal_adc_setup(void);
  *     0 on success.
  *     Negative Zephyr error code on failure.
  */
-int pedal_adc_read(int32_t *raw);
+int pedal_adc_read(int32_t *acc_raw, int32_t *brake_raw);
 
 #endif /* PEDAL_ADC_H */

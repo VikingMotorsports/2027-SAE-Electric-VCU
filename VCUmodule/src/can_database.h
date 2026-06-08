@@ -13,6 +13,7 @@
 
 /* ---------- CAN Message IDs ---------- */
 
+#define BRAKE_MSG_ID 0x040
 #define ACCELERATOR_MSG_ID 0x080
 #define MOTOR_DUTY_MSG_ID 0x100
 

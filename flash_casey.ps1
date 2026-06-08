@@ -4,7 +4,7 @@ $projectname = 'zephyrproject'
 $board = 'nucleo_c092rc'
 $app = 'VCUmodule' 
 $dir = '2027-SAE-Electric-VCU'
-$path = 'C:\Users\casey\OneDrive\Desktop\ECE413'
+$path = 'C:\Users\casey\github'
 
 cd ~\zephyr\$projectname\
 .venv\scripts\activate.ps1

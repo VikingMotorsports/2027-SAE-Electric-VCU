@@ -33,7 +33,7 @@
 #include <zephyr/device.h>
 
 //Number of frames to be created for sending data
-#define NUM_CAN_FRAMES 2
+#define NUM_CAN_FRAMES 3
 
 /* OPTIONAL
  * Define can frame specs here such as payload size, msg id, etc.

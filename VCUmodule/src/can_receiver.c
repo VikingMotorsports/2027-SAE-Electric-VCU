@@ -74,7 +74,11 @@ const struct can_filter vcu_filters[NUM_CAN_FILTERS] = {
 		.id = ACCELERATOR_MSG_ID,
 		.mask = CAN_STD_ID_MASK
     },
-
+	{
+        .flags = 0U,
+		.id = BRAKE_MSG_ID,
+		.mask = CAN_STD_ID_MASK
+    },
     {
         .flags = 0U,
 		.id = MOTOR_DUTY_MSG_ID,
@@ -142,6 +146,9 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 		//Process received message based on CAN ID.
 		//add case to define receiving behavior for new messages
 		switch (frame.id) {
+			case BRAKE_MSG_ID:
+				printf("BRAKE: %u\n", sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data)));
+				break;
 			case ACCELERATOR_MSG_ID:
 				printf("ACCELERATOR: %u\n", sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data)));
 				break;

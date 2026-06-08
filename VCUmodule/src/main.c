@@ -131,9 +131,10 @@ int main(void)
 
 		// * Raw accelerator pedal ADC reading.
 		int32_t acc_value;
+		int32_t brake_value;
 
 		// * Read accelerator pedal position from ADC.
-		rc = pedal_adc_read(&acc_value);
+		rc = pedal_adc_read(&acc_value, &brake_value);
 		if (rc) {
 			printk("pedal_adc_read failed: %d\n", rc);
 			return rc;
@@ -146,6 +147,7 @@ int main(void)
 
 		// * Adjusted pedal value after deadband removal.
 		uint32_t adj_acc_value;
+		uint32_t adj_brake_value;
 
 		// * PWM duty cycle percentage.
 		float duty;
@@ -167,6 +169,15 @@ int main(void)
 			adj_acc_value =
 				(acc_value - ADC_DEADBAND);
 		}
+		if (brake_value <= ADC_DEADBAND) {
+			adj_brake_value = 0;
+		} 
+		else {
+			// * Remove deadband offset from pedal value.
+			adj_brake_value =
+				(brake_value - ADC_DEADBAND);
+		}
+
 
 		// * Convert adjusted pedal position into PWM duty cycle percentage.
 		duty =
@@ -186,9 +197,14 @@ int main(void)
 		// * Convert duty cycle percentage into integer
 		// * value for CAN transmission.
 		uint16_t acc_pedal_percent = (uint16_t)duty;
+		uint16_t brake_pedal_percent = (uint16_t)(((float)adj_brake_value / ADC_SPAN)
+			* 100.0f);
 
 		// * Transmit accelerator pedal position over CAN bus.
 		if (can_send_sensor_data(can_dev, acc_pedal_percent, ACCELERATOR_MSG_ID)) {
+			printk("can_send_sensor_data failed: %d\n", rc);
+		}
+		if (can_send_sensor_data(can_dev, brake_pedal_percent, BRAKE_MSG_ID)) {
 			printk("can_send_sensor_data failed: %d\n", rc);
 		}
 

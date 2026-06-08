@@ -45,7 +45,7 @@
  */
 #define RX_THREAD_PRIORITY 2
 
-#define NUM_CAN_FILTERS 2
+#define NUM_CAN_FILTERS 3
 
 /*
  * struct containing all CAN message filters

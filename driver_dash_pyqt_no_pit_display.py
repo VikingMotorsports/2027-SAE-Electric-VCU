@@ -17,6 +17,20 @@ import threading
 import queue
 import json
 
+try:
+    from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
+                                 QHBoxLayout, QLabel, QFrame)
+    from PyQt6.QtCore import Qt, QTimer, QRect, QPoint
+    from PyQt6.QtGui import QPainter, QColor, QFont, QPen, QBrush, QLinearGradient
+except ImportError:
+    try:
+        from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
+                                       QHBoxLayout, QLabel, QFrame)
+        from PySide6.QtCore import Qt, QTimer, QRect, QPoint
+        from PySide6.QtGui import QPainter, QColor, QFont, QPen, QBrush, QLinearGradient
+    except ImportError:
+        raise ImportError('Requires PyQt6 or PySide6')
+
     
 # ─────────────────────────────────────────────────────────────────────────────
 #  CAN INPUT SETUP

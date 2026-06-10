@@ -38,6 +38,8 @@ except ImportError:
 BRAKE_MSG_ID = 0x040
 ACCELERATOR_MSG_ID = 0x080
 
+brake_pos = 0
+accel_pos = 0
 
 #can_bus queue for receiving CAN messages from a separate thread
 can_buffer = queue.Queue(maxsize=1000)
@@ -55,6 +57,11 @@ def can_listener():
             if msg:
 #                print(f"Listener_Thread: Received CAN message: {msg}")
                 can_buffer.put(msg, block=False)
+                if msg.arbitration_id == ACCELERATOR_MSG_ID:
+                    accel_pos = msg.data[1]
+                elif ms.arbitration_id == BRAKE_MSG_ID:
+                    brake_pos = msg.data[1]
+                
         except queue.Full:
             continue 
         except Exception as e:
@@ -284,7 +291,7 @@ class FormulaDashboard(QMainWindow):
         # Core rendering loop running at 60 FPS
         self.timer = QTimer()
         self.timer.timeout.connect(self.app_loop)
-        self.timer.start(5)
+        self.timer.start(16)
         self._last_phys = time.perf_counter()
 
     def create_temp_card(self, title, color):
@@ -504,17 +511,10 @@ class FormulaDashboard(QMainWindow):
 
         #s['accel'] = 1.0 if self.keys_held.get('w') else 0.0
         #s['brake'] = 1.0 if self.keys_held.get('s') else 0.0
-        while True:
-            canMessage = get_can_message()
-
-            if canMessage is None:
-                break
-
-            if canMessage.arbitration_id == ACCELERATOR_MSG_ID:
-                s['accel'] = canMessage.data[1] / 100.0
-
-            elif canMessage.arbitration_id == BRAKE_MSG_ID:
-                s['brake'] = canMessage.data[1] / 100.0
+        
+        #pedal inputs read in CAN receiver thread into accel_pos and brake_pos
+        s['accel'] = accel_pos / 100.0
+        s['brake'] = brake_pos / 100.0
 
 
         pm = {'normal': 1.0, 'attack': 1.0, 'fan': 1.15, 'regen': 0.75}[s['mode']]

@@ -61,8 +61,10 @@ def can_listener():
                 can_buffer.put(msg, block=False)
                 if msg.arbitration_id == ACCELERATOR_MSG_ID:
                     accel_pos = msg.data[1]
+                    print("accel in rec thread" accel_pos)
                 elif ms.arbitration_id == BRAKE_MSG_ID:
                     brake_pos = msg.data[1]
+                    print("brake in rec thread" brake_pos)
                 
         except queue.Full:
             continue 
@@ -518,7 +520,9 @@ class FormulaDashboard(QMainWindow):
         
         #pedal inputs read in CAN receiver thread into accel_pos and brake_pos
         s['accel'] = accel_pos / 100.0
+        print ("accel in qt" accel_pos)
         s['brake'] = brake_pos / 100.0
+        print ("brake in qt" brake_pos)
 
 
         pm = {'normal': 1.0, 'attack': 1.0, 'fan': 1.15, 'regen': 0.75}[s['mode']]

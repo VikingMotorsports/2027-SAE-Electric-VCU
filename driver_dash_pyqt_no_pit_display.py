@@ -67,6 +67,7 @@ def get_can_message():
     except queue.Empty:
         return None
 
+
 #start CAN listener thread
 listener_thread = threading.Thread(target=can_listener, daemon=True)
 listener_thread.start()
@@ -501,8 +502,13 @@ class FormulaDashboard(QMainWindow):
             if 'F' in data: self.set_mode('fan')
             if 'X' in data: self.close()
 
-        s['accel'] = 1.0 if self.keys_held.get('w') else 0.0
-        s['brake'] = 1.0 if self.keys_held.get('s') else 0.0
+        #s['accel'] = 1.0 if self.keys_held.get('w') else 0.0
+        #s['brake'] = 1.0 if self.keys_held.get('s') else 0.0
+        canMessage = get_can_message()
+        if canMessage.ID = ACCELERATOR_MSG_ID:
+            s['accel'] = canMessage.data[0]/100
+        elif canMessage.ID = BRAKE_MSG_ID:
+            s['brake'] = canMessage.data[0]/100
 
         pm = {'normal': 1.0, 'attack': 1.0, 'fan': 1.15, 'regen': 0.75}[s['mode']]
         rm = 1.5 if s['mode'] == 'regen' else 1.0

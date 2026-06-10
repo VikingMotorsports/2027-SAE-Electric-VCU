@@ -512,10 +512,11 @@ class FormulaDashboard(QMainWindow):
 
             if canMessage.arbitration_id == ACCELERATOR_MSG_ID:
                 s['accel'] = canMessage.data[0] / 100.0
+                print (canMessage.data[0])
 
             elif canMessage.arbitration_id == BRAKE_MSG_ID:
                 s['brake'] = canMessage.data[0] / 100.0
-
+                print (canMessage.data[0])
 
         pm = {'normal': 1.0, 'attack': 1.0, 'fan': 1.15, 'regen': 0.75}[s['mode']]
         rm = 1.5 if s['mode'] == 'regen' else 1.0

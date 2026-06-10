@@ -57,7 +57,7 @@
  *  - motor outputs are updated
  *  - CAN messages are transmitted
  */
-#define LOOP_PERIOD_MS 20
+#define LOOP_PERIOD_MS 100
 
 /*
  * Main application entry point.

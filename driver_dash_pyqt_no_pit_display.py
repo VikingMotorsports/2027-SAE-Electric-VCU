@@ -284,7 +284,7 @@ class FormulaDashboard(QMainWindow):
         # Core rendering loop running at 60 FPS
         self.timer = QTimer()
         self.timer.timeout.connect(self.app_loop)
-        self.timer.start(16)
+        self.timer.start(5)
         self._last_phys = time.perf_counter()
 
     def create_temp_card(self, title, color):
@@ -512,13 +512,10 @@ class FormulaDashboard(QMainWindow):
 
             if canMessage.arbitration_id == ACCELERATOR_MSG_ID:
                 s['accel'] = canMessage.data[1] / 100.0
-                print (canMessage.data)
-                print (s['accel'])
 
             elif canMessage.arbitration_id == BRAKE_MSG_ID:
                 s['brake'] = canMessage.data[1] / 100.0
-                print (canMessage.data)
-                print (s['brake'])
+
 
         pm = {'normal': 1.0, 'attack': 1.0, 'fan': 1.15, 'regen': 0.75}[s['mode']]
         rm = 1.5 if s['mode'] == 'regen' else 1.0

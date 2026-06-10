@@ -46,8 +46,13 @@ bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
 # Below is for testing
 #bus = can.interface.Bus(interface='virtual', channel='test', bitrate=500000)
 
+accel_pos = 0.0
+brake_pos = 0.0
 
 def can_listener():
+    global accel_pos
+    global brake_pos
+
     while True:  # Added loop to keep thread alive
         try:
             msg = bus.recv(timeout=1.0) # Added timeout to allow clean exit if needed
@@ -495,6 +500,8 @@ class FormulaDashboard(QMainWindow):
         dt = min(now - self._last_phys, 0.05)
         self._last_phys = now
         s = self.state
+        global accel_pos
+        global brake_pos
 
         # Check Hardware Input Pipelines via Serial
         if port and port.in_waiting > 0:

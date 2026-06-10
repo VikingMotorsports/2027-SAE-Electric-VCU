@@ -60,9 +60,9 @@ def can_listener():
 #                print(f"Listener_Thread: Received CAN message: {msg}")
                 can_buffer.put(msg, block=False)
                 if msg.arbitration_id == ACCELERATOR_MSG_ID:
-                    global accel_pos = msg.data[1]
+                    accel_pos = msg.data[1]
                 elif ms.arbitration_id == BRAKE_MSG_ID:
-                    global brake_pos = msg.data[1]
+                    brake_pos = msg.data[1]
                 
         except queue.Full:
             continue 

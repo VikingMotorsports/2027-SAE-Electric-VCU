@@ -38,9 +38,6 @@ except ImportError:
 BRAKE_MSG_ID = 0x040
 ACCELERATOR_MSG_ID = 0x080
 
-brake_pos = 0
-accel_pos = 0
-
 #can_bus queue for receiving CAN messages from a separate thread
 can_buffer = queue.Queue(maxsize=1000)
 
@@ -58,9 +55,9 @@ def can_listener():
 #                print(f"Listener_Thread: Received CAN message: {msg}")
                 can_buffer.put(msg, block=False)
                 if msg.arbitration_id == ACCELERATOR_MSG_ID:
-                    accel_pos = msg.data[1]
+                    global accel_pos = msg.data[1]
                 elif ms.arbitration_id == BRAKE_MSG_ID:
-                    brake_pos = msg.data[1]
+                    global brake_pos = msg.data[1]
                 
         except queue.Full:
             continue 
@@ -291,7 +288,7 @@ class FormulaDashboard(QMainWindow):
         # Core rendering loop running at 60 FPS
         self.timer = QTimer()
         self.timer.timeout.connect(self.app_loop)
-        self.timer.start(16)
+        self.timer.start(33)
         self._last_phys = time.perf_counter()
 
     def create_temp_card(self, title, color):

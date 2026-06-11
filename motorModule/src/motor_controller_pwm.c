@@ -115,7 +115,7 @@ int motor_pwm_setup(void)
 	/*
 	 * Ensure the motor starts in a safe state.
 	 */
-	enum motor_side side = BOTH;
+	motor_side side = BOTH;
 
 	(void)set_direction(DIR_STOP, side);
 
@@ -154,7 +154,7 @@ int motor_pwm_setup(void)
  *     0 on success.
  *     Negative Zephyr error code on failure.
  */
-int set_direction(enum motor_dir d, enum motor_side side)
+int set_direction(motor_dir d, motor_side side)
 {
 	int a = 0, b = 0;
 
@@ -220,7 +220,7 @@ int set_direction(enum motor_dir d, enum motor_side side)
  *     0 on success.
  *     Negative Zephyr error code on failure.
  */
-int set_speed(float duty_cycle, enum motor_side side)
+int set_speed(float duty_cycle, motor_side side)
 {
 	/* Clamp duty cycle to valid range */
 	if (duty_cycle < 0.0f) {

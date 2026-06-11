@@ -13,8 +13,13 @@
 
 /* ---------- CAN Message IDs ---------- */
 
-#define BRAKE_MSG_ID 0x040
-#define ACCELERATOR_MSG_ID 0x080
+#define PEDALS_MSG_ID 0x080
 #define MOTOR_DUTY_MSG_ID 0x100
+
+//CAN data structs
+typedef struct {
+	uint8_t acc_pedal;
+	uint8_t brake_pedal;
+} pedal_data_t;
 
 #endif

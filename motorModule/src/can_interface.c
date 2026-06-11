@@ -93,7 +93,7 @@ int can_interface_init(const struct device *can_dev) {
 		return -ENODEV;
 	}
 
-#ifdef CONFIG_LOOPBACK_MODE
+
 
 	/*
 	 * Enable internal CAN loopback mode.
@@ -102,14 +102,13 @@ int can_interface_init(const struct device *can_dev) {
 	 *  - transmitted messages are immediately received locally
 	 *  - no external CAN transceiver or bus is required
 	 */
-	ret = can_set_mode(can_dev, CAN_MODE_LOOPBACK);
+	ret = can_set_mode(can_dev, CAN_MODE_NORMAL);
 
 	if (ret != 0) {
 		printf("Error setting CAN mode [%d]\n", ret);
 		return ret;
 	}
 
-#endif
 
 	/* Start CAN controller operation */
 	ret = can_start(can_dev);

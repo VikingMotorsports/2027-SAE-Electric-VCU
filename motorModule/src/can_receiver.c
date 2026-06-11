@@ -19,9 +19,10 @@
 #include <zephyr/kernel.h>
 #include <zephyr/sys/byteorder.h>
 
+#include "can_database.h"
 #include "can_receiver.h"
 #include "can_interface.h"
-#include "can_database.h"
+
 
 /*
  * Allocate stack memory for the CAN receive thread.
@@ -69,14 +70,9 @@ static k_tid_t rx_tid;
  * Receiving behavior, if desired, needs to be defined in rx_thread below
  */
 const struct can_filter vcu_filters[NUM_CAN_FILTERS] = {
-    {
-        .flags = 0U,
-		.id = ACCELERATOR_MSG_ID,
-		.mask = CAN_STD_ID_MASK
-    },
 	{
         .flags = 0U,
-		.id = BRAKE_MSG_ID,
+		.id = PEDALS_MSG_ID,
 		.mask = CAN_STD_ID_MASK
     },
     {
@@ -101,15 +97,13 @@ const struct can_filter vcu_filters[NUM_CAN_FILTERS] = {
  *  unused2 - Unused thread argument
  *  unused3 - Unused thread argument
  */
-void rx_thread(void *can_dev, void *unused2, void *unused3)
+void rx_thread(void *can_dev, void *pedals, void *unused3)
 {
-	ARG_UNUSED(unused2);
 	ARG_UNUSED(unused3);
 
 	struct can_frame frame;
 
-	extern int32_t acc_value;
-	extern int32_t brake_value;
+	pedal_data_t *pedal_data = pedals;
 
 	/*
 	 * Only frames matching items in the vcu_filters array
@@ -150,13 +144,11 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 		//Process received message based on CAN ID.
 		//add case to define receiving behavior for new messages
 		switch (frame.id) {
-			case BRAKE_MSG_ID:
-				brake_value = sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data));
-				printf("BRAKE: %u\n", brake_value);
-				break;
-			case ACCELERATOR_MSG_ID:
-				acc_value = sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data));
-				printf("ACCELERATOR: %u\n", acc_value);
+			case PEDALS_MSG_ID:
+				uint16_t temp = sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data));
+				pedal_data->brake_pedal = (uint8_t)((temp >> 8) & 0xFF);
+				pedal_data->acc_pedal = (uint8_t)(temp & 0xFF);
+				printf("rx_thread: BRAKE=%d, ACCELERATOR=%d\n", pedal_data->brake_pedal, pedal_data->acc_pedal);
 				break;
 			case MOTOR_DUTY_MSG_ID:
 				printf("MOTOR DUTY: %u\n",sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data)));
@@ -185,7 +177,7 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
  *   0  -> Thread successfully created
  *  <0  -> Thread creation failed
  */
-int rx_thread_create(const struct device *can_dev)
+int rx_thread_create(const struct device *can_dev, void *pedals)
 {
 	/*
 	 * Create Zephyr thread for CAN reception.
@@ -196,7 +188,7 @@ int rx_thread_create(const struct device *can_dev)
 		K_THREAD_STACK_SIZEOF(rx_thread_stack),
 		rx_thread,
 		(void *)can_dev,
-		NULL,
+		pedals,
 		NULL,
 		RX_THREAD_PRIORITY,
 		0,

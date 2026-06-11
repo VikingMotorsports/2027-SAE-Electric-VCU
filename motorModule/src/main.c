@@ -63,6 +63,8 @@
 int32_t acc_value = 0;
 int32_t brake_value = 0;
 
+global float duty_cycle = 0;
+
 /*
  * Main application entry point.
  *
@@ -152,7 +154,7 @@ int main(void)
 		uint32_t adj_brake_value;
 
 		// * PWM duty cycle percentage.
-		float duty;
+		//float duty;
 
 		// * Apply pedal deadband.
 		if (acc_value <= ADC_DEADBAND) {
@@ -182,9 +184,8 @@ int main(void)
 
 
 		// * Convert adjusted pedal position into PWM duty cycle percentage.
-		duty =
-			((float)adj_acc_value / ADC_SPAN)
-			* 100.0f;
+		//duty = ((float)adj_acc_value / ADC_SPAN)* 100.0f;
+
 
 		/* ---------- Motor Control ---------- */
 		enum motor_side side = BOTH;

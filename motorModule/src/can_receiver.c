@@ -86,8 +86,6 @@ const struct can_filter vcu_filters[NUM_CAN_FILTERS] = {
     }
 };
 
-extern int32_t acc_value;
-extern int32_t brake_value;
 
 /*
  * Main CAN receive thread.
@@ -109,6 +107,9 @@ void rx_thread(void *can_dev, void *unused2, void *unused3)
 	ARG_UNUSED(unused3);
 
 	struct can_frame frame;
+
+	extern int32_t acc_value;
+	extern int32_t brake_value;
 
 	/*
 	 * Only frames matching items in the vcu_filters array

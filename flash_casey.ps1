@@ -2,7 +2,7 @@
 
 $projectname = 'zephyrproject'
 $board = 'nucleo_c092rc'
-$app = 'VCUmodule' 
+$app = 'motorModule' 
 $dir = '2027-SAE-Electric-VCU'
 $path = 'C:\Users\casey\github'
 

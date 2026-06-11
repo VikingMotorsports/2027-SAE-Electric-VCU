@@ -1,0 +1,72 @@
+/*
+ * Overlay for nucleo_c092rc:
+ *  A0  -> PA0  -> ADC1 channel 0  (accelerator potentiometer)
+ *	A1  -> PA1  -> ADC1 channel 1  (brake potentiometer)
+ *  
+ *	D7  -> PA8  -> TIM1_CH1 		(PWM1)
+ *  D6	-> PC8	-> B
+ *	D5	-> PB4	-> A
+ *	
+ *	D8  -> PA9  -> TIM1_CH2        (PWM2)
+ *	D9	-> PB3	-> a
+ *	D10	-> PA15	-> b
+ */
+
+/ {
+    zephyr,user {
+        io-channels = 	<&adc1 0>, <&adc1 1>;
+
+        pwms =
+			<&pwm1 1 PWM_USEC(50) PWM_POLARITY_NORMAL>,
+			<&pwm1 2 PWM_USEC(50) PWM_POLARITY_NORMAL>;
+
+		in1-gpios = <&gpiob 4 GPIO_ACTIVE_HIGH>;
+		in2-gpios = <&gpioc 8 GPIO_ACTIVE_HIGH>;
+		in3-gpios = <&gpiob 3 GPIO_ACTIVE_HIGH>;
+		in4-gpios = <&gpioa 15 GPIO_ACTIVE_HIGH>;
+    };
+};
+
+&adc1 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	status = "okay";
+
+	channel@0 {
+		reg = <0>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+
+	channel@1 {
+		reg = <1>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+};
+
+/*
+ * TIM1:
+ *   CH1 -> PA8  (D7)
+ *   CH2 -> PA9  (D8)
+ */
+&timers1 {
+	status = "okay";
+	st,prescaler = <0>;
+
+	pwm1: pwm {
+		status = "okay";
+
+		pinctrl-0 = <
+			&tim1_ch1_pa8
+			&tim1_ch2_pa9
+		>;
+
+		pinctrl-names = "default";
+	};
+};
+

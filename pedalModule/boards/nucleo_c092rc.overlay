@@ -1,24 +1,26 @@
 /*
- * Overlay for nucleo_c092rc: potentiometer on A0, H-bridge on D7/D8/D9.
- *
- * Arduino header mapping used:
- *   A0  -> PA0  -> ADC1 channel 0   (potentiometer wiper)
- *   D9  -> PA8  -> TIM1_CH1 (PWM)   (H-bridge ENABLE / PWM speed input)
- *   D8  -> PA9                       (H-bridge IN1, direction)
- *   D7  -> PC7                       (H-bridge IN2, direction)
+ * Overlay for nucleo_c092rc:
+ *   A0  -> PA0  -> ADC1 channel 0   (potentiometer)
+ *   D9  -> PA8  -> TIM1_CH1         (reverse PWM)
+ *   D8  -> PA9  -> TIM1_CH2         (forward PWM)
  */
+
 
 / {
 	zephyr,user {
-		/* ADC channel for the potentiometer */
-		io-channels = <&adc1 0>;
+		/* ADC channel for potentiometers */
+		io-channels = <&adc1 0>, <&adc1 1>;
 
-		/* PWM for the H-bridge ENABLE pin (period = 50 us -> 20 kHz, above audible) */
-		pwms = <&pwm1 1 PWM_USEC(50) PWM_POLARITY_NORMAL>;
-
-		/* Direction control GPIOs */
-		in1-gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
-		in2-gpios = <&gpioc 7 GPIO_ACTIVE_HIGH>;
+		/*
+		 * Two PWM outputs:
+		 *   pwm channel 1 -> D9 (PA8)
+		 *   pwm channel 2 -> D8 (PA9)
+		 *
+		 * 50 us period = 20 kHz
+		 */
+		pwms =
+			<&pwm1 1 PWM_USEC(50) PWM_POLARITY_NORMAL>,
+			<&pwm1 2 PWM_USEC(50) PWM_POLARITY_NORMAL>;
 	};
 };
 
@@ -31,20 +33,36 @@
 		reg = <0>;
 		zephyr,gain = "ADC_GAIN_1";
 		zephyr,reference = "ADC_REF_INTERNAL";
-		// zephyr,acquisition-time = <ADC_ACQ_TIME(ADC_ACQ_TIME_MICROSECONDS, 5)>;
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+
+	channel@1 {
+		reg = <1>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
 		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
 		zephyr,resolution = <12>;
 	};
 };
 
-/* TIM1 channel 1 -> PA8 (Arduino D9 on the C092RC Nucleo) */
+/*
+ * TIM1:
+ *   CH1 -> PA8  (D9)
+ *   CH2 -> PA9  (D8)
+ */
 &timers1 {
 	status = "okay";
 	st,prescaler = <0>;
 
 	pwm1: pwm {
 		status = "okay";
-		pinctrl-0 = <&tim1_ch1_pa8>;
+
+		pinctrl-0 = <
+			&tim1_ch1_pa8
+			&tim1_ch2_pa9
+		>;
+
 		pinctrl-names = "default";
 	};
 };

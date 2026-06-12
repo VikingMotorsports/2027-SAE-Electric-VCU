@@ -1,80 +1,327 @@
-/**
- * style.css — Dashboard Visual Styling
- *
- * ─────────────────────────────────────────────────────────
- * WHAT THIS FILE DOES:
- * ─────────────────────────────────────────────────────────
- * Controls every visual aspect of the dashboard:
- * colors, fonts, layout, spacing, and sizing.
- * No logic — only appearance.
- *
- * If something looks wrong, this is the first place to check.
- * Use browser DevTools (F12 → Inspector) to identify which
- * rule is affecting an element and test changes live.
- *
- * ─────────────────────────────────────────────────────────
- * COLOR REFERENCE (change these to retheme the dashboard):
- * ─────────────────────────────────────────────────────────
- *   Background (page)    #0d0d0d   near-black
- *   Background (cards)   #1a1a1a   dark gray
- *   Background (log box) #111      slightly lighter black
- *   Accent / cyan        #00ffff   headers, borders, values
- *   Connected (green)    #00ff88   status indicator
- *   Disconnected (red)   #ff4444   status indicator
- *   Primary text         #e0e0e0   body text
- *   Dim text             #888      labels, h2, status default
- *   Very dim             #555      units below values
- *   Borders (subtle)     #333      log box border
- *   Dividers (cards)     #1a1a1a   separator lines in log
- *
- * ─────────────────────────────────────────────────────────
- * LAYOUT OVERVIEW:
- * ─────────────────────────────────────────────────────────
- *   <header>         — title + connection status
- *   .card-grid       — CSS Grid: 4 equal columns of cards
- *     .card          — individual sensor readout panel
- *       .label       — sensor name (e.g. "WHEEL FL")
- *       .value       — the live number (big, cyan)
- *       .unit        — unit label (e.g. "RPM", "V")
- *   #log-box         — scrollable raw message log
- *
- * ─────────────────────────────────────────────────────────
- * TROUBLESHOOTING:
- * ─────────────────────────────────────────────────────────
- *   Layout broken        → check .card-grid columns/gap
- *   Wrong colors         → see color reference above
- *   Status color not changing → check .connected /
- *                          .disconnected rules + dashboard.js
- *   Cards too wide/narrow → adjust grid-template-columns
- *   Log box too short    → increase #log-box height
- */
+/* =============================================================================
+   style.css — VCU Pit Telemetry Dashboard
+   PSU Viking Motorsports | FSAE Electric 2027
 
+   PURPOSE:
+     This file controls all the visual styling of the dashboard —
+     colors, layout, spacing, typography, and component appearance.
+     No logic lives here; that's in dashboard.js. This file only
+     describes how things LOOK.
 
-/* ── General Reset ────────────────────────────────────────────────────────────
-   Removes default browser spacing and switches all elements to border-box
-   sizing, meaning padding and borders are included inside the declared width
-   rather than added on top of it. Keeps layout math predictable.        */
+   COLOR PALETTE (dark engineering terminal aesthetic):
+     Background:   #0d0d0d  (near black)
+     Cards:        #1a1a1a  (dark gray)
+     Accent green: #00ff88 / #6df5a8  (active/live data)
+     Muted gray:   #888  (labels, secondary text)
+     Dimmed:       #444 / #333 / #222  (future/inactive elements)
+     Warning red:  #ff4444  (disconnected status)
+
+   FILE STRUCTURE:
+     1. CSS Reset
+     2. Body / Base Styles
+     3. Header
+     4. Section Labels
+     5. Future Tag Badge
+     6. Card Grids
+     7. Cards
+     8. Charts
+     9. Message Log
+============================================================================= */
+
+/* ── 1. CSS RESET ────────────────────────────────────────────────────────────
+   Browsers apply their own default margin, padding, and box-sizing to
+   elements. These defaults vary between Chrome, Firefox, and Safari, which
+   causes layouts to look inconsistent.
+
+   This "universal reset" (*) targets EVERY element on the page and zeroes
+   out those defaults so we start from a clean, predictable baseline.
+
+   box-sizing: border-box changes how width/height are calculated.
+     Default (content-box): width = content only; padding/border add on top
+     border-box:            width INCLUDES padding and border
+   border-box is almost always what you want — it makes sizing intuitive.
+────────────────────────────────────────────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ── Page Body ────────────────────────────────────────────────────────────────
-   Sets the overall dark theme. Courier New gives the telemetry-terminal feel.
-   padding: 20px keeps content from touching the screen edges.            */
+/* ── 2. BODY / BASE STYLES ───────────────────────────────────────────────────
+   Sets the global defaults that all elements on the page inherit.
+   Child elements (like <p> and <span>) will use these values unless
+   they have their own more specific rule that overrides them.
+────────────────────────────────────────────────────────────────────────────── */
 body {
-    background-color: #0d0d0d;   /* near-black page background */
-    color: #e0e0e0;               /* default text color for anything not styled specifically */
-    font-family: 'Courier New', monospace;
-    padding: 20px;
+    background-color: #0d0d0d;            /* Near-black background — easier on eyes in dim pit environments */
+    color: #e0e0e0;                       /* Default text color: light gray (not pure white — less harsh) */
+    font-family: 'Courier New', monospace; /* Monospace font gives a terminal/engineering readout aesthetic */
+    padding: 20px;                        /* 20px breathing room between content and browser edge */
 }
 
+/* ── 3. HEADER ───────────────────────────────────────────────────────────────
+   The header bar stretches across the top of the page with:
+     [PSU Logo]  |  [Title + Status]  |  [VMS Logo]
 
-/* ── Header ───────────────────────────────────────────────────────────────────
-   The top section of the page containing the dashboard title and
-   connection status. Centered, with a cyan bottom border as a divider.  */
+   Flexbox is used to arrange these three items horizontally.
+   `justify-content: space-between` pushes the first item to the far left,
+   the last item to the far right, and centers any items in between.
+   `align-items: center` vertically centers them along the horizontal axis.
+────────────────────────────────────────────────────────────────────────────── */
 header {
-    text-align: center;
-    border-bottom: 2px solid #00ffff;  /* cyan accent line under the header */
-    padding-bottom: 15px;
+    display: flex;                    /* Activate flexbox layout for direct children */
+    justify-content: space-between;   /* Spread children: left | center | right */
+    align-items: center;              /* Vertically center all children */
+    border-bottom: 2px solid #00ff88; /* Green accent underline — matches the live data color */
+    padding-bottom: 15px;             /* Space between content and the green border line */
+    margin-bottom: 24px;              /* Space between the header and the first section below it */
+}
+
+header h1 {
+    color: #6df5a8;          /* Slightly softer green than the border — avoids visual clash */
+    font-size: 2.0rem;       /* rem = relative to root font size (usually 16px), so 2rem = 32px */
+    letter-spacing: 0.05em;  /* Slight character spacing — improves readability at large sizes */
+}
+
+/* The "Connecting..." / "Connected" / "Disconnected" text under the title. */
+#connection-status {
+    color: #888;          /* Default gray — overridden by .connected or .disconnected classes */
+    font-size: 0.85rem;
+    margin-top: 6px;      /* Small gap between the title and the status text */
+}
+
+/* These two classes are applied dynamically by dashboard.js via:
+     el.className = isConnected ? 'connected' : 'disconnected';
+   Only the color changes — the rest of the #connection-status styles still apply. */
+.connected    { color: #00ff88; }  /* Bright green = live and receiving data */
+.disconnected { color: #ff4444; }  /* Red = connection lost, data may be stale */
+
+/* Team logos in the header corners. */
+.psu-logo {
+    width: 60px;    /* Fixed width in pixels */
+    height: auto;   /* auto height maintains the original aspect ratio — no stretching */
+}
+
+.vms-logo {
+    width: 60px;
+    height: auto;
+}
+
+/* ── 4. SECTION LABELS ───────────────────────────────────────────────────────
+   Small all-caps labels that appear above groups of cards:
+   "LIVE DATA" and "FUTURE INTEGRATION — BATTERY & POWER"
+────────────────────────────────────────────────────────────────────────────── */
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;  /* Forces text to ALL CAPS in CSS — no need to type it that way in HTML */
+    letter-spacing: 0.12em;     /* Wide spacing is a common style for small-caps labels */
+    color: #00ff88;             /* Green = active/live sections */
+    margin-bottom: 8px;
+    margin-top: 24px;           /* Vertical rhythm — consistent spacing above each section */
+}
+
+/* Overrides the green color for "Future Integration" labels.
+   CSS specificity: .future-label is more specific than .section-label,
+   so its color wins when both classes are applied to the same element. */
+.future-label {
+    color: #555;  /* Dark gray — visually communicates "not active yet" */
+}
+
+/* <h2> tags inside <section> elements (used for chart titles). */
+section h2 {
+    color: #888;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 24px;
+}
+
+/* ── 5. FUTURE TAG BADGE ─────────────────────────────────────────────────────
+   The small "FUTURE INTEGRATION" pill badge that appears inline next to
+   chart headings, e.g.: "Pack Voltage / Current / Power [FUTURE INTEGRATION]"
+
+   `vertical-align: middle` aligns the badge vertically with the heading text
+   it sits next to, preventing it from drifting up or down.
+────────────────────────────────────────────────────────────────────────────── */
+.future-tag {
+    font-size: 0.65rem;
+    background-color: #1a1a1a;
+    color: #444;
+    border: 1px solid #333;
+    border-radius: 4px;       /* Slight rounding — pill/badge shape */
+    padding: 2px 6px;         /* top/bottom padding | left/right padding */
+    margin-left: 8px;         /* Gap between the heading text and this badge */
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ── 6. CARD GRIDS ───────────────────────────────────────────────────────────
+   CSS Grid is used to lay out stat cards side by side.
+   The base .card-grid class sets up the grid container.
+   .grid-4 and .grid-1 control how many columns appear.
+
+   `repeat(4, 1fr)` = create 4 columns, each taking an equal fraction (1fr)
+   of the available width. So all 4 cards are always the same width,
+   no matter how wide the browser is.
+────────────────────────────────────────────────────────────────────────────── */
+.card-grid {
+    display: grid;      /* Activate CSS Grid layout */
+    gap: 16px;          /* Consistent 16px gap between all cards (horizontal and vertical) */
+    margin-bottom: 8px;
+}
+
+.grid-4 { grid-template-columns: repeat(4, 1fr); }  /* 4 equal-width columns */
+.grid-1 { grid-template-columns: repeat(1, 1fr); }  /* 1 full-width column */
+
+/* ── 7. CARDS ────────────────────────────────────────────────────────────────
+   Each stat card is a dark rounded box containing three vertically stacked
+   elements: label (sensor name), value (the number), unit (e.g., V, %, °C).
+
+   Flexbox with flex-direction: column stacks children top-to-bottom.
+   align-items: center horizontally centers them inside the card.
+────────────────────────────────────────────────────────────────────────────── */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;  /* Stack label, value, unit vertically */
+    align-items: center;     /* Center everything horizontally */
+    gap: 8px;                /* Space between label, value, and unit */
+}
+
+/* Live card variant — green border and slightly green-tinted background
+   to visually distinguish it from the dimmed future cards at a glance. */
+.card.live {
+    border-color: #00ff88;
+    background-color: #0f1f16;  /* Very dark green tint */
+}
+
+/* Future card variant — dimmed border, darker background, and reduced opacity.
+   opacity: 0.65 makes the entire card (including text and border) semi-transparent,
+   reinforcing that this data is not yet available. */
+.card.future {
+    border-color: #222;
+    background-color: #141414;
+    opacity: 0.65;
+}
+
+/* Sensor name label at the top of each card (e.g., "PEDAL POSITION"). */
+.label {
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* The large number displayed in live cards (e.g., "67").
+   This is the element updated by dashboard.js at runtime. */
+.value {
+    color: #6df5a8;   /* Green — matches the live/active theme */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Same large number style but for future cards — much dimmer. */
+.future-value {
+    color: #444;     /* Very dark gray — indicates no data */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Engineering unit text at the bottom of each card (e.g., "%", "V", "°C"). */
+.unit {
+    color: #555;
+    font-size: 0.75rem;
+}
+
+/* ── 8. CHARTS ───────────────────────────────────────────────────────────────
+   Chart.js renders onto <canvas> elements. These rules style the canvas
+   containers and the overlay text for future charts.
+────────────────────────────────────────────────────────────────────────────── */
+
+/* Live pedal position chart — active styling, full opacity. */
+#pedal-chart {
+    width: 100%;           /* Stretch to fill its parent container */
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Wrapper div for future charts — needed to position the overlay text
+   on top of the canvas using CSS absolute positioning.
+   `position: relative` here establishes a positioning context so that
+   `position: absolute` on .placeholder-overlay is relative to THIS div,
+   not the entire page. */
+.chart-placeholder {
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Future chart canvases — same styling as the pedal chart but heavily
+   dimmed with opacity: 0.3. The chart still renders underneath,
+   but the near-transparency signals "not active". */
+#power-chart,
+#temp-chart {
+    width: 100%;
+    background-color: #111;
+    border: 1px solid #222;  /* Slightly lighter than the outer border color */
+    border-radius: 8px;
+    padding: 10px;
+    opacity: 0.3;            /* 30% opacity — very faint */
+}
+
+/* "Awaiting Battery & Power Data" text centered on top of each future chart.
+   Uses absolute positioning to layer it over the canvas without affecting layout.
+
+   The centering trick:
+     top: 50%  + left: 50%  moves the TOP-LEFT corner to the center of the parent.
+     transform: translate(-50%, -50%) then shifts the element back by half its own
+     width and height — resulting in perfect center alignment.
+
+   pointer-events: none lets mouse clicks "pass through" the overlay to the
+   canvas below — important if charts are ever made interactive.
+   white-space: nowrap prevents the text from wrapping to a second line. */
+.placeholder-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #444;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* ── 9. MESSAGE LOG ──────────────────────────────────────────────────────────
+   A fixed-height scrollable box that shows timestamped event log entries.
+   dashboard.js populates it by prepending <p> elements (newest at top).
+
+   overflow: auto adds a vertical scrollbar only when the content inside
+   is taller than the 200px height — otherwise no scrollbar is shown.
+────────────────────────────────────────────────────────────────────────────── */
+#log-box {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px;
+    height: 200px;       /* Fixed height — content scrolls inside this box */
+    overflow-y: auto;    /* Show scrollbar only when content overflows */
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Each log entry is a <p> element. A subtle bottom border acts as a
+   visual divider between log lines, similar to a terminal readout. */
+#log-box p {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 4px 0;  /* Vertical padding so lines don't feel cramped */
+}

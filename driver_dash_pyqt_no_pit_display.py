@@ -16,6 +16,7 @@ import can
 import threading
 import queue
 import json
+import paho.mqtt.client as mqtt
 
 try:
     from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
@@ -30,6 +31,42 @@ except ImportError:
         from PySide6.QtGui import QPainter, QColor, QFont, QPen, QBrush, QLinearGradient
     except ImportError:
         raise ImportError('Requires PyQt6 or PySide6')
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  MQTT SETUP
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Configuration
+BROKER = "10.42.0.1"
+PORT = 1883
+TOPIC = "pedal"
+CLIENT_ID = "publisher_001"
+
+# Callback when connected
+def on_connect(client, userdata, flags, rc):
+    if rc == 0:
+        print("Connected to broker")
+    else:
+        print(f"Connection failed with code {rc}")
+
+# Callback when message is published
+def on_publish(client, userdata, mid):
+    print(f"Message {mid} published")
+
+# Create client
+client = mqtt.Client(client_id=CLIENT_ID)
+
+client.on_connect = on_connect
+client.on_publish = on_publish
+
+# Connect to broker
+try:
+    client.connect(BROKER, PORT, keepalive=60)
+except Exception:
+    client.connect("localhost", PORT, keepalive=60)
+
+# Start network loop
+client.loop_start()
 
     
 # ─────────────────────────────────────────────────────────────────────────────
@@ -48,10 +85,12 @@ bus = can.interface.Bus(bustype='socketcan', channel='can0', bitrate=500000)
 
 accel_pos = 0.0
 brake_pos = 0.0
+previous_pos = 0.0
 
 def can_listener():
     global accel_pos
     global brake_pos
+    global previous_pos
 
     while True:  # Added loop to keep thread alive
         try:
@@ -61,10 +100,14 @@ def can_listener():
                 can_buffer.put(msg, block=False)
                 if msg.arbitration_id == ACCELERATOR_MSG_ID:
                     accel_pos = msg.data[1]
-                    print("accel in rec thread %d", accel_pos)
-                elif ms.arbitration_id == BRAKE_MSG_ID:
+                    print("accel in rec thread", accel_pos)
+                    # MQTT Sending
+                    if previous_pos != accel_pos:
+                        client.publish(TOPIC, f"{accel_pos}", qos=0)
+                        previous_pos = accel_pos
+                elif msg.arbitration_id == BRAKE_MSG_ID:
                     brake_pos = msg.data[1]
-                    print("brake in rec thread %d", brake_pos)
+                    print("brake in rec thread", brake_pos)
                 
         except queue.Full:
             continue 
@@ -92,12 +135,11 @@ listener_thread.start()
 # except Exception as e:
 #     print(f"Serial Error: {e}")
 #     port = None
-port = None
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  CONSTANTS & CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
-FPS          = 60
+FPS          = 30
 MAX_POWER    = 350
 MAX_REGEN    = 250
 MAX_SPEED    = 290
@@ -506,6 +548,7 @@ class FormulaDashboard(QMainWindow):
         global brake_pos
 
         # Check Hardware Input Pipelines via Serial
+        port = None
         if port and port.in_waiting > 0:
             data = port.read(port.in_waiting).decode('utf-8', errors='ignore').upper()
             if 'D' in data: s['drs_active'] = not s['drs_active']

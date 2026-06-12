@@ -1,188 +1,321 @@
+<!DOCTYPE html>
 <!--
-================================================================================
-  index.html — Dashboard Page Structure
-================================================================================
+  index.html — VCU Pit Telemetry Dashboard
+  PSU Viking Motorsports | FSAE Electric 2027
 
-  WHAT THIS FILE DOES:
-  ─────────────────────────────────────────────────────────
-  Defines the structure and content of the dashboard page.
-  No colors, no logic — only layout and element definitions.
+  PURPOSE:
+    This file defines the structure and layout of the dashboard webpage.
+    It is a Jinja2 template, meaning Flask (dashboard.py) renders it on the
+    server before sending it to the browser. The {{ url_for(...) }} expressions
+    are Jinja2 syntax — Flask replaces them with real file paths at runtime.
 
-    Colors / visual styling  →  style.css
-    Live data / interactivity  →  dashboard.js
-    Data source / server  →  dashboard.py
+  HOW THIS FILE FITS IN THE STACK:
+    Flask (Python) → renders this template → browser receives HTML
+    → loads CSS (style.css) + JS (dashboard.js) → Socket.IO connects
+    → live telemetry data fills in the cards and charts
 
-  WHAT "STRUCTURE" MEANS HERE:
-  ─────────────────────────────────────────────────────────
-  Every sensor card on the screen is defined here as an HTML
-  element. The id attribute on each .value span is the bridge
-  between this file and dashboard.js — JS finds elements by
-  id and writes the live number into them.
-
-  HOW TO ADD A NEW SENSOR CARD:
-  ─────────────────────────────────────────────────────────
-  1. Copy an existing <div class="card"> block
-  2. Change the .label text to the sensor name
-  3. Give the .value span a unique id (e.g. id="motor_temp")
-  4. Change the .unit text (e.g. °C, A, km/h)
-  5. In dashboard.js, add: update('motor_temp', data.motor_temp)
-     (the id here must match step 3 exactly)
-
-  HOW TO ADD A NEW ROW OF CARDS:
-  ─────────────────────────────────────────────────────────
-  Wrap your new cards in a new <section class="card-grid">
-  block. Each section becomes its own row. The number of
-  cards per row is controlled by .card-grid in style.css.
-
-  FLASK TEMPLATING NOTE:
-  ─────────────────────────────────────────────────────────
-  The {{ url_for(...) }} syntax is a Flask/Jinja2 template tag.
-  It generates the correct file path to static assets (CSS, JS)
-  relative to the server. Do NOT replace these with plain
-  relative paths like "style.css" — they won't work when
-  served through Flask.
-
-  SCRIPT LOADING ORDER (important):
-  ─────────────────────────────────────────────────────────
-  Scripts are loaded at the BOTTOM of <body>, after all HTML.
-  This ensures the page elements exist in the DOM before
-  dashboard.js tries to find them by id. If scripts were in
-  <head>, JS would run before the elements exist and fail silently.
-  Socket.IO must also load BEFORE dashboard.js since dashboard.js
-  depends on the io() function it provides.
-
-  TROUBLESHOOTING:
-  ─────────────────────────────────────────────────────────
-  Card not appearing      → check the .card div is inside
-                            a <section class="card-grid">
-  Value never updates     → confirm the id here matches the
-                            id used in update() in dashboard.js
-  CSS not applying        → confirm the url_for path is correct
-                            and Flask is running
-  Page loads but no data  → JS and CSS issue, not HTML
-                            check dashboard.js and dashboard.py
-================================================================================
+  STRUCTURE OVERVIEW:
+    <head>   — page metadata, stylesheet link
+    <header> — logos + title + connection status badge
+    <main>   — all dashboard content (cards, charts, log)
+      ├── Live Data cards         (currently active)
+      ├── Future Integration cards (greyed out / placeholders)
+      ├── Live chart: Pedal Position
+      ├── Future charts: Power, Temperature
+      └── Message Log
+    <script> — loads Socket.IO, Chart.js, and dashboard.js at the bottom
 -->
 
-<!DOCTYPE html>  <!-- Tells the browser this is HTML5 (modern standard) -->
-<html lang="en"> <!-- lang="en" helps screen readers and search engines -->
-<head>
-    <meta charset="UTF-8"> <!-- Character encoding: supports all standard symbols including ° -->
-    <title>FSAE VCU Telemetry</title> <!-- Text shown in the browser tab -->
+<!--
+  DOCTYPE declaration — always the first line of an HTML file.
+  Tells the browser this is modern HTML5, not an older version.
+-->
+<html lang="en">
+<!--
+  lang="en" tells screen readers and search engines the page is in English.
+  Good practice for accessibility.
+-->
 
-    <!-- Load stylesheet via Flask's url_for — generates the correct path to /static/style.css.
-         Do not replace with a plain href="style.css" — it won't resolve through Flask. -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+  <!--
+    The <head> section contains metadata — information ABOUT the page that
+    the browser needs but doesn't display directly to the user.
+  -->
+
+  <!-- Sets the character encoding to UTF-8 so special characters
+       (°C, &amp;, accented letters, etc.) render correctly. -->
+  <meta charset="UTF-8">
+
+  <!-- Sets the browser tab title. -->
+  <title>FSAE VCU Telemetry</title>
+
+  <!--
+    Links the external CSS stylesheet (style.css) for all visual styling.
+    {{ url_for('static', filename='style.css') }} is Jinja2 template syntax —
+    Flask replaces this with the correct URL path (e.g., /static/style.css)
+    so the browser can find the file. Never hardcode paths in Flask templates.
+  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
+  <!--
+    Everything inside <body> is what the user sees and interacts with.
+    The page is divided into <header> (branding) and <main> (dashboard content).
+  -->
 
-    <!-- ── Header ──────────────────────────────────────────────────────────────
-         Top bar with the dashboard title and connection status.
-         #connection-status starts as "Connecting..." and is updated
-         dynamically by setStatus() in dashboard.js.
-         Style lives in style.css under header, header h1, #connection-status  -->
-    <header>
-        <h1>VCU Capstone — Telemetry Dashboard</h1>
-        <p id="connection-status">Connecting...</p>
-                                  <!-- ↑ dashboard.js targets this id to show
-                                         "Connected" or "Disconnected"         -->
-    </header>
+  <!-- ══════════════════════════════════════════════════════════════════
+       HEADER — Branding bar across the top of the page
+       Contains: PSU logo | Title + connection status | VMS logo
+       ══════════════════════════════════════════════════════════════════ -->
+  <header>
 
-    <main>
+    <!-- PSU logo image. {{ url_for(...) }} generates the correct path to
+         the file inside the Flask /static/images/ folder.
+         alt="PSU Logo" is the accessibility text shown if the image fails to load. -->
+    <img src="{{ url_for('static', filename='images/psu_logo.png') }}" alt="PSU Logo" class="psu-logo" />
 
-        <!-- ── Wheel Speed Cards ───────────────────────────────────────────────
-             One card per wheel corner. FL/FR = front, RL/RR = rear.
-             Each .value span has a unique id — dashboard.js writes RPM
-             readings into these via update('wheel_fl', data.wheel_speed_fl).
-             The "--" is the placeholder shown before any data arrives.       -->
-        <section class="card-grid">
+    <div>
+      <h1>VCU Capstone — Telemetry Dashboard</h1>
 
-            <div class="card">
-                <span class="label">FL Wheel</span>
-                <span class="value" id="wheel_fl">--</span>  <!-- Front Left  -->
-                <span class="unit">RPM</span>
-            </div>
+      <!--
+        Connection status badge. Starts as "Connecting..." on page load.
+        dashboard.js updates this element's text AND CSS class dynamically:
+          class="connected"    → green badge (Socket.IO connected)
+          class="disconnected" → red badge  (Socket.IO dropped)
+        The id="connection-status" is how dashboard.js finds this element.
+      -->
+      <p id="connection-status">Connecting...</p>
+    </div>
 
-            <div class="card">
-                <span class="label">FR Wheel</span>
-                <span class="value" id="wheel_fr">--</span>  <!-- Front Right -->
-                <span class="unit">RPM</span>
-            </div>
+    <!-- Viking Motorsports team logo, right side of the header. -->
+    <img src="{{ url_for('static', filename='images/VMS_logo.png') }}" alt="VMS Logo" class="vms-logo" />
 
-            <div class="card">
-                <span class="label">RL Wheel</span>
-                <span class="value" id="wheel_rl">--</span>  <!-- Rear Left   -->
-                <span class="unit">RPM</span>
-            </div>
+  </header>
 
-            <div class="card">
-                <span class="label">RR Wheel</span>
-                <span class="value" id="wheel_rr">--</span>  <!-- Rear Right  -->
-                <span class="unit">RPM</span>
-            </div>
 
-        </section>
+  <!-- ══════════════════════════════════════════════════════════════════
+       MAIN — All dashboard content
+       ══════════════════════════════════════════════════════════════════ -->
+  <main>
 
-        <!-- ── Battery & Controls Cards ────────────────────────────────────────
-             Second row of cards for electrical and driver input data.
-             This section only has 3 cards — the fourth column will be
-             empty. Add a fourth card here or adjust the column count in
-             style.css (.card-grid) if you want a full row.                   -->
-        <section class="card-grid">
+    <!-- ── LIVE DATA: Pedal Position ──────────────────────────────────
+         This section contains the stat cards for data that is actively
+         being received from the car right now.
 
-            <div class="card">
-                <span class="label">Battery Voltage</span>
-                <span class="value" id="battery_voltage">--</span>
-                <span class="unit">V</span>
-            </div>
+         Each card follows the same pattern:
+           .label  — the human-readable name of the sensor
+           .value  — the number, updated live by dashboard.js via its id
+           .unit   — the engineering unit (%, V, A, °C, etc.)
 
-            <div class="card">
-                <span class="label">Pedal Position</span>
-                <span class="value" id="pedal_position">--</span>
-                <span class="unit">%</span>   <!-- 0% = no input, 100% = full throttle -->
-            </div>
+         The id on each .value span (e.g., id="pedal_position") is the
+         bridge between the HTML and dashboard.js. When a telemetry packet
+         arrives, dashboard.js calls:
+           document.getElementById('pedal_position').textContent = newValue;
+         which instantly updates the number visible on screen.
+    ─────────────────────────────────────────────────────────────────── -->
+    <p class="section-label">Live Data</p>
 
-            <div class="card">
-                <span class="label">Steering Angle</span>
-                <span class="value" id="steering_angle">--</span>
-                <span class="unit">°</span>   <!-- Degrees from center -->
-            </div>
+    <!--
+      card-grid grid-1: CSS class that arranges cards in a 1-column grid.
+      "live" class applies the active green styling defined in style.css.
+    -->
+    <section class="card-grid grid-1">
+      <div class="card live">
+        <span class="label">Pedal Position</span>
+        <!-- Starts as "--" (double dash = no data yet). dashboard.js
+             replaces this with the live value when packets arrive. -->
+        <span class="value" id="pedal_position">--</span>
+        <span class="unit">%</span>
+      </div>
+    </section>
 
-            <!-- ADD A FOURTH CARD HERE to fill the row, for example:
-            <div class="card">
-                <span class="label">Motor Temp</span>
-                <span class="value" id="motor_temp">- -</span>
-                <span class="unit">°C</span>
-            </div>
-            Then add: update('motor_temp', data.motor_temp); in dashboard.js -->
 
-        </section>
+    <!-- ── FUTURE INTEGRATION: Battery & Power ────────────────────────
+         These cards are placeholders for data the VCU doesn't publish yet.
+         They are styled with the "future" CSS class (dimmed/greyed out)
+         to visually communicate to the pit crew that this data is not live.
 
-        <!-- ── Message Log ──────────────────────────────────────────────────────
-             Scrollable box showing raw telemetry messages as they arrive.
-             dashboard.js writes to #log-box via the log() helper function —
-             it creates a <p> tag per message and prepends it (newest on top).
-             Height and scroll behavior are controlled in style.css (#log-box). -->
-        <section>
-            <h2>Message Log</h2>
-            <div id="log-box"></div>  <!-- dashboard.js fills this — do not add content here -->
-        </section>
+         When the VCU begins publishing pack_voltage, pack_current, etc.
+         over MQTT, these cards will auto-populate — no HTML changes needed.
+         dashboard.js already handles these fields in the telemetry_update
+         event listener; it just won't update them until the data exists.
 
-    </main>
+         &amp; is the HTML entity for the ampersand character "&".
+         Raw "&" in HTML can confuse the browser parser, so it's escaped.
+    ─────────────────────────────────────────────────────────────────── -->
+    <p class="section-label future-label">Future Integration — Battery &amp; Power</p>
 
-    <!-- ── Scripts ─────────────────────────────────────────────────────────────
-         Loaded at the BOTTOM of <body> so the HTML elements above exist in
-         the DOM before the scripts try to access them by id.
+    <!-- grid-4: lays out 4 cards in a row -->
+    <section class="card-grid grid-4">
 
-         Load order matters:
-           1. socket.io.min.js  — provides the io() function dashboard.js needs
-           2. dashboard.js      — our code, which calls io() on its first line
+      <div class="card future">
+        <span class="label">Pack Voltage</span>
+        <!-- id matches the MQTT field name in dashboard.js -->
+        <span class="value future-value" id="pack_voltage">--</span>
+        <span class="unit">V</span>
+      </div>
 
-         socket.io is loaded from a CDN (no install needed in the browser).
-         dashboard.js is loaded via Flask's url_for, same as the stylesheet.  -->
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+      <div class="card future">
+        <span class="label">Pack Current</span>
+        <span class="value future-value" id="pack_current">--</span>
+        <span class="unit">A</span>
+      </div>
+
+      <div class="card future">
+        <span class="label">Pack Power</span>
+        <span class="value future-value" id="pack_power">--</span>
+        <span class="unit">kW</span>
+      </div>
+
+      <div class="card future">
+        <span class="label">State of Charge</span>
+        <span class="value future-value" id="state_of_charge">--</span>
+        <span class="unit">%</span>
+      </div>
+
+    </section>
+
+
+    <!-- ── FUTURE INTEGRATION: Thermal & Vehicle ──────────────────────
+         Thermal monitoring is especially important for battery safety.
+         Exceeding safe temperature thresholds can damage the pack or
+         trigger a BMS fault. These cards will display that data once
+         the VCU publishes it over MQTT.
+    ─────────────────────────────────────────────────────────────────── -->
+    <p class="section-label future-label">Future Integration — Thermal &amp; Vehicle</p>
+
+    <section class="card-grid grid-4">
+
+      <div class="card future">
+        <span class="label">Battery Temp</span>
+        <span class="value future-value" id="battery_temp">--</span>
+        <span class="unit">°C</span>
+      </div>
+
+      <div class="card future">
+        <span class="label">Motor Temp</span>
+        <span class="value future-value" id="motor_temp">--</span>
+        <span class="unit">°C</span>
+      </div>
+
+      <div class="card future">
+        <span class="label">Battery Voltage</span>
+        <span class="value future-value" id="battery_voltage">--</span>
+        <span class="unit">V</span>
+      </div>
+
+      <div class="card future">
+        <span class="label">Steering Angle</span>
+        <span class="value future-value" id="steering_angle">--</span>
+        <span class="unit">deg</span>
+      </div>
+
+    </section>
+
+
+    <!-- ── LIVE CHART: Pedal Position ─────────────────────────────────
+         <canvas> is an HTML element that acts as a blank drawing surface.
+         Chart.js finds this element by id="pedal-chart" and draws the
+         rolling line chart directly onto it using the browser's 2D graphics.
+
+         height="120" sets the canvas height in pixels. The width is
+         determined automatically by the parent container (responsive: true
+         is set in dashboard.js baseChartOptions).
+    ─────────────────────────────────────────────────────────────────── -->
+    <section>
+      <h2>Pedal Position — Live</h2>
+      <canvas id="pedal-chart" height="120"></canvas>
+    </section>
+
+
+    <!-- ── FUTURE CHART: Pack Voltage / Current / Power ───────────────
+         chart-placeholder is a CSS wrapper that positions the canvas and
+         the overlay text on top of each other using relative/absolute
+         positioning. The overlay ("Awaiting Battery & Power Data") sits
+         visually on top of the empty chart so the pit crew immediately
+         knows the chart is waiting for data — not broken.
+
+         Once battery data arrives, the overlay is still visible but the
+         chart lines will draw over it. A future improvement could hide
+         the overlay once data is received (JS classList.remove()).
+    ─────────────────────────────────────────────────────────────────── -->
+    <section>
+      <h2>Pack Voltage / Current / Power <span class="future-tag">Future Integration</span></h2>
+      <div class="chart-placeholder">
+        <canvas id="power-chart" height="120"></canvas>
+        <!-- Overlay text rendered on top of the empty chart canvas -->
+        <div class="placeholder-overlay">Awaiting Battery &amp; Power Data</div>
+      </div>
+    </section>
+
+
+    <!-- ── FUTURE CHART: Battery & Motor Temperature ──────────────────
+         Same chart-placeholder pattern as the power chart above.
+         Two datasets will render here: battery temp and motor temp,
+         on the same axes (both in °C) for direct comparison.
+    ─────────────────────────────────────────────────────────────────── -->
+    <section>
+      <h2>Battery &amp; Motor Temperature <span class="future-tag">Future Integration</span></h2>
+      <div class="chart-placeholder">
+        <canvas id="temp-chart" height="120"></canvas>
+        <div class="placeholder-overlay">Awaiting Temperature Data</div>
+      </div>
+    </section>
+
+
+    <!-- ── MESSAGE LOG ────────────────────────────────────────────────
+         A scrollable box that shows a timestamped record of every event:
+         connections, disconnections, and each incoming telemetry packet.
+
+         dashboard.js populates this by creating <p> elements and
+         prepending them into #log-box so the newest entry is always
+         at the top without the user having to scroll down.
+
+         Useful for debugging in the pit — you can verify what raw data
+         the car is actually sending and catch missing fields early.
+    ─────────────────────────────────────────────────────────────────── -->
+    <section>
+      <h2>Message Log</h2>
+      <div id="log-box"></div>
+      <!-- dashboard.js inserts <p> elements here at runtime -->
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SCRIPT TAGS — Load JavaScript libraries and our dashboard code
+
+       These are placed at the BOTTOM of <body> intentionally.
+       Browsers parse HTML top-to-bottom. If scripts were in <head>,
+       they would run before the page elements exist, and code like
+       document.getElementById('pedal-chart') would return null.
+       Loading scripts last ensures the entire DOM is ready first.
+
+       Load order matters here:
+         1. socket.io.min.js  — must load before dashboard.js uses `io()`
+         2. chart.umd.min.js  — must load before dashboard.js uses `Chart()`
+         3. dashboard.js      — our code, depends on both libraries above
+
+       cdn.socket.io and cdn.jsdelivr.net are public CDNs (Content Delivery
+       Networks) that host the minified library files. Using a CDN avoids
+       storing these large files locally and often loads faster for users
+       due to geographic caching.
+  ══════════════════════════════════════════════════════════════════ -->
+
+  <!-- Socket.IO client library (v4.5.4) — enables the socket object in dashboard.js -->
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+  <!-- Chart.js (v4.4.0) — enables the Chart() constructor used in dashboard.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!--
+    Our dashboard logic. {{ url_for(...) }} resolves to /static/dashboard.js.
+    This is the last script loaded so it can safely reference both libraries above
+    and all HTML elements defined earlier in the page.
+  -->
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
 
 </body>
 </html>

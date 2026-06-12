@@ -64,7 +64,7 @@ app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 # ── MQTT Configuration ─────────────────────────────────────────────────────────
-# Update PI_IP_ADDRESS if Louis's Pi gets a new IP on the network.
+# Update PI_IP_ADDRESS if Raspberry Pi gets a new IP on the network.
 # MQTT_TOPIC must match what the Pi is publishing to.
 PI_IP_ADDRESS = "10.42.0.1"       # Pi IP (hotspot gateway address) 
 MQTT_PORT     = 1883              # Default MQTT port (no TLS)
@@ -84,11 +84,11 @@ def on_connect(client, userdata, flags, rc):
     """Called when the MQTT client connects to the broker (Pi).
     rc=0 means success; any other value is an error code."""
     if rc == 0:
-        print("✓ Connected to MQTT broker")
+        print("Connected to MQTT broker")
         client.subscribe(MQTT_TOPIC)          # Start listening for telemetry
-        print(f"✓ Subscribed to topic: {MQTT_TOPIC}")
+        print(f"Subscribed to topic: {MQTT_TOPIC}")
     else:
-        print(f"✗ MQTT connection failed, code: {rc}")
+        print(f"MQTT connection failed, code: {rc}")
 
 def on_message(client, userdata, msg):
     """Called every time a new message arrives on the subscribed topic.
@@ -96,14 +96,14 @@ def on_message(client, userdata, msg):
     The browser-side listener is in dashboard.js (socket.on('telemetry_update', ...))"""
     try:
         data = json.loads(msg.payload.decode())
-        print(f"📡 Data received: {data}")
+        print(f"Data received: {data}")
         socketio.emit('telemetry_update', data)   # Push to all connected browser clients
     except Exception as e:
-        print(f"✗ Error parsing message: {e}")    # Likely malformed JSON from the Pi
+        print(f"Error parsing message: {e}")    # Likely malformed JSON from the Pi
 
 def on_disconnect(client, userdata, rc):
     """Called if the MQTT connection drops (Pi turned off, network issue, etc.)"""
-    print("✗ Disconnected from MQTT broker")
+    print("Disconnected from MQTT broker")
 
 # ── Start MQTT Client ──────────────────────────────────────────────────────────
 # Registers the callbacks above, then attempts to connect to the Pi.
@@ -120,13 +120,10 @@ def start_mqtt():
         mqtt_client.connect(PI_IP_ADDRESS, MQTT_PORT, 60)  # 60s keepalive
         mqtt_client.loop_start()   # Runs MQTT network loop in a background thread
     except Exception as e:
-        print(f"✗ Could not connect to MQTT broker: {e}")
-        print("  → Running in offline mode (no live data)")
+        print(f"Could not connect to MQTT broker: {e}")
+        print("Running in offline mode (no live data)")
 
 # ── Main ───────────────────────────────────────────────────────────────────────
-# Entry point — only runs when you execute: python dashboard.py or 
-current file name (dashboard_V2.py)
-# (Not when this file is imported as a module by another script.)
 if __name__ == '__main__':
     print("=" * 50)
     print("  PSU Viking Motorsports — Pit Telemetry")

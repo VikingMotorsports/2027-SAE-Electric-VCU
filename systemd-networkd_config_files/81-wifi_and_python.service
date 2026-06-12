@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts the Python Script and Wifi
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/entry_script.sh
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target

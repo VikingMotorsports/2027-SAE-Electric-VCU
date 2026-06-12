@@ -76,7 +76,7 @@
 int main(void)
 {
 	static int rc;
-
+	int loop_ctr = 0;
 	pedal_data_t pedals;
 	pedals.acc_pedal = 0;
 	pedals.brake_pedal = 0;
@@ -128,18 +128,42 @@ int main(void)
 		motor_side side = BOTH;
 		float duty = pedals.acc_pedal;
 
+		if (pedals.brake_pedal) {
+			dir = DIR_STOP;
+			duty = pedals.brake_pedal;
+		}
+		else if (pedals.acc_pedal) {
+			dir = DIR_FORWARD;
+			duty = pedals.acc_pedal;
+		}
+		else {
+			dir = DIR_COAST;
+			duty = 0;
+		}
+
 		// * Apply motor direction command.
 		(void)set_direction(dir, side);
 
 		// * Apply PWM duty cycle command.
 		(void)set_speed(duty, side);
 
-		printf("main loop: duty=%d\n", duty);
+		
 
 		if (can_send_sensor_data(can_dev, (uint16_t)duty, MOTOR_DUTY_MSG_ID)) {
 			printk("can_send_sensor_data failed: %d\n", rc);
 		}
 
+		if ((loop_ctr % 100) == 0) {
+			printf("main loop: duty=%d\npedals.acc_pedal=%d\npedals.brake_pedal=%d\nmotor_dir=%s\n",
+				(uint16_t)duty,
+				pedals.acc_pedal,
+				pedals.acc_pedal,
+				(dir==DIR_FORWARD) ? "DIR_FORWARD" : 
+				(dir==DIR_REVERSE) ? "DIR_REVERSE" : 
+				(dir==DIR_STOP) ? "DIR_STOP" : 
+				(dir==DIR_COAST) ? "DIR_COAST" : "UNKNOWN");
+		}
+		loop_ctr++;
 		// * Wait until next control loop iteration.
 		k_msleep(LOOP_PERIOD_MS);
 	}

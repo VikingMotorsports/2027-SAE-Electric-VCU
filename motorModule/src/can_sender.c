@@ -43,12 +43,7 @@
 const struct can_frame vcu_frames[NUM_CAN_FRAMES] = {
 	{
 		.flags = 0U,
-		.id = ACCELERATOR_MSG_ID,
-		.dlc = 2
-	},
-	{
-		.flags = 0U,
-		.id = BRAKE_MSG_ID,
+		.id = PEDALS_MSG_ID,
 		.dlc = 2
 	},
 	{

@@ -44,17 +44,17 @@
  * DIR_REVERSE:
  *     Motor rotates in the reverse direction.
  */
-enum motor_dir {
+typedef enum {
 	DIR_STOP,
 	DIR_COAST,
 	DIR_FORWARD,
 	DIR_REVERSE
-};
-enum motor_side {
+} motor_dir;
+typedef enum {
 	LEFT,
 	RIGHT,
 	BOTH
-};
+} motor_side;
 
 
 /*
@@ -86,7 +86,7 @@ int motor_pwm_setup(void);
  *     0 on success.
  *     Negative Zephyr error code on failure.
  */
-int set_direction(enum motor_dir d, enum motor_side side);
+int set_direction(motor_dir d, motor_side side);
 
 /*
  * Set the motor PWM duty cycle.
@@ -102,7 +102,7 @@ int set_direction(enum motor_dir d, enum motor_side side);
  *     0 on success.
  *     Negative Zephyr error code on failure.
  */
-int set_speed(float duty_cycle, enum motor_side side);
+int set_speed(float duty_cycle, motor_side side);
 
 
 #endif /* MOTOR_CONTROLLER_PWM_H */

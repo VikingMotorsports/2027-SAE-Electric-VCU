@@ -45,7 +45,7 @@
  */
 #define RX_THREAD_PRIORITY 2
 
-#define NUM_CAN_FILTERS 3
+#define NUM_CAN_FILTERS 2
 
 /*
  * struct containing all CAN message filters
@@ -74,7 +74,7 @@
  *  unused2 - Unused Zephyr thread parameter
  *  unused3 - Unused Zephyr thread parameter
  */
-void rx_thread(void *can_dev, void *unused2, void *unused3);
+void rx_thread(void *can_dev, void *pedals, void *unused3);
 
 /*
  * Creates and starts the CAN receive thread.
@@ -86,6 +86,6 @@ void rx_thread(void *can_dev, void *unused2, void *unused3);
  *   0  -> Thread successfully started
  *  <0  -> Thread creation failed
  */
-int rx_thread_create(const struct device *can_dev);
+int rx_thread_create(const struct device *can_dev, void *pedals);
 
 #endif /* CAN_RECEIVER_H */

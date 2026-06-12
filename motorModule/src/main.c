@@ -57,13 +57,8 @@
  *  - motor outputs are updated
  *  - CAN messages are transmitted
  */
-#define LOOP_PERIOD_MS 1000
+#define LOOP_PERIOD_MS 33
 
-// * Raw accelerator pedal ADC reading.
-int32_t acc_value = 0;
-int32_t brake_value = 0;
-
-global float duty_cycle = 0;
 
 /*
  * Main application entry point.
@@ -82,6 +77,9 @@ int main(void)
 {
 	static int rc;
 
+	pedal_data_t pedals;
+	pedals.acc_pedal = 0;
+	pedals.brake_pedal = 0;
 	/*
 	 * Retrieve pointer to initialized CAN controller device.
 	 *
@@ -92,16 +90,6 @@ int main(void)
 		can_interface_get_device();
 
 	/* ---------- Subsystem Initialization ---------- */
-
-	/*
-	 * Initialize accelerator pedal ADC subsystem.
-	 */
-	rc = pedal_adc_setup();
-	if (rc) {
-		printk("pedal_adc_setup failed: %d\n", rc);
-		return rc;
-	}
-
 	/*
 	 * Initialize PWM motor controller subsystem.
 	 */
@@ -123,7 +111,7 @@ int main(void)
 	/*
 	 * Create and start background CAN receive thread.
 	 */
-	rc = rx_thread_create(can_dev);
+	rc = rx_thread_create(can_dev, (void *)&pedals);
 	if (rc) {
 		printk("rx_thread_create failed: %d\n", rc);
 		return rc;
@@ -134,79 +122,20 @@ int main(void)
 	/* ---------- Main Vehicle Control Loop ---------- */
 
 	while (1) {
-
-		
-
-		// * Read accelerator pedal position from ADC.
-		/*rc = pedal_adc_read(&acc_value, &brake_value);
-		if (rc) {
-			printk("pedal_adc_read failed: %d\n", rc);
-			return rc;
-		}*/
-
-		/* ---------- Pedal Processing ---------- */
-
-		// * Motor direction command.
-		enum motor_dir dir;
-
-		// * Adjusted pedal value after deadband removal.
-		uint32_t adj_acc_value;
-		uint32_t adj_brake_value;
-
-		// * PWM duty cycle percentage.
-		//float duty;
-
-		// * Apply pedal deadband.
-		if (acc_value <= ADC_DEADBAND) {
-			dir = DIR_STOP;
-			adj_acc_value = 0;
-		} 
-		else {
-			/*
-			 * Current configuration uses reverse direction.
-			 *
-			 * This may vary
-			 */
-			dir = DIR_REVERSE;
-
-			// * Remove deadband offset from pedal value.
-			adj_acc_value =
-				(acc_value - ADC_DEADBAND);
-		}
-		if (brake_value <= ADC_DEADBAND) {
-			adj_brake_value = 0;
-		} 
-		else {
-			// * Remove deadband offset from pedal value.
-			adj_brake_value =
-				(brake_value - ADC_DEADBAND);
-		}
-
-
-		// * Convert adjusted pedal position into PWM duty cycle percentage.
-		//duty = ((float)adj_acc_value / ADC_SPAN)* 100.0f;
-
-
 		/* ---------- Motor Control ---------- */
-		enum motor_side side = BOTH;
+		// * Motor direction command
+		motor_dir dir = DIR_FORWARD;
+		motor_side side = BOTH;
+		float duty = pedals.acc_pedal;
+
 		// * Apply motor direction command.
 		(void)set_direction(dir, side);
 
 		// * Apply PWM duty cycle command.
 		(void)set_speed(duty, side);
 
-		/* ---------- CAN Transmission ---------- */
+		printf("main loop: duty=%d\n", duty);
 
-		// * Convert duty cycle percentage into integer
-		// * value for CAN transmission.
-		uint16_t acc_pedal_percent = (uint16_t)duty;
-		uint16_t brake_pedal_percent = (uint16_t)(((float)adj_brake_value / ADC_SPAN)
-			* 100.0f);
-
-		// * Transmit accelerator pedal position over CAN bus.
-		/*if (can_send_sensor_data(can_dev, acc_pedal_percent, ACCELERATOR_MSG_ID)) {
-			printk("can_send_sensor_data failed: %d\n", rc);
-		}*/
 		if (can_send_sensor_data(can_dev, (uint16_t)duty, MOTOR_DUTY_MSG_ID)) {
 			printk("can_send_sensor_data failed: %d\n", rc);
 		}

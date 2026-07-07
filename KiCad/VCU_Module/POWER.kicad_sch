@@ -2623,6 +2623,18 @@
 		)
 		(uuid "67cc7717-9f24-4b05-bfbc-0595baa96c09")
 	)
+	(text "use a tps series switching power supply, at least 30V MHz class of switching frequencies, internal fets, sychronous rectification, do two of these, 1 for 5v and 1 for 3.3v, package with leads"
+		(exclude_from_sim no)
+		(at 204.978 106.426 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "8fbbcf18-e60e-4219-bd28-0f192760dc43")
+	)
 	(text "S"
 		(exclude_from_sim no)
 		(at 163.322 134.62 0)

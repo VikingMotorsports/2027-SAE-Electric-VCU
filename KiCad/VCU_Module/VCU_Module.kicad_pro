@@ -315,10 +315,6 @@
         ""
       ],
       [
-        "power_pin_not_driven|2641600|825500|91a9be11-6125-41bd-8541-17bf57fbace2|00000000-0000-0000-0000-000000000000|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|",
-        ""
-      ],
-      [
         "power_pin_not_driven|2959100|876300|91a9be11-6125-41bd-8541-17bf57fbace2|00000000-0000-0000-0000-000000000000|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|",
         ""
       ],
@@ -919,7 +915,7 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "#PWR1-2,#PWR7,#PWR9-10,#PWR20",
+    "used_designators": "#PWR1-2,#PWR7,#PWR9-10,#PWR20,J2-4,J6-7,J9-10,J12-17",
     "variants": []
   },
   "sheets": [

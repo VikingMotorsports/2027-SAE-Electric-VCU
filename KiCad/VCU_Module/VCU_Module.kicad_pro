@@ -915,17 +915,13 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "#PWR1-2,#PWR7,#PWR9-10,#PWR20,J2-4,J6-7,J9-10,J12-17",
+    "used_designators": "D1-2,#PWR1-4,#PWR6-24,R1-5,J1-4,J6-7,J9-10,J12-17,C1-4,CR1,F1,Q1,S1,TP7-11,U1-4",
     "variants": []
   },
   "sheets": [
     [
       "efb70416-ce55-4766-98ba-c3d23efcccb1",
       "VCU_Module"
-    ],
-    [
-      "72276164-1341-4c36-b4e6-9b9f0edc7f8e",
-      "POWER"
     ],
     [
       "f115f1df-fd74-4b87-bcb3-90c9dd231c01",

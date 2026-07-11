@@ -16,4 +16,6 @@
 	(lib (name "PESD5V0L2BT") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/PESD5V0L2BT.kicad_sym") (options "") (descr ""))
 	(lib (name "STM32C092RCT6") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/STM32C092RCT6.kicad_sym") (options "") (descr ""))
 	(lib (name "ZXTN4004KQTC") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/ZXTN4004KQTC.kicad_sym") (options "") (descr ""))
+	(lib (name "LMR33640DDDAR") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/LMR33640DDDAR.kicad_sym") (options "") (descr ""))
+	(lib (name "FDC6301N") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/FDC6301N.kicad_sym") (options "") (descr ""))
 )

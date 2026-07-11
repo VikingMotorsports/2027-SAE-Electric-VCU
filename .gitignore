@@ -8,3 +8,6 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Ignore local git-based history (KiCad 9.0+)
+.history

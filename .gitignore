@@ -9,5 +9,30 @@
 # Built Visual Studio Code Extensions
 *.vsix
 
-# Ignore local git-based history (KiCad 9.0+)
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*-cache*
+*-bak*
+*~
+~*
+_autosave-*
+#auto_saved_files#
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+~*.lck
+
+# Netlist and autorouter files
+*.net
+*.dsn
+*.ses
+
+# Local git-based history (KiCad 9.0+)
 .history
+*.kicad_prl

@@ -18,4 +18,5 @@
 	(lib (name "ZXTN4004KQTC") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/ZXTN4004KQTC.kicad_sym") (options "") (descr ""))
 	(lib (name "LMR33640DDDAR") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/LMR33640DDDAR.kicad_sym") (options "") (descr ""))
 	(lib (name "FDC6301N") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/FDC6301N.kicad_sym") (options "") (descr ""))
+	(lib (name "1x10_Header_F") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols/1x10_Header_F.kicad_sym") (options "") (descr ""))
 )

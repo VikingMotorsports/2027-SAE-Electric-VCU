@@ -161,7 +161,7 @@
         "min_through_hole_diameter": 0.254,
         "min_track_width": 0.127,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.4572,
+        "min_via_diameter": 0.457,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -312,10 +312,6 @@
       ],
       [
         "pin_to_pin|2387600|1371600|3347e5e8-b9ae-4bd7-9d4f-03c4178f0512|ae465722-e8ba-488f-8e09-f5d6a8baa8f7|/efb70416-ce55-4766-98ba-c3d23efcccb1||",
-        ""
-      ],
-      [
-        "power_pin_not_driven|2959100|876300|91a9be11-6125-41bd-8541-17bf57fbace2|00000000-0000-0000-0000-000000000000|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|",
         ""
       ],
       [
@@ -571,7 +567,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.127,
         "tuning_profile": "",
-        "via_diameter": 0.4572,
+        "via_diameter": 0.457,
         "via_drill": 0.254,
         "wire_width": 6
       },
@@ -915,7 +911,7 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "D1-2,D4-5,#PWR1-4,#PWR6-28,#PWR49-50,R1-10,J1-4,J6-7,J9-10,J12-17,C1-12,C18-21,CR1,F1,Q1-3,S1,TP7-11,U1-4,L1-2",
+    "used_designators": "D1-2,D4-5,#PWR1-4,#PWR6-28,#PWR37-38,#PWR49-50,R1-10,R24,R26,J1-10,J12-17,C1-13,C18-21,CR1,F1,Q1-3,S1,TP7-11,U1-4,L1-2,SW2",
     "variants": []
   },
   "sheets": [

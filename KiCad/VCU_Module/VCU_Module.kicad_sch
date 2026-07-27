@@ -4962,7 +4962,7 @@
 	)
 	(text "Reverse Polarity Protection"
 		(exclude_from_sim no)
-		(at 56.134 159.004 0)
+		(at 54.356 159.004 0)
 		(effects
 			(font
 				(size 1.27 1.27)

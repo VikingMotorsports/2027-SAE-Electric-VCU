@@ -4074,7 +4074,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:AO3401A"
+		(symbol "Transistor_FET:SUD19P06-60"
 			(pin_names
 				(hide yes)
 			)
@@ -4084,7 +4084,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
-				(at 5.08 1.905 0)
+				(at 4.953 1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4094,8 +4094,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "AO3401A"
-				(at 5.08 0 0)
+			(property "Value" "SUD19P06-60"
+				(at 4.953 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4105,8 +4105,8 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 5.08 -1.905 0)
+			(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+				(at 4.953 -1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -4118,7 +4118,7 @@
 					(justify left)
 				)
 			)
-			(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+			(property "Datasheet" "https://www.vishay.com/docs/69253/sud19p06.pdf"
 				(at 5.08 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4130,7 +4130,7 @@
 					(justify left)
 				)
 			)
-			(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+			(property "Description" "-19A Id, -60V Vds, TrenchFET P-Channel Power MOSFET, 60mOhm Ron, 40nC Qg, -55 to 150 °C, TO-252-2"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4141,7 +4141,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "P-Channel MOSFET"
+			(property "ki_keywords" "TrenchFET P-Channel Power MOSFET"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4152,7 +4152,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23*"
+			(property "ki_fp_filters" "TO?252*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4163,7 +4163,7 @@
 					)
 				)
 			)
-			(symbol "AO3401A_0_1"
+			(symbol "SUD19P06-60_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -4330,7 +4330,7 @@
 					)
 				)
 			)
-			(symbol "AO3401A_1_1"
+			(symbol "SUD19P06-60_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -4350,9 +4350,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "S"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4368,9 +4368,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "D"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4960,9 +4960,9 @@
 		)
 		(uuid "d86592ad-999a-42c4-9ff7-0f3006591a08")
 	)
-	(text "Protection"
+	(text "Reverse Polarity Protection"
 		(exclude_from_sim no)
-		(at 56.388 156.21 0)
+		(at 56.134 159.004 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4994,7 +4994,7 @@
 	)
 	(text "D"
 		(exclude_from_sim no)
-		(at 50.038 169.164 0)
+		(at 61.976 168.656 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5002,7 +5002,7 @@
 		)
 		(uuid "57327643-dbf7-466e-9efe-7447932d14a1")
 	)
-	(text "5V Supply\nInput Range: 3.8V-36V"
+	(text "5V Supply\nInput Range: 5.5V-36V"
 		(exclude_from_sim no)
 		(at 118.11 216.408 0)
 		(effects
@@ -5012,7 +5012,7 @@
 		)
 		(uuid "667553ea-2a1f-43b3-9d73-164616ce2156")
 	)
-	(text "Main power input\nfrom bus connector\n3.8V-36V"
+	(text "Main power input\nfrom bus connector\n6V-36V"
 		(exclude_from_sim no)
 		(at 26.162 150.368 0)
 		(effects
@@ -5064,7 +5064,7 @@
 	)
 	(text "S"
 		(exclude_from_sim no)
-		(at 61.722 168.91 0)
+		(at 49.53 168.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5314,12 +5314,6 @@
 		(uuid "98ff20d9-fce7-4d03-9aed-483af80b5d1b")
 	)
 	(junction
-		(at 82.55 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9ad2211b-be25-44c7-84e6-04977b58c0c0")
-	)
-	(junction
 		(at 30.48 236.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5350,6 +5344,12 @@
 		(uuid "b3ae0745-4792-42bf-99b8-dd803f875b28")
 	)
 	(junction
+		(at 55.88 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c090bc3c-68fc-4686-8c61-2815f57bf440")
+	)
+	(junction
 		(at 118.11 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5374,10 +5374,10 @@
 		(uuid "f870c721-d8f0-405d-8473-f216e10a6f2f")
 	)
 	(junction
-		(at 55.88 185.42)
+		(at 49.53 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "fa7c7027-5774-492c-8ef1-077051cc146b")
+		(uuid "ffa3525e-7026-4298-8603-09db8ed49187")
 	)
 	(no_connect
 		(at 128.27 240.03)
@@ -5463,7 +5463,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 185.42) (xy 82.55 229.87)
+			(xy 82.55 170.18) (xy 82.55 229.87)
 		)
 		(stroke
 			(width 0)
@@ -5523,16 +5523,6 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 185.42) (xy 82.55 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a684519-adc5-4005-85a6-1c13141c3985")
-	)
-	(wire
-		(pts
 			(xy 128.27 172.72) (xy 138.43 172.72)
 		)
 		(stroke
@@ -5550,16 +5540,6 @@
 			(type default)
 		)
 		(uuid "0f23e26f-ba9b-4f2e-b4be-ebc406eccf8d")
-	)
-	(wire
-		(pts
-			(xy 55.88 185.42) (xy 63.5 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f5895e6-b4b0-4e0b-848e-f9c9acedc26a")
 	)
 	(wire
 		(pts
@@ -5680,6 +5660,16 @@
 			(type default)
 		)
 		(uuid "25466371-be12-4d21-94a9-28a7d9511509")
+	)
+	(wire
+		(pts
+			(xy 49.53 170.18) (xy 50.8 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26a04534-cbaa-4486-9706-181e392cc412")
 	)
 	(wire
 		(pts
@@ -5820,6 +5810,16 @@
 			(type default)
 		)
 		(uuid "36ff1e96-d278-4d7b-b5d8-c21d2b412fbc")
+	)
+	(wire
+		(pts
+			(xy 55.88 187.96) (xy 55.88 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38491b81-665e-4828-8af6-2882bda59017")
 	)
 	(wire
 		(pts
@@ -6060,16 +6060,6 @@
 			(type default)
 		)
 		(uuid "50ffbf1e-80f7-44e4-bca6-bad35b3809c5")
-	)
-	(wire
-		(pts
-			(xy 55.88 177.8) (xy 55.88 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5280864b-8d7a-4c6a-affd-c9876bf26cfe")
 	)
 	(wire
 		(pts
@@ -6563,7 +6553,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 170.18) (xy 50.8 170.18)
+			(xy 45.72 170.18) (xy 49.53 170.18)
 		)
 		(stroke
 			(width 0)
@@ -6793,6 +6783,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 170.18) (xy 49.53 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4d8c09e-cd79-4682-9ba2-db9229b7d4a4")
+	)
+	(wire
+		(pts
 			(xy 177.8 181.61) (xy 184.15 181.61)
 		)
 		(stroke
@@ -6910,6 +6910,16 @@
 			(type default)
 		)
 		(uuid "b28f7e5a-c273-4f14-9442-c2e7de78020b")
+	)
+	(wire
+		(pts
+			(xy 49.53 187.96) (xy 55.88 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3092270-34e1-4ae6-84be-9975f79393f4")
 	)
 	(wire
 		(pts
@@ -7343,7 +7353,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 185.42) (xy 55.88 189.23)
+			(xy 55.88 177.8) (xy 55.88 187.96)
 		)
 		(stroke
 			(width 0)
@@ -7453,6 +7463,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 186.69) (xy 49.53 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed9e3732-3d5b-45ce-803c-92b8bcbe46fd")
+	)
+	(wire
+		(pts
 			(xy 344.17 168.91) (xy 341.63 168.91)
 		)
 		(stroke
@@ -7520,16 +7540,6 @@
 			(type default)
 		)
 		(uuid "fb05b922-cb2c-4e15-a610-75858b517fb2")
-	)
-	(wire
-		(pts
-			(xy 82.55 170.18) (xy 82.55 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb70ba6d-5786-43fa-b692-2521dafb2d3a")
 	)
 	(wire
 		(pts
@@ -11894,147 +11904,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:AO3401A")
-		(at 55.88 172.72 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "91ef0f43-144f-46a5-9ecc-8b0d9359843b")
-		(property "Reference" "Q1"
-			(at 55.88 163.83 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AO3401A"
-			(at 55.88 166.37 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 57.785 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
-			(at 59.69 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
-			(at 55.88 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 55.88 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DPN" "785-1001-1-ND"
-			(at 55.88 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "Alpha & Omega Semiconductor Inc."
-			(at 55.88 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "AO3401A"
-			(at 55.88 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO3401A/1855773"
-			(at 55.88 172.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "d61c75bf-b27c-46b2-abd3-96d7034eb02b")
-		)
-		(pin "2"
-			(uuid "9141bd9e-9ed6-46a1-9359-c21f3c634c38")
-		)
-		(pin "1"
-			(uuid "0ac10aa3-1ebc-4e32-b48e-21088faebe82")
-		)
-		(instances
-			(project "VCU_Module"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 199.39 168.91 0)
 		(unit 1)
@@ -13442,6 +13311,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:SUD19P06-60")
+		(at 55.88 172.72 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c455c649-fe12-43f2-ad59-5686a4f338a8")
+		(property "Reference" "Q1"
+			(at 55.88 163.83 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SUD19P06-60"
+			(at 55.88 166.37 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+			(at 53.975 167.767 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/69253/sud19p06.pdf"
+			(at 52.07 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "-19A Id, -60V Vds, TrenchFET P-Channel Power MOSFET, 60mOhm Ron, 40nC Qg, -55 to 150 °C, TO-252-2"
+			(at 55.88 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb8042b4-5303-4ff8-8639-a6811e4db9d2")
+		)
+		(pin "2"
+			(uuid "3df562eb-3dde-4535-9625-356de1cab6d7")
+		)
+		(pin "3"
+			(uuid "0fe3da22-f4a5-432f-9695-5caaa0cc3c1a")
+		)
+		(instances
+			(project "VCU_Module"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Fuse")
 		(at 25.4 162.56 180)
 		(unit 1)
@@ -14215,7 +14170,7 @@
 				)
 			)
 		)
-		(property "Value" "43.2k"
+		(property "Value" "24.9k"
 			(at 149.606 245.364 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14947,7 +14902,8 @@
 	)
 	(symbol
 		(lib_id "MMSZ5245B_7_F:MMSZ5245B-7-F")
-		(at 63.5 185.42 0)
+		(at 49.53 186.69 270)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14955,30 +14911,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ff8daf02-cd62-4a7a-91f6-f745700bfd78")
 		(property "Reference" "CR1"
-			(at 68.58 179.07 0)
+			(at 45.72 180.3399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "MMSZ5245B-7-F"
-			(at 68.58 181.61 0)
+		(property "Value" "MMSZ5240B"
+			(at 45.72 182.8799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "VMS_Footprints:SOD123_DIO"
-			(at 63.5 185.42 0)
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14989,8 +14946,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "MMSZ5245B-7-F"
-			(at 63.5 185.42 0)
+		(property "Datasheet" "MMSZ5240B"
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15002,7 +14959,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 63.5 185.42 0)
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15013,7 +14970,7 @@
 			)
 		)
 		(property "DIS" "DigiKey"
-			(at 63.5 185.42 0)
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15024,7 +14981,7 @@
 			)
 		)
 		(property "DPN" "MMSZ5245B-FDICT-ND"
-			(at 63.5 185.42 0)
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15035,7 +14992,7 @@
 			)
 		)
 		(property "MFR" "Diodes Incorporated"
-			(at 63.5 185.42 0)
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15045,8 +15002,8 @@
 				)
 			)
 		)
-		(property "MPN" "MMSZ5245B-7-F"
-			(at 63.5 185.42 0)
+		(property "MPN" "MMSZ5240B"
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15056,8 +15013,8 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/diodes-incorporated/MMSZ5245B-7-F/717792"
-			(at 63.5 185.42 0)
+		(property "Purchase Link" ""
+			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

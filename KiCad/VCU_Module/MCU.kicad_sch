@@ -6671,14 +6671,15 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 182.88 44.45 0)
+		(property "Value" "3V3"
+			(at 185.42 48.2599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -7336,7 +7337,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "357277f9-221d-46b3-b6aa-a8801591fc91")
 		(property "Reference" "#PWR044"
 			(at 189.23 194.31 0)
@@ -7349,14 +7349,15 @@
 				)
 			)
 		)
-		(property "Value" "+5V"
-			(at 189.23 185.42 0)
+		(property "Value" "5V"
+			(at 187.706 186.69 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -7560,7 +7561,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "3V3"
 			(at 110.49 100.584 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8064,14 +8065,15 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 106.68 52.07 0)
+		(property "Value" "3V3"
+			(at 109.22 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -8129,7 +8131,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5e203edf-8309-4417-bbb8-55b9c46915dd")
 		(property "Reference" "#PWR049"
 			(at 358.14 116.84 0)
@@ -8142,14 +8143,15 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 358.14 107.95 0)
+		(property "Value" "3V3"
+			(at 356.362 108.458 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -9498,7 +9500,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "97df682e-ae23-40d7-a653-ec3b1f81d29c")
 		(property "Reference" "#PWR045"
 			(at 196.85 194.31 0)
@@ -9511,14 +9512,15 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 196.85 185.42 0)
+		(property "Value" "3V3"
+			(at 195.326 185.928 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""

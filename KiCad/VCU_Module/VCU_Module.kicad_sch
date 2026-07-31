@@ -4967,6 +4967,16 @@
 		)
 		(uuid "da9bcfa5-18dc-43ca-99a4-2838e8222b89")
 	)
+	(text "specify in the chematic what is the fuse, what is the part number, change to fuse holder and fuse, maybe ptc fuse. probably smd holder and fuse smallest i can find\n\nchange user leds remove transistor, move them next \n\nc13 between reset and ground, double check data sheet\n\ndouble check pa2 and pa3 are wired correctly\n\ndouble check pa13 and pa14\n\nreroute traces and get pcb finalized\n\n\n\n\n"
+		(exclude_from_sim no)
+		(at 233.68 97.536 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e24bdd06-cd68-43d9-bebe-7c2cade99d2a")
+	)
 	(text ""
 		(exclude_from_sim no)
 		(at 126.746 29.972 0)

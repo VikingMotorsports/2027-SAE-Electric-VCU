@@ -1,0 +1,231 @@
+(footprint "FUSE_3568"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -5.075 -4.385 0)
+		(layer "F.SilkS")
+		(uuid "5ba34627-0092-426c-950f-cc9d6e28dc19")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "FUSE_3568"
+		(at -2.535 4.365 0)
+		(layer "F.Fab")
+		(uuid "9ff1d5e9-9543-457a-81d8-040d78a9dd1b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31675ac9-0ec2-41e0-a11e-5fafecd567f7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "80097f4e-54d2-404e-8693-78de298e73b7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -8 -3.365)
+		(end 8 -3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "00a5ffa7-be88-44d9-814b-5a8c3709fbe0")
+	)
+	(fp_line
+		(start -8 3.365)
+		(end -8 -3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "49a21371-6fc9-4d1c-a19f-231b619defb6")
+	)
+	(fp_line
+		(start 8 -3.365)
+		(end 8 3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f53f59fb-0e9e-4479-a272-3beb5f51830d")
+	)
+	(fp_line
+		(start 8 3.365)
+		(end -8 3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "95fd9c7f-46fe-4cc2-b497-8a01b149422c")
+	)
+	(fp_line
+		(start -8.25 -3.615)
+		(end 8.25 -3.615)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "83f97053-058a-41a4-a7f1-ad44993f62a4")
+	)
+	(fp_line
+		(start -8.25 3.615)
+		(end -8.25 -3.615)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8b8a16ee-913b-4851-aa3d-0e8406219568")
+	)
+	(fp_line
+		(start 8.25 -3.615)
+		(end 8.25 3.615)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "59f0e48f-b658-43e9-ac0a-e2776156f94d")
+	)
+	(fp_line
+		(start 8.25 3.615)
+		(end -8.25 3.615)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "798a2c26-b6d1-426d-8055-099b4849a9f3")
+	)
+	(fp_line
+		(start -8 -3.365)
+		(end 8 -3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "afd2d981-16f7-473c-836e-593405664626")
+	)
+	(fp_line
+		(start -8 3.365)
+		(end -8 -3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "42e30f19-336e-489f-8f88-65a607ccdc59")
+	)
+	(fp_line
+		(start 8 -3.365)
+		(end 8 3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "58a57680-e5e2-4d65-a2c3-addbbb7600c7")
+	)
+	(fp_line
+		(start 8 3.365)
+		(end -8 3.365)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bfcb555a-9ffb-44b6-99b6-d94008b10d25")
+	)
+	(pad "1" thru_hole circle
+		(at -4.96 -1.7)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "35e3a4fe-429a-41f8-8747-004b13267ec2")
+	)
+	(pad "2" thru_hole circle
+		(at 4.96 -1.7)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "87b56bd7-9fa5-4052-a70f-8275dd5f29cb")
+	)
+	(pad "3" thru_hole circle
+		(at -4.96 1.7)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "802f0ddd-97ae-4b2c-9196-8aaca83f42f2")
+	)
+	(pad "4" thru_hole circle
+		(at 4.96 1.7)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "cc89c74f-22a7-436e-95c5-32737067232b")
+	)
+	(embedded_fonts no)
+	(model "${VCU_MODELS}/Keystone_3568_Fuse_Holder.step"
+		(offset
+			(xyz -1 0.25 5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+	(model "${VCU_MODELS}/ANM58 Auto Blade Fuse.stp"
+		(offset
+			(xyz 0.1 0 16)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 90)
+		)
+	)
+)

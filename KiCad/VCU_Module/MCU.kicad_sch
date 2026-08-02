@@ -6452,7 +6452,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 82.55 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -6463,7 +6463,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" ""
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6474,7 +6474,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1140-1-ND"
+		(property "DPN" ""
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6485,7 +6485,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" ""
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6496,7 +6496,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805KRX7R9BB104"
+		(property "MPN" ""
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6507,7 +6507,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874"
+		(property "Purchase Link" ""
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7576,7 +7576,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 105.41 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -7587,7 +7587,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" ""
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7598,7 +7598,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1140-1-ND"
+		(property "DPN" ""
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7609,7 +7609,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" ""
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7620,7 +7620,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805KRX7R9BB104"
+		(property "MPN" ""
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7631,7 +7631,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874"
+		(property "Purchase Link" ""
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7714,8 +7714,63 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "TVS Diode"
 			(at 44.45 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "497-ESDA051-1JYCT-ND"
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "STMicroelectronics"
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ESDA051-1JY"
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/stmicroelectronics/ESDA051-1JY/11686344?s=N4IgTCBcDaIKIGUAiBBADAVgIwFosCkBNEAXQF8g"
+			(at 44.45 67.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9388,7 +9443,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9399,7 +9454,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" ""
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9410,7 +9465,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1140-1-ND"
+		(property "DPN" ""
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9421,7 +9476,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" ""
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9432,7 +9487,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805KRX7R9BB104"
+		(property "MPN" ""
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9443,7 +9498,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874"
+		(property "Purchase Link" ""
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9937,7 +9992,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9948,7 +10003,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9959,7 +10014,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1365-1-ND"
+		(property "DPN" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9970,7 +10025,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9981,7 +10036,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805KKX7R7BB105"
+		(property "MPN" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9992,7 +10047,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KKX7R7BB105/2103103"
+		(property "Purchase Link" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10668,7 +10723,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10679,7 +10734,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10690,7 +10745,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1140-1-ND"
+		(property "DPN" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10701,7 +10756,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10712,7 +10767,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0805KRX7R9BB104"
+		(property "MPN" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10723,7 +10778,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/CC0805KRX7R9BB104/302874"
+		(property "Purchase Link" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)

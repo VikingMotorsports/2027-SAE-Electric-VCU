@@ -76,7 +76,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "items_not_allowed|108950000|50933375|9d80e28b-c32c-4349-9498-e9d7e7ad521e|00000000-0000-0000-0000-000000000000",
+          "Not allowing copper fill zone in keepout area?"
+        ],
+        [
+          "items_not_allowed|152930819|58799760|61dc8630-222a-4054-aea7-8022d72019a3|00000000-0000-0000-0000-000000000000",
+          "footprint conflicts with itself"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -86,7 +95,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "ignore",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
@@ -943,7 +952,7 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "#FLG1-5,R11,Q2",
+    "used_designators": "Q1,CR1,H1,F1",
     "variants": []
   },
   "sheets": [

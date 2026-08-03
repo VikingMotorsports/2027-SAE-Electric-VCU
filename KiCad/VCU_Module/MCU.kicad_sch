@@ -6441,7 +6441,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-sg/api/pdfdownloadapi?cate=luCeramicCapacitorsSMD&partno=GCJ21BR72A104KA01%23"
 			(at 82.55 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -6452,7 +6452,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "0.1 µF ±10% 100V Ceramic Capacitor X7R 0805 (2012 Metric)"
 			(at 82.55 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -6463,7 +6463,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6474,7 +6474,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "490-5825-1-ND"
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6485,7 +6485,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Murata Electronics"
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6496,7 +6496,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "GCJ21BR72A104KA01L"
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6507,7 +6507,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" ""
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCJ21BR72A104KA01L/2786665"
 			(at 82.55 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -6577,7 +6577,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/SG73S.pdf"
 			(at 104.14 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -6588,7 +6588,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small US symbol"
+		(property "Description" "120 Ohms ±1% 0.75W, 3/4W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200, Moisture Resistant, Pulse Withstanding Thick Film"
 			(at 104.14 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -6610,7 +6610,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-10.0KCRCT-ND"
+		(property "DPN" "2019-SG73S2ATTD1200FCT-ND"
 			(at 104.14 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -6621,7 +6621,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" "KOA Speer Electronics, Inc."
 			(at 104.14 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -6632,7 +6632,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710KL"
+		(property "MPN" "SG73S2ATTD1200F"
 			(at 104.14 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -6643,7 +6643,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD1200F/10279903"
 			(at 104.14 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -6869,7 +6869,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/20005284A.pdf"
 			(at 86.36 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -7565,7 +7565,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-sg/api/pdfdownloadapi?cate=luCeramicCapacitorsSMD&partno=GCJ21BR72A104KA01%23"
 			(at 105.41 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -7576,7 +7576,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "0.1 µF ±10% 100V Ceramic Capacitor X7R 0805 (2012 Metric)"
 			(at 105.41 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -7587,7 +7587,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7598,7 +7598,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "490-5825-1-ND"
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7609,7 +7609,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Murata Electronics"
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7620,7 +7620,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "GCJ21BR72A104KA01L"
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7631,7 +7631,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" ""
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCJ21BR72A104KA01L/2786665"
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -7714,7 +7714,7 @@
 				)
 			)
 		)
-		(property "Description" "TVS Diode"
+		(property "Description" "12.8V Clamp 20A (8/20µs) Ipp Tvs Diode Surface Mount SOD-323"
 			(at 44.45 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -8007,7 +8007,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "41V Clamp 3A (8/20µs) Ipp Tvs Diode Surface Mount SOT-323-3"
 			(at 138.43 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -8791,7 +8791,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/SG73S.pdf"
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8802,7 +8802,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small US symbol"
+		(property "Description" "360 Ohms ±1% 0.75W, 3/4W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200, Moisture Resistant, Pulse Withstanding Thick Film"
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8824,7 +8824,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1.00KCRCT-ND"
+		(property "DPN" "2019-SG73S2ATTD3600FCT-ND"
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8835,7 +8835,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" "KOA Speer Electronics, Inc."
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8846,7 +8846,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-071KL"
+		(property "MPN" "SG73S2ATTD3600F"
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8857,7 +8857,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD3600F/10279941"
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9294,7 +9294,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf"
 			(at 34.29 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9305,7 +9305,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
+		(property "Description" "Tactile Switch SPST-NO Top Actuated Through Hole"
 			(at 34.29 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9432,7 +9432,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-sg/api/pdfdownloadapi?cate=luCeramicCapacitorsSMD&partno=GCJ21BR72A104KA01%23"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9443,7 +9443,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "0.1 µF ±10% 100V Ceramic Capacitor X7R 0805 (2012 Metric)"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9454,7 +9454,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9465,7 +9465,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "490-5825-1-ND"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9476,7 +9476,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Murata Electronics"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9487,7 +9487,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "GCJ21BR72A104KA01L"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9498,7 +9498,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" ""
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCJ21BR72A104KA01L/2786665"
 			(at 54.61 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9566,7 +9566,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/SG73S.pdf"
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9577,7 +9577,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small US symbol"
+		(property "Description" "680 Ohms ±1% 0.75W, 3/4W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200, Moisture Resistant, Pulse Withstanding Thick Film"
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9599,7 +9599,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-1.00KCRCT-ND"
+		(property "DPN" "2019-SG73S2ATTD6800FCT-ND"
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9610,7 +9610,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" "KOA Speer Electronics, Inc."
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9621,7 +9621,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-071KL"
+		(property "MPN" "SG73S2ATTD6800F"
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9632,7 +9632,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-071KL/727444"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD6800F/10279885"
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9700,7 +9700,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.qt-brightek.com/datasheet/QBLP631-2IB.pdf"
 			(at 246.38 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9711,7 +9711,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Blue 466nm LED Indication - Discrete 2.9V 0805 (2012 Metric)"
 			(at 246.38 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9744,7 +9744,7 @@
 				)
 			)
 		)
-		(property "DPN" "160-1179-1-ND"
+		(property "DPN" "1516-QBLP631-2IBCT-ND"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9755,7 +9755,7 @@
 				)
 			)
 		)
-		(property "MFR" "Lite-On Inc."
+		(property "MFR" "QT Brightek (QTB)"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9766,7 +9766,7 @@
 				)
 			)
 		)
-		(property "MPN" "LTST-C170GKT"
+		(property "MPN" "QBLP631-2IB"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9777,7 +9777,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/liteon/LTST-C170GKT/269226"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBLP631-2IB/23026403"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9981,7 +9981,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_automotive_midvoltage_en.pdf"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9992,7 +9992,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1 µF ±10% 100V Ceramic Capacitor X7S 0805 (2012 Metric)"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10003,7 +10003,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10014,7 +10014,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "445-6974-1-ND"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10025,7 +10025,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "TDK"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10036,7 +10036,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "CGA4J3X7S2A105K125AB"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10047,7 +10047,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" ""
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/tdk/CGA4J3X7S2A105K125AB/2672867"
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10118,7 +10118,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://suddendocs.samtec.com/catalog_english/td.pdf"
 			(at 115.57 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -10129,7 +10129,62 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
+		(property "Description" "2 Position Header Connector Post Tin"
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "612-TS-102-T-A-ND"
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Samtec Inc."
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TS-102-T-A"
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/TS-102-T-A/1105492"
 			(at 115.57 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -10199,7 +10254,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/SG73S.pdf"
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10210,7 +10265,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small US symbol"
+		(property "Description" "10 kOhms ±5% 0.75W, 3/4W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200, Moisture Resistant, Pulse Withstanding Thick Film"
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10232,7 +10287,7 @@
 				)
 			)
 		)
-		(property "DPN" "311-10.0KCRCT-ND"
+		(property "DPN" "2019-SG73S2ATTD103JCT-ND"
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10243,7 +10298,7 @@
 				)
 			)
 		)
-		(property "MFR" "YAGEO"
+		(property "MFR" "KOA Speer Electronics, Inc."
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10254,7 +10309,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710KL"
+		(property "MPN" "SG73S2ATTD103J"
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10265,7 +10320,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD103J/10279997"
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10488,7 +10543,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/895/LTST-C170GKT.pdf"
 			(at 138.43 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10499,7 +10554,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Green 569nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
 			(at 138.43 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10712,7 +10767,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-sg/api/pdfdownloadapi?cate=luCeramicCapacitorsSMD&partno=GCJ21BR72A104KA01%23"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10723,7 +10778,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "0.1 µF ±10% 100V Ceramic Capacitor X7R 0805 (2012 Metric)"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10734,7 +10789,7 @@
 				)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "DigiKey"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10745,7 +10800,7 @@
 				)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "490-5825-1-ND"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10756,7 +10811,7 @@
 				)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Murata Electronics"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10767,7 +10822,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "GCJ21BR72A104KA01L"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10778,7 +10833,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" ""
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCJ21BR72A104KA01L/2786665"
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)

@@ -6638,6 +6638,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 82.55 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 82.55 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 82.55 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e19ac2cd-2330-43d2-81b9-2da98a58ea09")
 		)
@@ -6774,6 +6807,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 104.14 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 104.14 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 104.14 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dc3671b7-45f5-4b87-b7f0-e762167bab97")
 		)
@@ -6898,6 +6964,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD1001F/10279896"
+			(at 138.43 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 138.43 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 138.43 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 138.43 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -7287,6 +7386,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/microchip-technology/MCP2562FDT-H-SN/4860107"
+			(at 86.36 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q100"
+			(at 86.36 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 86.36 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 86.36 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -7764,6 +7896,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" ""
+			(at 66.04 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 66.04 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 66.04 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d26c4616-7751-4515-b675-e2c3e88cc08f")
 		)
@@ -7886,6 +8051,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCJ21BR72A104KA01L/2786665"
+			(at 105.41 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 105.41 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 105.41 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 105.41 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -8034,6 +8232,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q101"
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 44.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "57957069-966f-4c33-857e-c06841e5b1f4")
 		)
@@ -8158,6 +8389,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD1001F/10279896"
+			(at 246.38 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 246.38 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 246.38 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 246.38 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8461,6 +8725,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q101"
+			(at 138.43 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 138.43 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 138.43 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "84873aba-325f-40f4-aeef-f00b2eabcc53")
 		)
@@ -8591,6 +8888,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/FTSH-107-01-F-DV-K/2650001"
+			(at 40.64 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 40.64 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 40.64 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 40.64 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -8850,6 +9180,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32C092RCT6/25935639"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 160.02 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 160.02 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9494,6 +9857,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" ""
+			(at 66.04 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 66.04 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 66.04 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ba643d2d-9037-4f7e-80a3-47fe57077aae")
 		)
@@ -9617,6 +10013,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3F-1000/33150"
+			(at 34.29 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 34.29 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 34.29 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 34.29 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9765,6 +10194,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 54.61 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 54.61 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 54.61 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "57554721-71b3-4dab-aea0-83b87b00139a")
 		)
@@ -9822,7 +10284,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.qt-brightek.com/datasheet/QBLP631-2IB.pdf"
+		(property "Datasheet" "https://www.rohm.com/datasheet?p=SMLMN2BCT(C)&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key"
 			(at 246.38 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9833,7 +10295,7 @@
 				)
 			)
 		)
-		(property "Description" "Blue 466nm LED Indication - Discrete 2.9V 0805 (2012 Metric)"
+		(property "Description" "Blue 470nm LED Indication - Discrete 2.9V 0805 (2012 Metric)"
 			(at 246.38 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -9866,7 +10328,7 @@
 				)
 			)
 		)
-		(property "DPN" "1516-QBLP631-2IBCT-ND"
+		(property "DPN" "846-1207-1-ND"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9877,7 +10339,7 @@
 				)
 			)
 		)
-		(property "MFR" "QT Brightek (QTB)"
+		(property "MFR" "Rohm Semiconductor"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9888,7 +10350,7 @@
 				)
 			)
 		)
-		(property "MPN" "QBLP631-2IB"
+		(property "MPN" "SMLMN2BCTT86C"
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -9899,7 +10361,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBLP631-2IB/23026403"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/rohm-semiconductor/SMLMN2BCTT86C/6057236"
+			(at 246.38 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q102"
+			(at 246.38 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 246.38 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 246.38 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -10047,6 +10542,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" ""
+			(at 66.04 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 66.04 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 66.04 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "84729b5d-4618-4bb1-b408-1b624911fa63")
 		)
@@ -10170,6 +10698,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/tdk/CGA4J3X7S2A105K125AB/2672867"
+			(at 163.83 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 163.83 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 163.83 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 163.83 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10317,6 +10878,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 115.57 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "66d54eba-fee4-4fa3-95fd-4fe2e5d3cf59")
 		)
@@ -10443,6 +11037,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD103J/10279997"
+			(at 73.66 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 73.66 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 73.66 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 73.66 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -10665,7 +11292,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150080AS75000.pdf"
+		(property "Datasheet" "https://www.rohm.com/datasheet?p=SML-H12D8T(C)&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key"
 			(at 138.43 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10676,7 +11303,7 @@
 				)
 			)
 		)
-		(property "Description" "Amber 605nm LED Indication - Discrete 2V 0805 (2012 Metric)"
+		(property "Description" "Orange 605nm LED Indication - Discrete 2.2V 0805 (2012 Metric)"
 			(at 138.43 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10709,7 +11336,7 @@
 				)
 			)
 		)
-		(property "DPN" "732-150080AS75000CT-ND"
+		(property "DPN" "SML-H12D8TT86CCT-ND"
 			(at 138.43 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -10720,7 +11347,7 @@
 				)
 			)
 		)
-		(property "MFR" "Würth Elektronik"
+		(property "MFR" "Rohm Semiconductor"
 			(at 138.43 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -10731,7 +11358,7 @@
 				)
 			)
 		)
-		(property "MPN" "150080AS75000"
+		(property "MPN" "SML-H12D8TT86C"
 			(at 138.43 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -10742,7 +11369,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/150080AS75000/11479384"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/rohm-semiconductor/SML-H12D8TT86C/9090443"
+			(at 138.43 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q101"
+			(at 138.43 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 138.43 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 138.43 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -10956,6 +11616,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCJ21BR72A104KA01L/2786665"
+			(at 173.99 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 173.99 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 173.99 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 173.99 53.34 0)
 			(hide yes)
 			(show_name no)

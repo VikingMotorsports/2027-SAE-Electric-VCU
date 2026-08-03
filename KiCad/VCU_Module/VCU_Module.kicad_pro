@@ -747,6 +747,12 @@
           "show": true
         },
         {
+          "group_by": false,
+          "label": "Automotive Certification",
+          "name": "Automotive Certification",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "DIS",
           "name": "DIS",
@@ -757,6 +763,12 @@
           "label": "DPN",
           "name": "DPN",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "AEC-Q101",
+          "name": "AEC-Q101",
+          "show": false
         },
         {
           "group_by": false,
@@ -901,6 +913,18 @@
           "label": "SNAPEDA_PN",
           "name": "SNAPEDA_PN",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "AEC-Q200",
+          "name": "AEC-Q200",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "AEC-Q100",
+          "name": "AEC-Q100",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -917,7 +941,13 @@
       "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
-      "field_names": [],
+      "field_names": [
+        {
+          "name": "Automotive Certification",
+          "url": false,
+          "visible": true
+        }
+      ],
       "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
@@ -959,7 +989,7 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "Q1,N1,F1-2,U1,CR1,H1,R3,R9,J18-19,#PWR40,#PWR44-46,C16-17",
+    "used_designators": "J20-51",
     "variants": []
   },
   "sheets": [

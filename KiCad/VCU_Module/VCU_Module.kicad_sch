@@ -2106,1134 +2106,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_02x06_Counter_Clockwise"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_02x06_Counter_Clockwise"
-				(at 1.27 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x06, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_02x06_Counter_Clockwise_1_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 3.81 -8.89)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 5.207)
-					(end 2.54 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -7.493)
-					(end 2.54 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -7.62 180)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 5.08 180)
-					(length 3.81)
-					(name "Pin_12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_02x10_Counter_Clockwise"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_02x10_Counter_Clockwise"
-				(at 1.27 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x10, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_02x10_Counter_Clockwise_1_1"
-				(rectangle
-					(start -1.27 11.43)
-					(end 3.81 -13.97)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 10.287)
-					(end 0 10.033)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -10.033)
-					(end 0 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -12.573)
-					(end 0 -12.827)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 10.287)
-					(end 2.54 10.033)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 7.747)
-					(end 2.54 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 5.207)
-					(end 2.54 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -7.493)
-					(end 2.54 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -10.033)
-					(end 2.54 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -12.573)
-					(end 2.54 -12.827)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 10.16 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 7.62 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -10.16 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 0)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -12.7 180)
-					(length 3.81)
-					(name "Pin_11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -10.16 180)
-					(length 3.81)
-					(name "Pin_12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -7.62 180)
-					(length 3.81)
-					(name "Pin_13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 5.08 180)
-					(length 3.81)
-					(name "Pin_18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 7.62 180)
-					(length 3.81)
-					(name "Pin_19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 10.16 180)
-					(length 3.81)
-					(name "Pin_20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -6811,148 +5683,20 @@
 		(uuid "fa956355-5c69-4d0c-bd0f-e6a2005f7450")
 	)
 	(no_connect
-		(at 82.55 107.95)
-		(uuid "03604e69-5cb4-4fa2-8974-c0e32d26ee1d")
-	)
-	(no_connect
-		(at 82.55 123.19)
-		(uuid "07717ab2-c237-4309-8ee4-3649c6caab92")
-	)
-	(no_connect
 		(at 128.27 240.03)
 		(uuid "1cae717d-e5d2-4fba-9018-411f1adc4c7e")
-	)
-	(no_connect
-		(at 82.55 110.49)
-		(uuid "239127df-354a-421b-8f9e-75b1817ef653")
-	)
-	(no_connect
-		(at 95.25 102.87)
-		(uuid "2ab1683d-e602-4401-abf9-253e704aae49")
-	)
-	(no_connect
-		(at 60.96 123.19)
-		(uuid "2c63c5de-4701-4d17-9693-39186167750f")
-	)
-	(no_connect
-		(at 82.55 125.73)
-		(uuid "3954478a-3c18-4e45-9570-991e90a1764a")
-	)
-	(no_connect
-		(at 95.25 118.11)
-		(uuid "3be3af4f-0ed5-4cc0-8911-9494b9354037")
-	)
-	(no_connect
-		(at 82.55 102.87)
-		(uuid "3f05dee7-dce3-4e6c-9419-fe5b5fafdce7")
-	)
-	(no_connect
-		(at 60.96 125.73)
-		(uuid "5ebd30c4-6a79-4bbf-94f2-78bee6a2f4ff")
-	)
-	(no_connect
-		(at 60.96 120.65)
-		(uuid "63e569f4-a55e-4a6f-ba41-92d7ec2cadce")
-	)
-	(no_connect
-		(at 48.26 120.65)
-		(uuid "66752241-5d2c-4387-97fc-3964ab09a60e")
-	)
-	(no_connect
-		(at 60.96 113.03)
-		(uuid "6850c151-e771-461a-a655-7379a3410e8d")
 	)
 	(no_connect
 		(at 128.27 180.34)
 		(uuid "6a5e5da1-554c-467f-a456-84d22462a015")
 	)
 	(no_connect
-		(at 82.55 118.11)
-		(uuid "6e821b87-db03-410b-a737-8b4b0133ade9")
-	)
-	(no_connect
-		(at 95.25 125.73)
-		(uuid "7645bf4a-6357-41ac-bcc2-c1e180ea6ceb")
-	)
-	(no_connect
-		(at 95.25 113.03)
-		(uuid "77b22e42-efcb-422e-947c-7b04e78b2b1b")
-	)
-	(no_connect
-		(at 60.96 115.57)
-		(uuid "79d1b052-68a8-490c-9dcc-d57d770292fd")
-	)
-	(no_connect
-		(at 82.55 113.03)
-		(uuid "801ac5c1-af1e-4943-91a0-b7121871379d")
-	)
-	(no_connect
-		(at 48.26 125.73)
-		(uuid "86464283-454f-4a4e-854e-b7504fbcad51")
-	)
-	(no_connect
-		(at 82.55 115.57)
-		(uuid "86b5b882-6042-4ee5-9108-45162432239d")
-	)
-	(no_connect
-		(at 60.96 118.11)
-		(uuid "925080f8-a920-4c4b-9df2-ef48fed9d1e6")
-	)
-	(no_connect
-		(at 95.25 115.57)
-		(uuid "9e2f200a-5afa-4f40-8141-4076913174d5")
-	)
-	(no_connect
-		(at 95.25 110.49)
-		(uuid "a2afa199-b438-4708-b215-2ac24a14b3db")
-	)
-	(no_connect
-		(at 95.25 120.65)
-		(uuid "a2cd76ae-5e9f-451e-9880-474904eb3961")
-	)
-	(no_connect
-		(at 82.55 105.41)
-		(uuid "a9397949-3f59-4f37-931a-d73db08557df")
-	)
-	(no_connect
-		(at 95.25 105.41)
-		(uuid "ad186206-80cf-4d8e-a938-1330200978f5")
-	)
-	(no_connect
-		(at 48.26 113.03)
-		(uuid "aebf9aa3-236b-476a-bfed-93d735dadf90")
-	)
-	(no_connect
-		(at 48.26 115.57)
-		(uuid "b29e1f76-6953-44cd-98f4-7e802a25f99d")
-	)
-	(no_connect
 		(at 27.94 158.75)
 		(uuid "b7cd1649-31fb-47da-9b9c-7df0d7498549")
 	)
 	(no_connect
-		(at 95.25 107.95)
-		(uuid "c1259b00-32ef-469e-8938-20dd62139d6c")
-	)
-	(no_connect
-		(at 95.25 123.19)
-		(uuid "d429ca5d-fe6c-4218-929c-1d5663984715")
-	)
-	(no_connect
-		(at 82.55 120.65)
-		(uuid "e6f1fbca-364b-4fd0-b011-7a3df789b909")
-	)
-	(no_connect
-		(at 48.26 123.19)
-		(uuid "eac1d43e-ae68-4dac-b6b4-dac4c6d9ffb6")
-	)
-	(no_connect
 		(at 27.94 151.13)
 		(uuid "ec2e7d30-ebbc-4307-bd9e-cae998fa05e1")
-	)
-	(no_connect
-		(at 48.26 118.11)
-		(uuid "f85a6422-7f67-4d19-b131-9620972e821c")
 	)
 	(wire
 		(pts
@@ -9256,7 +8000,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/895/LTST-C170GKT.pdf"
+		(property "Datasheet" "https://www.rohm.com/datasheet?p=SMLMN2ECT(C)&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key"
 			(at 199.39 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -9267,7 +8011,7 @@
 				)
 			)
 		)
-		(property "Description" "Green 569nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
+		(property "Description" "Green 527nm LED Indication - Discrete 3V 0805 (2012 Metric)"
 			(at 199.39 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -9300,7 +8044,7 @@
 				)
 			)
 		)
-		(property "DPN" "160-1179-1-ND"
+		(property "DPN" "846-SMLMN2ECTT86CCT-ND"
 			(at 199.39 187.96 90)
 			(hide yes)
 			(show_name no)
@@ -9311,7 +8055,7 @@
 				)
 			)
 		)
-		(property "MFR" "Lite-On Inc."
+		(property "MFR" "Rohm Semiconductor"
 			(at 199.39 187.96 90)
 			(hide yes)
 			(show_name no)
@@ -9322,7 +8066,7 @@
 				)
 			)
 		)
-		(property "MPN" "LTST-C170GKT"
+		(property "MPN" "SMLMN2ECTT86C"
 			(at 199.39 187.96 90)
 			(hide yes)
 			(show_name no)
@@ -9333,7 +8077,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/liteon/LTST-C170GKT/269226"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/rohm-semiconductor/SMLMN2ECTT86C/12359500"
+			(at 199.39 187.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q102"
+			(at 199.39 187.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 199.39 187.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 199.39 187.96 90)
 			(hide yes)
 			(show_name no)
@@ -9404,7 +8181,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://calchip.com/wp-content/uploads/2026/04/GMC-Series-1.pdf"
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRT21BR61C226ME13-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9415,7 +8192,7 @@
 				)
 			)
 		)
-		(property "Description" "22 µF ±10% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
+		(property "Description" "22 µF ±20% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9437,7 +8214,7 @@
 				)
 			)
 		)
-		(property "DPN" "4713-GMC21X5R226K16NTCT-ND"
+		(property "DPN" "490-GRT21BR61C226ME13KCT-ND"
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9448,7 +8225,7 @@
 				)
 			)
 		)
-		(property "MFR" "Cal-Chip Electronics, Inc."
+		(property "MFR" "Murata Electronics"
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9459,7 +8236,7 @@
 				)
 			)
 		)
-		(property "MPN" "GMC21X5R226K16NT"
+		(property "MPN" "GRT21BR61C226ME13K"
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9470,7 +8247,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R226K16NT/25672142"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRT21BR61C226ME13K/13904964"
+			(at 177.8 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 177.8 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 177.8 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9605,6 +8415,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD1003F/10279970"
+			(at 153.67 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 153.67 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 153.67 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 153.67 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -9777,6 +8620,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cinch-connectivity-solutions/5810132011/6199347?s=N4IgTCBcDaIKwA4CMAGJBmMakgLoF8g"
+			(at 46.99 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "IP67 and IP69K"
+			(at 46.99 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 46.99 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 46.99 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -10092,6 +8968,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 38.1 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 38.1 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 38.1 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "7b55ff4b-25a3-43f0-a6b1-89171cc73c11")
 		)
@@ -10224,6 +9133,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+			(at 350.52 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 350.52 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 350.52 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -10395,6 +9337,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 134.62 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 134.62 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 134.62 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4025c7de-7d4f-432f-9031-d1a0ed463f02")
 		)
@@ -10521,6 +9496,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+			(at 67.31 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 67.31 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 67.31 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -10692,6 +9700,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 55.88 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 55.88 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 55.88 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f286f572-5e99-4117-9300-61b0e25f16f1")
 		)
@@ -10819,6 +9860,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/tdk/CGA4J3X7S2A105K125AB/2672867"
+			(at 105.41 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 105.41 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 105.41 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 105.41 245.11 0)
 			(hide yes)
 			(show_name no)
@@ -10964,6 +10038,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 53.34 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 53.34 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 53.34 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "73f92f09-4516-4640-a06e-985e2972d760")
 		)
@@ -11094,6 +10201,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73S2ATTD1001F/10279896"
+			(at 199.39 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 199.39 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 199.39 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 199.39 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -11316,6 +10456,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 118.11 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 118.11 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 118.11 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "12be486d-c684-4146-aa7c-654044cf02e2")
 		)
@@ -11472,6 +10645,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 118.11 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 118.11 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 118.11 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "e320cf1f-747d-46f6-a0a3-dcb92e82c6d9")
 		)
@@ -11509,195 +10715,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x10_Counter_Clockwise")
-		(at 87.63 113.03 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board no)
-		(in_pos_files no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3c371ebf-2387-4acf-90a6-312961365bed")
-		(property "Reference" "J19"
-			(at 88.9 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Molex MX150 20_pin"
-			(at 88.9 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "N/A"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://tools.molex.com/pdm_docs/as/AS-33611-001.pdf"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "20 Position Rectangular Housing Connector Receptacle Gray 0.138\" (3.50mm)"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DPN" "WM9436-ND"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "Molex"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0334722007"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/molex/0334722007/3838615"
-			(at 87.63 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "63691465-fae1-46ec-852a-ef5712e24adb")
-		)
-		(pin "4"
-			(uuid "aa97d1a7-c0b0-4d4c-beaa-476de0be09e7")
-		)
-		(pin "3"
-			(uuid "4d087f1e-ee93-496e-b269-3526c1267dc0")
-		)
-		(pin "7"
-			(uuid "172d64bf-de92-4b1d-8ef3-98e15dca3c55")
-		)
-		(pin "15"
-			(uuid "b1ec9eca-4884-420b-90a2-528e45ea257b")
-		)
-		(pin "2"
-			(uuid "65c297d6-9d2f-4edb-89c6-975f1674a229")
-		)
-		(pin "6"
-			(uuid "299d2094-c3ae-471e-8b1a-6e9e209dc0a3")
-		)
-		(pin "8"
-			(uuid "26a881fa-7796-4d3d-a36a-ed83a4a771d1")
-		)
-		(pin "12"
-			(uuid "aae69246-da5c-4df4-a23a-121b26b77252")
-		)
-		(pin "9"
-			(uuid "3c794c32-5ed4-42d9-8063-828336b16de9")
-		)
-		(pin "11"
-			(uuid "50f35ffb-41c3-49a3-9744-e457742c95ac")
-		)
-		(pin "13"
-			(uuid "e426ef46-c501-48fc-9f6b-a91c591e60da")
-		)
-		(pin "5"
-			(uuid "3d0223d7-31e2-4ab8-b6e6-7996f1cad5e8")
-		)
-		(pin "10"
-			(uuid "d9f2a9df-27a0-45c6-a940-330b7370c77b")
-		)
-		(pin "14"
-			(uuid "9c1033d1-21af-4c10-a4e6-eb4e5ccc9ab0")
-		)
-		(pin "17"
-			(uuid "8913a6a8-ec36-4581-ae70-d010267ac131")
-		)
-		(pin "18"
-			(uuid "c02a53f7-3e6d-438e-9c08-14cb7dab1d65")
-		)
-		(pin "19"
-			(uuid "44453356-7623-4b67-9de1-ca9da2470cc7")
-		)
-		(pin "20"
-			(uuid "04805dd6-8a4c-4946-87ed-cc52a7e112b8")
-		)
-		(pin "16"
-			(uuid "89408c5e-2b34-4ddc-95bd-d3e58679b371")
-		)
-		(instances
-			(project "VCU_Module"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:SUD19P06-60")
 		(at 55.88 172.72 90)
 		(unit 1)
@@ -11718,7 +10735,7 @@
 				)
 			)
 		)
-		(property "Value" "SUD19P06-60"
+		(property "Value" "PJD9P06A-AU_L2_000A1"
 			(at 55.88 166.37 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11741,7 +10758,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/69253/sud19p06.pdf"
+		(property "Datasheet" "https://www.panjit.com.tw/upload/datasheet/PJD9P06A-AU.pdf"
 			(at 59.69 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -11753,7 +10770,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "-19A Id, -60V Vds, TrenchFET P-Channel Power MOSFET, 60mOhm Ron, 40nC Qg, -55 to 150 °C, TO-252-2"
+		(property "Description" "P-Channel 60 V 2.5A (Ta), 7A (Tc) 2W (Ta), 15.6W (Tc) Surface Mount TO-252AA"
 			(at 55.88 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -11775,7 +10792,7 @@
 				)
 			)
 		)
-		(property "DPN" "SUD19P06-60-GE3CT-ND"
+		(property "DPN" "3757-PJD9P06A-AU_L2_000A1CT-ND"
 			(at 55.88 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -11786,7 +10803,7 @@
 				)
 			)
 		)
-		(property "MFR" "Vishay Siliconix"
+		(property "MFR" "Panjit International Inc."
 			(at 55.88 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -11797,7 +10814,7 @@
 				)
 			)
 		)
-		(property "MPN" "SUD19P06-60-GE3"
+		(property "MPN" "PJD9P06A-AU_L2_000A1"
 			(at 55.88 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -11808,7 +10825,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/vishay-siliconix/SUD19P06-60-GE3/1978865"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/panjit-international-inc/PJD9P06A-AU-L2-000A1/15800633"
+			(at 55.88 172.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q101"
+			(at 55.88 172.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 55.88 172.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 55.88 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -12116,7 +11166,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://calchip.com/wp-content/uploads/2026/04/GMC-Series-1.pdf"
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRT21BR61C226ME13-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 184.15 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12127,7 +11177,7 @@
 				)
 			)
 		)
-		(property "Description" "22 µF ±10% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
+		(property "Description" "22 µF ±20% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
 			(at 184.15 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12149,7 +11199,7 @@
 				)
 			)
 		)
-		(property "DPN" "4713-GMC21X5R226K16NTCT-ND"
+		(property "DPN" "490-GRT21BR61C226ME13KCT-ND"
 			(at 184.15 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12160,7 +11210,7 @@
 				)
 			)
 		)
-		(property "MFR" "Cal-Chip Electronics, Inc."
+		(property "MFR" "Murata Electronics"
 			(at 184.15 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12171,7 +11221,7 @@
 				)
 			)
 		)
-		(property "MPN" "GMC21X5R226K16NT"
+		(property "MPN" "GRT21BR61C226ME13K"
 			(at 184.15 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12182,7 +11232,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R226K16NT/25672142"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRT21BR61C226ME13K/13904964"
+			(at 184.15 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 184.15 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 184.15 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 184.15 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12320,6 +11403,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
+			(at 349.25 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 349.25 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 349.25 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 349.25 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -12473,6 +11589,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 38.1 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 38.1 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 38.1 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "49722e1c-1c05-4ef2-9290-71222bcda82b")
 		)
@@ -12616,6 +11765,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 290.83 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 290.83 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 290.83 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "ac206549-2b64-4e24-8524-a7e2da1552f9")
 		)
@@ -12700,7 +11882,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://calchip.com/wp-content/uploads/2026/04/GMC-Series-1.pdf"
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRT21BR61C226ME13-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 190.5 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -12711,7 +11893,7 @@
 				)
 			)
 		)
-		(property "Description" "22 µF ±10% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
+		(property "Description" "22 µF ±20% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
 			(at 190.5 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -12733,7 +11915,7 @@
 				)
 			)
 		)
-		(property "DPN" "4713-GMC21X5R226K16NTCT-ND"
+		(property "DPN" "490-GRT21BR61C226ME13KCT-ND"
 			(at 190.5 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -12744,7 +11926,7 @@
 				)
 			)
 		)
-		(property "MFR" "Cal-Chip Electronics, Inc."
+		(property "MFR" "Murata Electronics"
 			(at 190.5 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -12755,7 +11937,7 @@
 				)
 			)
 		)
-		(property "MPN" "GMC21X5R226K16NT"
+		(property "MPN" "GRT21BR61C226ME13K"
 			(at 190.5 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -12766,7 +11948,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R226K16NT/25672142"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRT21BR61C226ME13K/13904964"
+			(at 190.5 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 190.5 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 190.5 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 190.5 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -12912,7 +12127,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/895/LTST-C170GKT.pdf"
+		(property "Datasheet" "https://www.rohm.com/datasheet?p=SMLMN2ECT(C)&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key"
 			(at 199.39 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -12923,7 +12138,7 @@
 				)
 			)
 		)
-		(property "Description" "Green 569nm LED Indication - Discrete 2.1V 0805 (2012 Metric)"
+		(property "Description" "Green 527nm LED Indication - Discrete 3V 0805 (2012 Metric)"
 			(at 199.39 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -12956,7 +12171,7 @@
 				)
 			)
 		)
-		(property "DPN" "160-1179-1-ND"
+		(property "DPN" "846-SMLMN2ECTT86CCT-ND"
 			(at 199.39 247.65 90)
 			(hide yes)
 			(show_name no)
@@ -12967,7 +12182,7 @@
 				)
 			)
 		)
-		(property "MFR" "Lite-On Inc."
+		(property "MFR" "Rohm Semiconductor"
 			(at 199.39 247.65 90)
 			(hide yes)
 			(show_name no)
@@ -12978,7 +12193,7 @@
 				)
 			)
 		)
-		(property "MPN" "LTST-C170GKT"
+		(property "MPN" "SMLMN2ECTT86C"
 			(at 199.39 247.65 90)
 			(hide yes)
 			(show_name no)
@@ -12989,7 +12204,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/liteon/LTST-C170GKT/269226"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/rohm-semiconductor/SMLMN2ECTT86C/12359500"
+			(at 199.39 247.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q102"
+			(at 199.39 247.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 199.39 247.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 199.39 247.65 90)
 			(hide yes)
 			(show_name no)
@@ -13216,6 +12464,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 92.71 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 92.71 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 92.71 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "712d8d1f-696a-454c-aeb7-3e717a897f8e")
 		)
@@ -13276,7 +12557,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://calchip.com/wp-content/uploads/2026/04/GMC-Series-1.pdf"
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRT21BR61C226ME13-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 177.8 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13287,7 +12568,7 @@
 				)
 			)
 		)
-		(property "Description" "22 µF ±10% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
+		(property "Description" "22 µF ±20% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
 			(at 177.8 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13309,7 +12590,7 @@
 				)
 			)
 		)
-		(property "DPN" "4713-GMC21X5R226K16NTCT-ND"
+		(property "DPN" "490-GRT21BR61C226ME13KCT-ND"
 			(at 177.8 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13320,7 +12601,7 @@
 				)
 			)
 		)
-		(property "MFR" "Cal-Chip Electronics, Inc."
+		(property "MFR" "Murata Electronics"
 			(at 177.8 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13331,7 +12612,7 @@
 				)
 			)
 		)
-		(property "MPN" "GMC21X5R226K16NT"
+		(property "MPN" "GRT21BR61C226ME13K"
 			(at 177.8 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13342,7 +12623,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R226K16NT/25672142"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRT21BR61C226ME13K/13904964"
+			(at 177.8 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 177.8 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 177.8 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 177.8 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13567,6 +12881,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 349.25 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 349.25 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 349.25 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "3471bac0-1437-4428-9e50-94147b408db8")
 		)
@@ -13706,6 +13053,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B224KBFVPNE/7320517"
+			(at 101.6 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 101.6 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 101.6 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 101.6 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -14070,6 +13450,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 36.83 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 36.83 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 36.83 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "ef8ca747-1bf0-4dd4-86f2-59ce49dd0fcb")
 		)
@@ -14289,6 +13702,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 153.67 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 153.67 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 153.67 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "01c75c89-f39b-4389-9c17-f9e9e9502562")
 		)
@@ -14347,7 +13793,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773151-4&DocType=Data%20Sheet&DocLang=English&DocFormat=pdf&PartCntxt=7-2176797-0"
+		(property "Datasheet" "https://www.chilisin.com/upload/media/product/power/file/AKPx_Series.pdf"
 			(at 144.78 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -14358,7 +13804,7 @@
 				)
 			)
 		)
-		(property "Description" "3.3 µH Shielded Wirewound Inductor 1.8 A 220mOhm Max 0805 (2012 Metric)"
+		(property "Description" "3.3 µH Shielded Multilayer Inductor 800 mA 240mOhm 0805 (2012 Metric)"
 			(at 144.78 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -14380,7 +13826,7 @@
 				)
 			)
 		)
-		(property "DPN" "1712-7-2176797-0CT-ND"
+		(property "DPN" "553-AKPB002012103R3MA2CT-ND"
 			(at 144.78 232.41 90)
 			(hide yes)
 			(show_name no)
@@ -14391,7 +13837,7 @@
 				)
 			)
 		)
-		(property "MFR" "TE Connectivity Passive Product"
+		(property "MFR" "Pulse Electronics"
 			(at 144.78 232.41 90)
 			(hide yes)
 			(show_name no)
@@ -14402,7 +13848,7 @@
 				)
 			)
 		)
-		(property "MPN" "7-2176797-0"
+		(property "MPN" "AKPB002012103R3MA2"
 			(at 144.78 232.41 90)
 			(hide yes)
 			(show_name no)
@@ -14413,7 +13859,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/te-connectivity-passive-product/7-2176797-0/27791973"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/pulse-electronics/AKPB002012103R3MA2/16502331"
+			(at 144.78 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 144.78 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 144.78 232.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 144.78 232.41 90)
 			(hide yes)
 			(show_name no)
@@ -14484,7 +13963,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://calchip.com/wp-content/uploads/2026/04/GMC-Series-1.pdf"
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRT21BR61C226ME13-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 184.15 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -14495,7 +13974,7 @@
 				)
 			)
 		)
-		(property "Description" "22 µF ±10% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
+		(property "Description" "22 µF ±20% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
 			(at 184.15 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -14517,7 +13996,7 @@
 				)
 			)
 		)
-		(property "DPN" "4713-GMC21X5R226K16NTCT-ND"
+		(property "DPN" "490-GRT21BR61C226ME13KCT-ND"
 			(at 184.15 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -14528,7 +14007,7 @@
 				)
 			)
 		)
-		(property "MFR" "Cal-Chip Electronics, Inc."
+		(property "MFR" "Murata Electronics"
 			(at 184.15 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -14539,7 +14018,7 @@
 				)
 			)
 		)
-		(property "MPN" "GMC21X5R226K16NT"
+		(property "MPN" "GRT21BR61C226ME13K"
 			(at 184.15 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -14550,7 +14029,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R226K16NT/25672142"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRT21BR61C226ME13K/13904964"
+			(at 184.15 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 184.15 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 184.15 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 184.15 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -14687,6 +14199,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC021LFBN-RC/810174"
+			(at 53.34 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 53.34 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 53.34 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14834,6 +14379,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 92.71 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 92.71 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 92.71 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "283ab4d6-334c-444d-9c8d-1dfac5fbc3e1")
 		)
@@ -14894,7 +14472,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://calchip.com/wp-content/uploads/2026/04/GMC-Series-1.pdf"
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRT21BR61C226ME13-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -14905,7 +14483,7 @@
 				)
 			)
 		)
-		(property "Description" "22 µF ±10% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
+		(property "Description" "22 µF ±20% 16V Ceramic Capacitor X5R 0805 (2012 Metric)"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -14927,7 +14505,7 @@
 				)
 			)
 		)
-		(property "DPN" "4713-GMC21X5R226K16NTCT-ND"
+		(property "DPN" "490-GRT21BR61C226ME13KCT-ND"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -14938,7 +14516,7 @@
 				)
 			)
 		)
-		(property "MFR" "Cal-Chip Electronics, Inc."
+		(property "MFR" "Murata Electronics"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -14949,7 +14527,7 @@
 				)
 			)
 		)
-		(property "MPN" "GMC21X5R226K16NT"
+		(property "MPN" "GRT21BR61C226ME13K"
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -14960,7 +14538,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R226K16NT/25672142"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRT21BR61C226ME13K/13904964"
+			(at 190.5 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 190.5 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 190.5 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 190.5 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -15187,6 +14798,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 290.83 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 290.83 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 290.83 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "2996161f-2161-467c-a1a0-78f4b7778eda")
 		)
@@ -15348,6 +14992,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "bbb738d2-13a0-4b73-b128-96455ab737e8")
 		)
@@ -15475,6 +15152,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/tdk/CGA4J3X7S2A105K125AB/2672867"
+			(at 105.41 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 105.41 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 105.41 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 105.41 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -15892,6 +15602,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "IP67 and IP69K"
+			(at 46.99 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 46.99 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 46.99 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "A18"
 			(uuid "1f98b2d3-3552-4392-be00-789fd0dd94c0")
 		)
@@ -16218,6 +15961,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" ""
+			(at 27.94 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 27.94 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 27.94 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "14d9f830-4ef2-4df5-a455-66a0ef29705d")
 		)
@@ -16432,6 +16208,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "IP67 and IP69K"
+			(at 91.44 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 91.44 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 91.44 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
@@ -16562,7 +16371,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1773151-4&DocType=Data%20Sheet&DocLang=English&DocFormat=pdf&PartCntxt=7-2176797-0"
+		(property "Datasheet" "https://www.chilisin.com/upload/media/product/power/file/AKPx_Series.pdf"
 			(at 144.78 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -16573,7 +16382,7 @@
 				)
 			)
 		)
-		(property "Description" "3.3 µH Shielded Wirewound Inductor 1.8 A 220mOhm Max 0805 (2012 Metric)"
+		(property "Description" "3.3 µH Shielded Multilayer Inductor 800 mA 240mOhm 0805 (2012 Metric)"
 			(at 144.78 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -16595,7 +16404,7 @@
 				)
 			)
 		)
-		(property "DPN" "1712-7-2176797-0CT-ND"
+		(property "DPN" "553-AKPB002012103R3MA2CT-ND"
 			(at 144.78 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -16606,7 +16415,7 @@
 				)
 			)
 		)
-		(property "MFR" "TE Connectivity Passive Product"
+		(property "MFR" "Pulse Electronics"
 			(at 144.78 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -16617,7 +16426,7 @@
 				)
 			)
 		)
-		(property "MPN" "7-2176797-0"
+		(property "MPN" "AKPB002012103R3MA2"
 			(at 144.78 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -16628,7 +16437,40 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/te-connectivity-passive-product/7-2176797-0/27791973"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/pulse-electronics/AKPB002012103R3MA2/16502331"
+			(at 144.78 172.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 144.78 172.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 144.78 172.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 144.78 172.72 90)
 			(hide yes)
 			(show_name no)
@@ -16677,7 +16519,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "MMSZ5245B-7-F"
+		(property "Value" "SZMMSZ5245BT1G"
 			(at 67.31 180.3399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16700,7 +16542,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "MMSZ5245B-7-F"
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/mmsz5221bt1-d.pdf"
 			(at 63.5 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -16712,8 +16554,106 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Zener Diode 15 V 500 mW ±5% Surface Mount SOD-123"
 			(at 63.5 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "SZMMSZ5245BT1GOSCT-ND"
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "onsemi"
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SZMMSZ5245BT1G"
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/onsemi/SZMMSZ5245BT1G/3063370"
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q101" ""
+			(at 63.5 184.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q101"
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 63.5 184.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 63.5 184.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16860,6 +16800,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 134.62 229.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 134.62 229.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 134.62 229.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f572fcf6-1eff-4fc6-b0ae-f843d6bf4791")
 		)
@@ -16986,6 +16959,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+			(at 67.31 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 67.31 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 67.31 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17142,6 +17148,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 199.39 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 199.39 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 199.39 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8ddd7f15-4068-4255-bcbd-0b5b45fc713d")
 		)
@@ -17268,6 +17307,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+			(at 26.67 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 26.67 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 26.67 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17514,6 +17586,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 153.67 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 153.67 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 153.67 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f921886a-541e-4eda-99f4-6bd3b303c255")
 		)
@@ -17641,6 +17746,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+			(at 290.83 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "None"
+			(at 290.83 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 290.83 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17799,6 +17937,39 @@
 			)
 		)
 		(property "Purchase Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RK73H2ATTD4322F/10233973"
+			(at 153.67 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Automotive Certification" "AEC-Q200"
+			(at 153.67 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 153.67 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
 			(at 153.67 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -18100,6 +18271,39 @@
 				)
 			)
 		)
+		(property "Automotive Certification" "None"
+			(at 26.67 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q100" ""
+			(at 26.67 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AEC-Q200" ""
+			(at 26.67 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "e0375e01-d0b7-42d4-bd21-9190e2b7d958")
 		)
@@ -18200,171 +18404,6 @@
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x06_Counter_Clockwise")
-		(at 53.34 118.11 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board no)
-		(in_pos_files no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fff8fc45-6c0c-4e36-b5c3-7da9e9b96dda")
-		(property "Reference" "J18"
-			(at 54.61 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Molex MX150 12_pin"
-			(at 54.61 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "N/A"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://tools.molex.com/pdm_docs/as/AS-33611-001.pdf"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "12 Position Rectangular Housing Connector Receptacle Black 0.138\" (3.50mm)"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DPN" "WM9431-ND"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "Molex"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0334721206"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/molex/0334721206/3838610?s=N4IgTCBcDaIMxwCwHYwEYwAYBsIC6AvkA"
-			(at 53.34 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "11"
-			(uuid "607a2c7f-36e1-4533-b588-0bbfcd66c2b5")
-		)
-		(pin "1"
-			(uuid "29dbb82c-852f-4760-9537-ed4e615c7180")
-		)
-		(pin "7"
-			(uuid "ef87171c-a719-4bff-9e73-8475d0456a09")
-		)
-		(pin "6"
-			(uuid "10b1fef7-1afe-4029-8a1f-46c4050d0df3")
-		)
-		(pin "4"
-			(uuid "c9eefe04-492d-4647-9691-c401f07fe213")
-		)
-		(pin "3"
-			(uuid "372b7458-912e-4863-94d5-f873e3076adf")
-		)
-		(pin "5"
-			(uuid "997ffada-7684-4168-be79-e831f62dcc84")
-		)
-		(pin "9"
-			(uuid "f4473e18-c52a-4616-8d27-d70ca1ddc427")
-		)
-		(pin "2"
-			(uuid "2fbb82d0-676a-4948-8c03-e442a399933d")
-		)
-		(pin "8"
-			(uuid "c7757806-a314-4dbb-ae25-5709bb1a7be1")
-		)
-		(pin "10"
-			(uuid "cae308c7-6a07-4cf2-8e0f-47172cbb9933")
-		)
-		(pin "12"
-			(uuid "1741172a-a301-4713-9b78-4aaaf5f758a5")
-		)
-		(instances
-			(project "VCU_Module"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J18")
 					(unit 1)
 				)
 			)

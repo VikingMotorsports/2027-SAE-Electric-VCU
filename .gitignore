@@ -36,3 +36,7 @@ fp-info-cache
 # Local git-based history (KiCad 9.0+)
 .history
 *.kicad_prl
+
+# Build and archive files
+build
+archive

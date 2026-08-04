@@ -309,6 +309,42 @@
   "erc": {
     "erc_exclusions": [
       [
+        "footprint_filter|266700|482600|dd8342fc-3fbf-4533-9af3-3ce20a5fb59c|00000000-0000-0000-0000-000000000000|||",
+        "ok"
+      ],
+      [
+        "footprint_filter|279400|1549400|b1e92a68-218c-4174-b546-34cf76a821d7|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "footprint_filter|2908300|1485900|f03aaf2e-ff8f-469a-b54c-6ef3c4f749f9|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
+        "footprint_filter|2908300|1752600|4fdbef09-2ce0-49d6-a1ec-c7e45a5ce3eb|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
+        "footprint_filter|2908300|2133600|9b981b75-f7df-4756-b28e-28e755ccfebb|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
+        "footprint_filter|3505200|2133600|1fe2bde6-9ecc-4f25-a7bd-215bd0e9c9ab|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
+        "footprint_filter|444500|673100|4eb4a509-cbb5-49b8-bf6e-ea4443db96c0|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
+        "footprint_filter|673100|482600|243467ea-91e2-403b-b043-704880ae901b|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
+        "footprint_filter|914400|368300|b6221978-6f4b-4d51-8f7a-d7508af638b9|00000000-0000-0000-0000-000000000000|||",
+        "checked and ok"
+      ],
+      [
         "footprint_link_issues|266700|482600|dd8342fc-3fbf-4533-9af3-3ce20a5fb59c|00000000-0000-0000-0000-000000000000|||",
         "using generic symbol with custom footprint and model"
       ],
@@ -351,6 +387,10 @@
       [
         "footprint_link_issues|914400|368300|b6221978-6f4b-4d51-8f7a-d7508af638b9|00000000-0000-0000-0000-000000000000|||",
         "no footprint needed, used to populate BOM"
+      ],
+      [
+        "four_way_junction|1841500|1816100|447d0769-f788-4f72-8204-25d31e9ba47d|5f1f9e16-1f73-42a5-ae84-19a26c08c601|/efb70416-ce55-4766-98ba-c3d23efcccb1||",
+        "checked and ok"
       ],
       [
         "four_way_junction|1841500|1816100|a6a664a2-f476-486c-ac26-2ee739f599ea|447d0769-f788-4f72-8204-25d31e9ba47d|/efb70416-ce55-4766-98ba-c3d23efcccb1||",
@@ -688,7 +728,253 @@
       "ref_range_delimiter": "",
       "string_delimiter": "\""
     },
-    "bom_presets": [],
+    "bom_presets": [
+      {
+        "exclude_dnp": true,
+        "fields_ordered": [
+          {
+            "group_by": false,
+            "label": "Qty",
+            "name": "${QUANTITY}",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Reference",
+            "name": "Reference",
+            "show": true
+          },
+          {
+            "group_by": true,
+            "label": "Value",
+            "name": "Value",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "DNP",
+            "name": "${DNP}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Exclude from BOM",
+            "name": "${EXCLUDE_FROM_BOM}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Exclude from Board",
+            "name": "${EXCLUDE_FROM_BOARD}",
+            "show": false
+          },
+          {
+            "group_by": true,
+            "label": "Footprint",
+            "name": "Footprint",
+            "show": true
+          },
+          {
+            "group_by": true,
+            "label": "MPN",
+            "name": "MPN",
+            "show": true
+          },
+          {
+            "group_by": true,
+            "label": "MFR",
+            "name": "MFR",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Automotive Certification",
+            "name": "Automotive Certification",
+            "show": true
+          },
+          {
+            "group_by": true,
+            "label": "DIS",
+            "name": "DIS",
+            "show": true
+          },
+          {
+            "group_by": true,
+            "label": "DPN",
+            "name": "DPN",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "AEC-Q101",
+            "name": "AEC-Q101",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Description",
+            "name": "Description",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Purchase Link",
+            "name": "Purchase Link",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Datasheet",
+            "name": "Datasheet",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "MANUFACTURER",
+            "name": "MANUFACTURER",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "MF",
+            "name": "MF",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "MP",
+            "name": "MP",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Manufacturer_Name",
+            "name": "Manufacturer_Name",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Manufacturer_Part_Number",
+            "name": "Manufacturer_Part_Number",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Mouser Part Number",
+            "name": "Mouser Part Number",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Mouser Price/Stock",
+            "name": "Mouser Price/Stock",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Package",
+            "name": "Package",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Price",
+            "name": "Price",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "SnapEDA_Link",
+            "name": "SnapEDA_Link",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "#",
+            "name": "${ITEM_NUMBER}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Arrow Part Number",
+            "name": "Arrow Part Number",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Arrow Price/Stock",
+            "name": "Arrow Price/Stock",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Availability",
+            "name": "Availability",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Check_prices",
+            "name": "Check_prices",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Height",
+            "name": "Height",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Sim.Pins",
+            "name": "Sim.Pins",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "STANDARD",
+            "name": "STANDARD",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "PARTREV",
+            "name": "PARTREV",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "MAXIMUM_PACKAGE_HEIGHT",
+            "name": "MAXIMUM_PACKAGE_HEIGHT",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "SNAPEDA_PN",
+            "name": "SNAPEDA_PN",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "AEC-Q200",
+            "name": "AEC-Q200",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "AEC-Q100",
+            "name": "AEC-Q100",
+            "show": false
+          }
+        ],
+        "filter_string": "",
+        "group_symbols": true,
+        "include_excluded_from_bom": false,
+        "name": "bom-export-preset",
+        "sort_asc": true,
+        "sort_field": "Reference"
+      }
+    ],
     "bom_settings": {
       "exclude_dnp": true,
       "fields_ordered": [

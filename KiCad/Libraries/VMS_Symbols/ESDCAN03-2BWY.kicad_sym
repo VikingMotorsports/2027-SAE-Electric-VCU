@@ -446,7 +446,7 @@
 					(type none)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 0 0)
 				(length 7.62)
 				(name "1"
@@ -464,7 +464,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -5.08 0)
 				(length 7.62)
 				(name "2"
@@ -482,7 +482,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 38.1 -2.54 180)
 				(length 7.62)
 				(name "3"

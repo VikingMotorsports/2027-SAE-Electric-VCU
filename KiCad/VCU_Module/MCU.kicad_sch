@@ -1409,16 +1409,6 @@
 					)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "ki_keywords" "ESDA051-1JY"
 				(at 0 0 0)
 				(show_name no)
@@ -1430,7 +1420,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOD323_STM SOD323_STM-M SOD323_STM-L"
+			(property "ki_fp_filters" "SOD323_STM SOD323_STM-M SOD323_STM-L Diode_SMD:D_SOD-323"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1550,7 +1540,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 10.16 0 180)
 					(length 2.54)
 					(name ""
@@ -1568,7 +1558,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -2033,7 +2023,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 7.62)
 					(name "1"
@@ -2051,7 +2041,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 -5.08 0)
 					(length 7.62)
 					(name "2"
@@ -2069,7 +2059,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 38.1 -2.54 180)
 					(length 7.62)
 					(name "3"

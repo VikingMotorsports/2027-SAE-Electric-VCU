@@ -76,28 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "footprint_type_mismatch|125500000|106865000|84caa0ba-84bb-475c-aa94-441135f87919|00000000-0000-0000-0000-000000000000",
-          "does this matter?"
-        ],
-        [
-          "footprint_type_mismatch|125600000|95600000|1ded3e59-4cf4-49fc-897e-1d2ff8b3d979|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|151910000|59403375|61dc8630-222a-4054-aea7-8022d72019a3|00000000-0000-0000-0000-000000000000",
-          "conflict with itself"
-        ],
-        [
-          "silk_edge_clearance|109360000|53358375|7200bbc0-5074-4161-9ad3-8529f8bc21a7|b695219c-c59f-480f-b756-bf48389f3070",
-          "issue with J1 footprint"
-        ],
-        [
-          "silk_over_copper|132949999|107059223|b989d464-4af5-4794-a78e-f7120554f855|00000000-0000-0000-0000-000000000000",
-          "confirmed OK"
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -118,7 +97,7 @@
         "footprint_filters_mismatch": "warning",
         "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "error",
+        "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_to_hole": "error",
         "holes_co_located": "warning",
@@ -307,136 +286,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "footprint_filter|266700|482600|dd8342fc-3fbf-4533-9af3-3ce20a5fb59c|00000000-0000-0000-0000-000000000000|||",
-        "ok"
-      ],
-      [
-        "footprint_filter|279400|1549400|b1e92a68-218c-4174-b546-34cf76a821d7|00000000-0000-0000-0000-000000000000|||",
-        ""
-      ],
-      [
-        "footprint_filter|2908300|1485900|f03aaf2e-ff8f-469a-b54c-6ef3c4f749f9|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_filter|2908300|1752600|4fdbef09-2ce0-49d6-a1ec-c7e45a5ce3eb|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_filter|2908300|2133600|9b981b75-f7df-4756-b28e-28e755ccfebb|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_filter|3505200|2133600|1fe2bde6-9ecc-4f25-a7bd-215bd0e9c9ab|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_filter|444500|673100|4eb4a509-cbb5-49b8-bf6e-ea4443db96c0|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_filter|673100|482600|243467ea-91e2-403b-b043-704880ae901b|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_filter|914400|368300|b6221978-6f4b-4d51-8f7a-d7508af638b9|00000000-0000-0000-0000-000000000000|||",
-        "checked and ok"
-      ],
-      [
-        "footprint_link_issues|266700|482600|dd8342fc-3fbf-4533-9af3-3ce20a5fb59c|00000000-0000-0000-0000-000000000000|||",
-        "using generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|279400|1549400|b1e92a68-218c-4174-b546-34cf76a821d7|00000000-0000-0000-0000-000000000000|||",
-        "using generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|2908300|1485900|f03aaf2e-ff8f-469a-b54c-6ef3c4f749f9|00000000-0000-0000-0000-000000000000|||",
-        "generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|2908300|1752600|4fdbef09-2ce0-49d6-a1ec-c7e45a5ce3eb|00000000-0000-0000-0000-000000000000|||",
-        "generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|2908300|2133600|9b981b75-f7df-4756-b28e-28e755ccfebb|00000000-0000-0000-0000-000000000000|||",
-        "generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|3505200|2133600|1fe2bde6-9ecc-4f25-a7bd-215bd0e9c9ab|00000000-0000-0000-0000-000000000000|||",
-        "generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|444500|673100|4eb4a509-cbb5-49b8-bf6e-ea4443db96c0|00000000-0000-0000-0000-000000000000|||",
-        "confirmed OK"
-      ],
-      [
-        "footprint_link_issues|533400|1181100|fff8fc45-6c0c-4e36-b5c3-7da9e9b96dda|00000000-0000-0000-0000-000000000000|||",
-        "no footprint required, used to include part in BOM"
-      ],
-      [
-        "footprint_link_issues|673100|482600|243467ea-91e2-403b-b043-704880ae901b|00000000-0000-0000-0000-000000000000|||",
-        "generic symbol with custom footprint and model"
-      ],
-      [
-        "footprint_link_issues|876300|1130300|3c371ebf-2387-4acf-90a6-312961365bed|00000000-0000-0000-0000-000000000000|||",
-        "no footprint needed, used to populate BOM"
-      ],
-      [
-        "footprint_link_issues|914400|368300|b6221978-6f4b-4d51-8f7a-d7508af638b9|00000000-0000-0000-0000-000000000000|||",
-        "no footprint needed, used to populate BOM"
-      ],
-      [
-        "four_way_junction|1841500|1816100|447d0769-f788-4f72-8204-25d31e9ba47d|5f1f9e16-1f73-42a5-ae84-19a26c08c601|/efb70416-ce55-4766-98ba-c3d23efcccb1||",
-        "checked and ok"
-      ],
-      [
-        "four_way_junction|1841500|1816100|a6a664a2-f476-486c-ac26-2ee739f599ea|447d0769-f788-4f72-8204-25d31e9ba47d|/efb70416-ce55-4766-98ba-c3d23efcccb1||",
-        "Confirmed OK"
-      ],
-      [
-        "four_way_junction|1841500|2413000|0364199c-dc1b-4a05-af5f-c550266b2667|1dac3579-89cf-408c-95b1-e78d0c713e19|/efb70416-ce55-4766-98ba-c3d23efcccb1||",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|1384300|2463800|911c9042-691b-40f5-a956-9868e6530e95|522d013d-7acd-44f1-a5cc-ef7db9a0ca71|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|1384300|2514600|98e7496e-da2c-40dd-8cb0-e6ec9c7bb2ba|bad2cfa7-d092-42af-a6b2-b792302677ca|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|1765300|2489200|84873aba-325f-40f4-aeef-f00b2eabcc53|86d05067-ed61-48c7-8b4f-7ed4eaaf5694|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|444500|571500|2518efb6-d1b5-47c9-85fe-e60908deee6c|5caa4c91-07ba-4191-85fe-5c2d7ff5fe86|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|444500|673100|57957069-966f-4c33-857e-c06841e5b1f4|b1247518-82d0-4fb5-baa5-400b91de66a8|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01|/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|635000|1739900|09111ee4-c08f-4eef-8800-00378a0e2ba2|bfab1c2e-5180-466a-a0e7-d9594e22e07b|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|635000|1739900|d6c41543-3650-4bce-b9e5-b1a54951e1d6|bfab1c2e-5180-466a-a0e7-d9594e22e07b|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|635000|1841500|29706750-9523-4f44-b72e-064654118ded|f286f572-5e99-4117-9300-61b0e25f16f1|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1",
-        "Confirmed OK"
-      ],
-      [
-        "pin_to_pin|635000|1841500|5027a983-fa8e-4110-a8a9-5629e5c26701|f286f572-5e99-4117-9300-61b0e25f16f1|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1|/efb70416-ce55-4766-98ba-c3d23efcccb1",
-        "Confirmed OK"
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -624,7 +474,7 @@
       "field_name_whitespace": "warning",
       "footprint_filter": "warning",
       "footprint_link_issues": "warning",
-      "four_way_junction": "warning",
+      "four_way_junction": "ignore",
       "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",

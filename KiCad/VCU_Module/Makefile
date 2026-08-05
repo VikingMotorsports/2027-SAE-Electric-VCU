@@ -44,7 +44,7 @@ bom:	## Generate a CSV Bill of Materials (BOM) with the output preset file that 
 # Generate build files from the board
 
 drc:	## Check layout for schematic parity, layout errors, and layout warnings. Exit build if there are any. Remove useless report if none.
-	kicad-cli pcb drc  -o $(OUTPUT_DIR)/$(FAB_DIR)/$(PROJECT_NAME)-drc.rpt --schematic-parity --severity-error --exit-code-violations $(BOARD)
+	kicad-cli pcb drc  -o $(OUTPUT_DIR)/$(FAB_DIR)/$(PROJECT_NAME)-drc.rpt --schematic-parity --severity-error --severity-warning --exit-code-violations $(BOARD)
 	rm -f $(OUTPUT_DIR)/$(FAB_DIR)/$(PROJECT_NAME)-drc.rpt
 
 ipc:	## IPC-2581 is an open standard used for board fab and assembly (silly to copy it twice, but :shrug:

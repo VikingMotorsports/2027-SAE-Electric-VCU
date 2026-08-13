@@ -39,7 +39,7 @@ fp-info-cache
 
 # Build and archive files
 #build
-.zip
+*.zip
 assembly
 cad
 fabrication

@@ -320,25 +320,12 @@ The board provides a consistent physical and electrical interface for the Viking
 
 *Custom hardware for the 2027 SAE Electric Vehicle Control System.*
 
-```
-
-### One thing I'd change from your description
-
-I would **not** call this simply a "Dev Board" in the README title. I'd call it the **Viking Motorsports VCU Module** and describe it as a *development and vehicle-control platform*. That makes it sound like an intentional piece of the VCU architecture rather than a generic STM32 development board.
-
-The really interesting feature of this PCB is actually the **configurable pin-routing concept**. That's worth emphasizing because it explains *why Viking Motorsports designed its own board* instead of just buying an STM32 Nucleo board.
-
-Also, the repository confirms that the project is already organized with separate `MCU.kicad_sch`, `POWER.kicad_sch`, and top-level `VCU_Module.kicad_sch` sheets, plus the actual PCB and KiCad project files, so the README above reflects the project structure rather than just your description. :contentReference[oaicite:1]{index=1}
-
-One thing I **wouldn't document yet** is the exact 12-pin/20-pin pinout. Since the whole point of the board is that those connections are configurable, I'd make a separate `PINOUT.md` later for the **default/current configuration**. That will be much easier to maintain as you create different configurations for the pedal module, motor controller, BMS, etc.
-```
-
-[1]: https://github.com/VikingMotorsports/2027-SAE-Electric-VCU/tree/main/PCB/VCU_Module "2027-SAE-Electric-VCU/PCB/VCU_Module at main · VikingMotorsports/2027-SAE-Electric-VCU · GitHub"
-
 
 ## Documentation Links
 
-*Link to documentation here*
+*https://www.cinch.com/products/enclosures/enclosures/5810130065*
+*https://www.cinch.com/products/enclosures/headers/5810132011*
+*https://www.st.com/en/microcontrollers-microprocessors/stm32c092rc.html*
 
 ## Documentation Files
 

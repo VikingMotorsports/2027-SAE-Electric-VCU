@@ -8811,7 +8811,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf"
+		(property "Datasheet" "https://suddendocs.samtec.com/catalog_english/ftsh_th.pdf"
 			(at 31.75 143.51 90)
 			(hide yes)
 			(show_name no)
@@ -8844,7 +8844,7 @@
 				)
 			)
 		)
-		(property "DPN" "612-FTSH-107-01-F-DV-K-ND"
+		(property "DPN" "SAM12420-ND"
 			(at 40.64 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -8866,7 +8866,7 @@
 				)
 			)
 		)
-		(property "MPN" "FTSH-107-01-F-DV-K"
+		(property "MPN" "FTSH-107-01-S-D-K"
 			(at 40.64 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -8877,7 +8877,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/FTSH-107-01-F-DV-K/2650001"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/FTSH-107-01-S-D-K/2650004?gclsrc=aw.ds&gad_source=1&gad_campaignid=17336967819&gbraid=0AAAAADrbLlicyKK0eY_V0wleFKoDjVbWz&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k6pgiYkH2W21gU4f999biLNDO9FzNBRms_SrUikYiU-KfRn2oXJkshoCrk8QAvD_BwE"
 			(at 40.64 111.76 0)
 			(hide yes)
 			(show_name no)

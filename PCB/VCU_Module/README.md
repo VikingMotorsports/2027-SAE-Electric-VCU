@@ -329,8 +329,8 @@ The board provides a consistent physical and electrical interface for the Viking
 
 ## Board Renders
 
-![Render of the top of the 3D model](./build/documentation/VCU_Module-render-top.jpg){width=50%}
-![Render of the bottom of the 3D model](./build/documentation/VCU_Module-render-bot.jpg){width=50%}
+![Render of the top of the 3D model](./build/documentation/VCU_Module-render-top.jpg)
+![Render of the bottom of the 3D model](./build/documentation/VCU_Module-render-bot.jpg)
 
 \newpage
 

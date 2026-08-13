@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at -5.075 -4.385 0)
 		(layer "F.SilkS")
-		(uuid "4c598a28-c156-4a31-a32b-3408e0560ac6")
+		(uuid "a93877b9-58f2-4f04-b540-c9ac9500c978")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "FUSE_3568"
 		(at -2.535 4.365 0)
 		(layer "F.Fab")
-		(uuid "e7d38a22-9de6-4872-938a-46958f36a244")
+		(uuid "30789870-dd4a-4e77-8a06-a4401a141339")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "acb4c75c-4a57-49bd-b7ca-81d77bb2230d")
+		(uuid "f59c976d-c926-414b-8bcf-156a608b32d0")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1a55965c-9a69-49d4-86fc-d0da0d1708b9")
+		(uuid "26934a3d-8477-4d02-80b1-c58174445f20")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "ff5d128d-a9d1-4324-9807-3da23843f765")
+		(uuid "bbd8d922-2157-4897-bd08-bd6645257248")
 	)
 	(fp_line
 		(start -8 3.365)
@@ -67,7 +67,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e15c97bf-ceee-4452-b9ad-cd3367c8918a")
+		(uuid "faeb49cf-ad80-4660-8066-e235b1b8d490")
 	)
 	(fp_line
 		(start 8 -3.365)
@@ -77,7 +77,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8f891b43-948a-4c73-b521-643f7257177c")
+		(uuid "4910ef0c-5d14-4c16-b69f-9c1f4b17b4c9")
 	)
 	(fp_line
 		(start 8 3.365)
@@ -87,7 +87,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "90245359-4643-428f-9958-2d34d841b7f5")
+		(uuid "58383320-63a2-4bf3-9766-29be3fd3cb7e")
 	)
 	(fp_line
 		(start -8.25 -3.615)
@@ -97,7 +97,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "d67dc9d2-7723-4015-a841-bd16775a303c")
+		(uuid "26857662-8fde-471c-b793-0b12647a24c2")
 	)
 	(fp_line
 		(start -8.25 3.615)
@@ -107,7 +107,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "a5a12365-6959-4d97-a3e0-42e27843c802")
+		(uuid "c5171d83-0c20-4922-8b6e-1a84f4365772")
 	)
 	(fp_line
 		(start 8.25 -3.615)
@@ -117,7 +117,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "26196054-bfe9-4dcc-ab0c-d773e0fa5673")
+		(uuid "a73eb54e-d522-4f1d-abf1-0396c95b78ee")
 	)
 	(fp_line
 		(start 8.25 3.615)
@@ -127,7 +127,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "9b43ad69-2c93-4d62-b8cb-51fe8ac1b75f")
+		(uuid "f743d625-b3eb-4e71-af64-5876746aa879")
 	)
 	(fp_line
 		(start -8 -3.365)
@@ -137,7 +137,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "02d404a0-cdb9-472a-a5c4-fda02aa2aa99")
+		(uuid "8cf03599-9009-4bf1-b70a-ff9f1db1a452")
 	)
 	(fp_line
 		(start -8 3.365)
@@ -147,7 +147,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "79888f76-97d2-400c-a788-77fc4284fa27")
+		(uuid "af993201-dfe3-46e9-907f-4cd07d69ded0")
 	)
 	(fp_line
 		(start 8 -3.365)
@@ -157,7 +157,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "629073de-e06c-40c5-a355-687cacb79d41")
+		(uuid "0845d278-188d-4e2b-827b-4ce2626a9186")
 	)
 	(fp_line
 		(start 8 3.365)
@@ -167,7 +167,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "55a81d8d-955a-4603-9315-853e7c46e0ed")
+		(uuid "2a00903d-e010-4a40-b890-446966555612")
 	)
 	(pad "1" thru_hole circle
 		(at -4.96 -1.7)
@@ -176,7 +176,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
-		(uuid "62484bd7-ad24-465c-b422-549cbc9a7641")
+		(uuid "0d775e34-b737-4c5c-ace2-636bb50c9341")
 	)
 	(pad "2" thru_hole circle
 		(at 4.96 -1.7)
@@ -185,7 +185,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
-		(uuid "689849aa-bb58-4909-965d-3a7c7e12c9dc")
+		(uuid "0799a3d7-dda1-41a2-9e83-0cbb85fbeb05")
 	)
 	(pad "3" thru_hole circle
 		(at -4.96 1.7)
@@ -194,7 +194,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
-		(uuid "f4fe43bd-e549-401b-b874-6308dcbe7c17")
+		(uuid "4e353e06-990d-4318-bba1-7ba5c2936c5f")
 	)
 	(pad "4" thru_hole circle
 		(at 4.96 1.7)
@@ -203,10 +203,10 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
-		(uuid "d55fc075-bbbd-4fdd-a150-7f221854b98c")
+		(uuid "927457e2-adac-4482-bd90-6009718a59ed")
 	)
 	(embedded_fonts no)
-	(model "${VMS_LIBRARIES}/Keystone_3568_Fuse_Holder.step"
+	(model "${VMS_LIBRARIES}/VMS_3DModels/Keystone_3568_Fuse_Holder.step"
 		(offset
 			(xyz -1 0.25 5)
 		)
@@ -217,7 +217,7 @@
 			(xyz -90 -0 -0)
 		)
 	)
-	(model "${VMS_LIBRARIES}/ANM58 Auto Blade Fuse.stp"
+	(model "${VMS_LIBRARIES}/VMS_3DModels/ANM58 Auto Blade Fuse.stp"
 		(offset
 			(xyz 0.1 0 16)
 		)

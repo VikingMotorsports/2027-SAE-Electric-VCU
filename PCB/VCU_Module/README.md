@@ -316,11 +316,11 @@ The board provides a consistent physical and electrical interface for the Viking
 | Filename                        | Notes                                    |
 | ------------------------------- | ---------------------------------------- |
 | README.pdf                      | This README file                         |
-| PROJECT-NAME-outline.dxf        | Board outline (with holes) in DXF format |
-| PROJECT-NAME-pcba.step          | 3D model of PCBA (with components)       |
-| PROJECT-NAME-render-bot.jpg     | Render of the top of the 3D model        |
-| PROJECT-NAME-render-bot.jpg     | Render of the bottom of the 3D model     |
-| PROJECT-NAME-schematic.pdf      | PDF of board schematics                  |
+| VCU_Module-outline.dxf        | Board outline (with holes) in DXF format |
+| VCU_Module-pcba.step          | 3D model of PCBA (with components)       |
+| VCU_Module-render-bot.jpg     | Render of the top of the 3D model        |
+| VCU_Module-render-bot.jpg     | Render of the bottom of the 3D model     |
+| VCU_Module-schematic.pdf      | PDF of board schematics                  |
 
 ## Contact Information
 
@@ -329,8 +329,8 @@ The board provides a consistent physical and electrical interface for the Viking
 
 ## Board Renders
 
-![Render of the top of the 3D model](./build/documentation/PROJECT-NAME-render-top.jpg)
-![Render of the bottom of the 3D model](./build/documentation/PROJECT-NAME-render-bot.jpg)
+![Render of the top of the 3D model](./build/documentation/VCU_Module-render-top.jpg)
+![Render of the bottom of the 3D model](./build/documentation/VCU_Module-render-bot.jpg)
 
 \newpage
 
@@ -406,23 +406,23 @@ urlcolor: blue
 
 | Filename                 | Notes                                   |
 | ------------------------ | --------------------------------------- |
-| PROJECT-NAME-ipc2581.xml | IPC-2581 board information file         |
+| VCU_Module-ipc2581.xml | IPC-2581 board information file         |
 
 ### Legacy PCB Files
 
 | Filename                      | Notes                                         |
 | ------------------------------| --------------------------------------------- |
-| PROJECT-NAME-Edge_Cuts.gbr    | RS274X file for the dimension (outline) layer |
-| PROJECT-NAME-F_Silkscreen.gbr | RS274X file for the top silkscreen            |
-| PROJECT-NAME-F_Mask.gbr       | RS274X file for the top soldermask            |
-| PROJECT-NAME-F_Cu.gbr         | RS274X file for the top copper layer          |
-| PROJECT-NAME-In1_Cu.gbr       | RS274X file for the layer 2 copper            |
-| PROJECT-NAME-In2_Cu.gbr       | RS274X file for the layer 3 copper            |
-| PROJECT-NAME-B_Cu.gbr         | RS274X file for the bottom copper layer       |
-| PROJECT-NAME-B_Mask.gbr       | RS274X file for the bottom soldermask         |
-| PROJECT-NAME-B_Silkscreen.gbr | RS274X file for the bottom silkscreen         |
-| PROJECT-NAME-NPTH.drl         | Excellon file for non-plated through holes    |
-| PROJECT-NAME-PTH.drl          | Excellon file for plated through holes        | 
+| VCU_Module-Edge_Cuts.gbr    | RS274X file for the dimension (outline) layer |
+| VCU_Module-F_Silkscreen.gbr | RS274X file for the top silkscreen            |
+| VCU_Module-F_Mask.gbr       | RS274X file for the top soldermask            |
+| VCU_Module-F_Cu.gbr         | RS274X file for the top copper layer          |
+| VCU_Module-In1_Cu.gbr       | RS274X file for the layer 2 copper            |
+| VCU_Module-In2_Cu.gbr       | RS274X file for the layer 3 copper            |
+| VCU_Module-B_Cu.gbr         | RS274X file for the bottom copper layer       |
+| VCU_Module-B_Mask.gbr       | RS274X file for the bottom soldermask         |
+| VCU_Module-B_Silkscreen.gbr | RS274X file for the bottom silkscreen         |
+| VCU_Module-NPTH.drl         | Excellon file for non-plated through holes    |
+| VCU_Module-PTH.drl          | Excellon file for plated through holes        | 
 
 \newpage
 
@@ -450,24 +450,24 @@ urlcolor: blue
 
 | Filename                 | Notes                           |
 | ------------------------ | ------------------------------- |
-| PROJECT-NAME-ipc2581.xml | IPC-2581 board information file |
+| VCU_Module-ipc2581.xml | IPC-2581 board information file |
 
 ### Bill of Materials (BOM)
 
 | Filename             | Description                            |
 | -------------------- | -------------------------------------- |
-| PROJECT-NAME-bom.csv | BOM in Comma Separated Variable format |
+| VCU_Module-bom.csv | BOM in Comma Separated Variable format |
 
 ### Solder Paste Stencils
 
 | Filename                 | Notes                                            |
 | ------------------------ | ------------------------------------------------ |
-| PROJECT-NAME-B_Paste.gbr | RS274X file for top/front solder paste stencil   |
-| PROJECT-NAME-F_Paste.gbr | RS274X file for bottom/back solder paste stencil |
+| VCU_Module-B_Paste.gbr | RS274X file for top/front solder paste stencil   |
+| VCU_Module-F_Paste.gbr | RS274X file for bottom/back solder paste stencil |
 
 ### Mounting/Placement Location
 
 | Filename            | Description                                 |
 | ------------------- | ------------------------------------------- |
-| PROJECT-NAME-3u.pos | Pick and place locations for components     |
+| VCU_Module-3u.pos | Pick and place locations for components     |
 

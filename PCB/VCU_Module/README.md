@@ -1,21 +1,3 @@
----
-title: "**Viking MotorSports VCU Module**"
-subtitle: |
-  **Fabrication and Assembly Information**\
-  For build TIME-STAMP
-fontsize: 10pt
-geometry:
-  - margin=0.5in
-toc: true
-toc-depth: 2
-colorlinks: true
-urlcolor: blue
----
-
-\newpage
-
-# About this Board
-
 # Viking Motorsports VCU Module
 
 A custom STM32C092RCT6 development and vehicle-control PCB designed specifically for the Viking Motorsports Formula SAE Electric vehicle control system.
@@ -351,6 +333,20 @@ The board provides a consistent physical and electrical interface for the Viking
 \newpage
 
 # Printed Circuit Board (PCB) Fabrication Information
+
+---
+title: "**Viking MotorSports VCU Module**"
+subtitle: |
+  **Fabrication and Assembly Information**\
+  For build TIME-STAMP
+fontsize: 10pt
+geometry:
+  - margin=0.5in
+toc: true
+toc-depth: 2
+colorlinks: true
+urlcolor: blue
+---
 
 ## Board Info
 

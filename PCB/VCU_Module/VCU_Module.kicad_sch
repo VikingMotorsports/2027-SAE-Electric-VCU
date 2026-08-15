@@ -5433,7 +5433,7 @@
 		)
 		(uuid "d679bc58-f5be-4e29-8881-db793aba85e5")
 	)
-	(text "VCU Module TOP-LEVEL ARCHITECTURE\n\nThe \"VMS VCU Dev Board\" is the first iteration of the VCU module using a custom PCB designed to fit in a Cinch 2.25\" x 3.35\" enclosure\n\nThe board accepts up to a 36V DC power source (needs to be manually connected from bus connector) \nand contains both 3.3V and 5V regulators to power the MCU and any external sensors/components\n\nThe Cinch enclosure header consists of a 12-pin connector which is to be designated as the main bus connection point \nand a 20-pin connector which is to be used to interface with external components and sensors\n\nPins from the PCB header will connect to internal headers that can be manually connected via jumpers to the appropriate source (MCU pin, 5V, 3.3V, CAN H/L, GND, etc.) \n\n"
+	(text "VCU Module TOP-LEVEL ARCHITECTURE\n\nThe \"VMS VCU Dev Board\" is the first iteration of the VCU module using a custom PCB designed to fit in a Cinch 2.25\" x 3.35\" enclosure\n\nThe board accepts 6V to 36V DC power source (needs to be manually connected from bus connector) \nand contains both 3.3V and 5V regulators to power the MCU and any external sensors/components\n\nThe Cinch enclosure header consists of a 12-pin connector which is to be designated as the main bus connection point \nand a 20-pin connector which is to be used to interface with external components and sensors\n\nPins from the PCB header will connect to internal headers that can be manually connected via jumpers to the appropriate source (MCU pin, 5V, 3.3V, CAN H/L, GND, etc.) \n\n"
 		(exclude_from_sim no)
 		(at 124.968 38.862 0)
 		(effects

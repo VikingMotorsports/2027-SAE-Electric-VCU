@@ -2,8 +2,14 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "64489838-9fc5-4d7e-a833-787b16361cd0")
+	(uuid "9bc60d4b-daf2-4d1d-b2e5-cca36762705c")
 	(paper "A4")
+	(title_block
+		(title "Formula EV Wiring Diagram")
+		(date "2026-08-17")
+		(rev "1.0")
+		(company "Viking Motorsports")
+	)
 	(lib_symbols
 		(symbol "power:GND"
 			(power global)

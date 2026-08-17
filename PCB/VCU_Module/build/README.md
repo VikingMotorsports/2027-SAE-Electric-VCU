@@ -340,7 +340,7 @@ The board provides a consistent physical and electrical interface for the Viking
 title: "**Viking MotorSports VCU Module**"
 subtitle: |
   **Fabrication and Assembly Information**\
-  For build 2026-08-13T13-15-24
+  For build 2026-08-17T13-23-11
 fontsize: 10pt
 geometry:
   - margin=0.5in

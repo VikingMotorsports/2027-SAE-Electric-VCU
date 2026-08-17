@@ -8236,7 +8236,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "07c1879c-060d-4fc7-8aaa-6f2736b14967")
-		(property "Reference" "C6"
+		(property "Reference" "C4"
 			(at 176.784 175.768 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8388,7 +8388,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C6")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -8405,7 +8405,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "199a5b47-1db3-4b81-902e-36522c4dd1be")
-		(property "Reference" "R6"
+		(property "Reference" "R5"
 			(at 150.876 234.442 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8555,7 +8555,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "R6")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -8573,7 +8573,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c34a67b-3b90-45dc-942c-bdaf2d046627")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 46.99 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8850,7 +8850,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J1")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -9120,7 +9120,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1fe2bde6-9ecc-4f25-a7bd-215bd0e9c9ab")
-		(property "Reference" "J17"
+		(property "Reference" "J11"
 			(at 374.904 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9296,7 +9296,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J17")
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -9314,7 +9314,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "22162f5a-52a5-4119-a2c8-0119ff28e8a3")
-		(property "Reference" "C5"
+		(property "Reference" "C1"
 			(at 135.89 168.402 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9466,7 +9466,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C5")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -9677,7 +9677,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a8b67fc-cfd4-4bf4-be7b-e9047c3c6e37")
-		(property "Reference" "R1"
+		(property "Reference" "R4"
 			(at 58.42 190.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9829,7 +9829,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "R1")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -9847,7 +9847,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2be0a775-f2bf-4b8d-ad48-ca7f40c1aeb9")
-		(property "Reference" "C12"
+		(property "Reference" "C14"
 			(at 104.394 243.078 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9999,7 +9999,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C12")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -10017,7 +10017,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3271a21f-4b90-4086-bb9d-56249dba83c4")
-		(property "Reference" "J9"
+		(property "Reference" "J14"
 			(at 50.8 239.268 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10173,7 +10173,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J9")
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -10435,7 +10435,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "36b52dfd-de78-48bb-8f9a-f3ee7653d1b9")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 118.11 222.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10606,7 +10606,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "U4")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -10624,7 +10624,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b3b0099-9cec-4ddb-ad89-c147927923c1")
-		(property "Reference" "U3"
+		(property "Reference" "U1"
 			(at 118.11 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10795,7 +10795,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "U3")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -10985,7 +10985,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4181d871-9042-4be5-bc38-6661baa49291")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR011"
 			(at 27.94 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -11046,7 +11046,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR06")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -11064,7 +11064,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4577505d-5481-4250-b2f3-252d77366490")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR05"
 			(at 184.15 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -11124,7 +11124,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR022")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -11142,7 +11142,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4593de40-6a00-4d31-aa10-ed6c454863a0")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR016"
 			(at 62.23 260.35 0)
 			(hide yes)
 			(show_name no)
@@ -11202,7 +11202,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR08")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -11220,7 +11220,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4aef6735-c50a-4669-9ee2-8c7f82f839e1")
-		(property "Reference" "C7"
+		(property "Reference" "C5"
 			(at 183.134 175.768 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11372,7 +11372,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C7")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -11390,7 +11390,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b55d790-e240-46ee-8032-cdeec58768a5")
-		(property "Reference" "J5"
+		(property "Reference" "J7"
 			(at 351.79 171.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11548,7 +11548,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J5")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -11565,7 +11565,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ed5cc49-754c-4036-88e2-8aaa3bc0d1c3")
-		(property "Reference" "J14"
+		(property "Reference" "J12"
 			(at 36.068 228.346 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11723,7 +11723,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J14")
+					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -11741,7 +11741,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4fdbef09-2ce0-49d6-a1ec-c7e45a5ce3eb")
-		(property "Reference" "J13"
+		(property "Reference" "J8"
 			(at 265.176 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11917,7 +11917,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J13")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -11935,7 +11935,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5419ad75-f77c-4d0d-9404-a3c13c6385e0")
-		(property "Reference" "C21"
+		(property "Reference" "C13"
 			(at 189.484 235.458 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12087,7 +12087,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C21")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -12105,7 +12105,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "55839632-bda1-4071-b8c5-ef2fe31bef93")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR07"
 			(at 199.39 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -12165,7 +12165,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR015")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -12182,7 +12182,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5b68c9f6-5dbc-4a58-b2db-5333b05a0888")
-		(property "Reference" "D4"
+		(property "Reference" "D2"
 			(at 197.612 250.444 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12343,7 +12343,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "D4")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -12361,7 +12361,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "63014aa0-2086-4c25-8d59-449df5e202bd")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR08"
 			(at 55.88 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -12422,7 +12422,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR012")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -12440,7 +12440,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "671a4349-724f-4fed-a706-e26566185646")
-		(property "Reference" "C10"
+		(property "Reference" "C9"
 			(at 91.694 232.918 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12592,7 +12592,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C10")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -12610,7 +12610,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "68429c90-0a6f-462b-b055-5b4c82fc0ecf")
-		(property "Reference" "C19"
+		(property "Reference" "C11"
 			(at 176.784 235.458 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12762,7 +12762,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C19")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -12779,7 +12779,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "686ecc9a-cb60-40e2-b6c2-e929e61f7dfc")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR010"
 			(at 22.86 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -12840,7 +12840,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR04")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -12857,7 +12857,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "69174477-052f-47a4-9b8b-4107a5fc34d1")
-		(property "Reference" "J7"
+		(property "Reference" "J9"
 			(at 352.552 185.928 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13021,7 +13021,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J7")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -13039,7 +13039,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6b3ba036-f4a7-4704-9977-118d30babd60")
-		(property "Reference" "C11"
+		(property "Reference" "C10"
 			(at 100.584 232.918 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13191,7 +13191,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C11")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -13209,7 +13209,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6cac9529-3adb-4b27-8e46-4417ca4ce243")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR04"
 			(at 92.71 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -13269,7 +13269,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR021")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -13286,7 +13286,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "72b84f67-6d45-48d0-92cc-944e748e536e")
-		(property "Reference" "#FLG05"
+		(property "Reference" "#FLG02"
 			(at 87.63 168.275 0)
 			(hide yes)
 			(show_name no)
@@ -13347,7 +13347,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#FLG05")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -13680,7 +13680,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c3b9ce1-9da0-4bc2-9b5b-afc971ee3cb4")
-		(property "Reference" "R4"
+		(property "Reference" "R1"
 			(at 150.876 174.752 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13830,7 +13830,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "R4")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -14016,7 +14016,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7fb21fd4-f925-4bbe-a543-e57ff9141a2d")
-		(property "Reference" "C20"
+		(property "Reference" "C12"
 			(at 183.134 235.458 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14168,7 +14168,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C20")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -14185,7 +14185,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7fb240bc-88d2-4f06-bc64-ac77d652cc16")
-		(property "Reference" "J10"
+		(property "Reference" "J13"
 			(at 54.356 228.346 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14337,7 +14337,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J10")
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -14355,7 +14355,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8c3b96e9-6710-4ecb-8236-d50bc71a7e47")
-		(property "Reference" "C3"
+		(property "Reference" "C2"
 			(at 91.694 173.228 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14507,7 +14507,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C3")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -14525,7 +14525,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9112f25d-1942-4c37-8649-eafeb36b8c12")
-		(property "Reference" "C8"
+		(property "Reference" "C6"
 			(at 189.484 175.768 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14677,7 +14677,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C8")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -14695,7 +14695,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95695343-82a2-4d33-9129-35537599d0df")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR02"
 			(at 199.39 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -14756,7 +14756,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR07")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -14774,7 +14774,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b981b75-f7df-4756-b28e-28e755ccfebb")
-		(property "Reference" "J16"
+		(property "Reference" "J10"
 			(at 264.668 211.582 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14950,7 +14950,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J16")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -14968,7 +14968,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b9b16b1-7bf0-4b6f-b447-8c2584737ed2")
-		(property "Reference" "C4"
+		(property "Reference" "C3"
 			(at 100.584 173.228 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15120,7 +15120,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C4")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -15138,7 +15138,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9be1f095-7677-4ccc-8475-ac82dba7af73")
-		(property "Reference" "C9"
+		(property "Reference" "C7"
 			(at 104.394 183.388 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15290,7 +15290,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C9")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -15308,7 +15308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ee2c3ce-0b48-445a-87a2-99867fb6c050")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR013"
 			(at 92.71 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -15368,7 +15368,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR024")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -15386,7 +15386,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a02306bb-d1c0-4cd6-94ca-e0470b5a11b9")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR018"
 			(at 118.11 265.43 0)
 			(hide yes)
 			(show_name no)
@@ -15446,7 +15446,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR025")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -15464,7 +15464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2933f16-5979-4d97-9401-a439a477b55d")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR03"
 			(at 210.82 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -15525,7 +15525,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR09")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -15543,7 +15543,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3481084-1924-41e5-b0cd-a4c6807b84ac")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 46.99 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15820,7 +15820,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J1")
+					(reference "J2")
 					(unit 2)
 				)
 			)
@@ -15837,7 +15837,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa57f574-2a4a-4b6a-b2be-6c41d5fe191f")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR012"
 			(at 63.5 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -15897,7 +15897,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR02")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -15915,7 +15915,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af10a7df-10a3-4c77-97ef-004cce84863a")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR014"
 			(at 184.15 250.19 0)
 			(hide yes)
 			(show_name no)
@@ -15975,7 +15975,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR027")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -16107,7 +16107,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b498e893-996d-4f19-b59a-319ba315c2f6")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR015"
 			(at 153.67 254 0)
 			(hide yes)
 			(show_name no)
@@ -16167,7 +16167,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR026")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -16348,7 +16348,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb61faed-1bd3-4e57-8bd9-dce60a625209")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR06"
 			(at 153.67 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -16408,7 +16408,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR023")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -16776,7 +16776,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c3f71688-1d77-4602-993f-e8a9d01c4f21")
-		(property "Reference" "C18"
+		(property "Reference" "C8"
 			(at 135.89 228.092 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16928,7 +16928,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "C18")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -16945,7 +16945,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c680f550-bfe5-42f9-8c90-97d5c6015124")
-		(property "Reference" "J6"
+		(property "Reference" "J5"
 			(at 69.596 96.266 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17109,7 +17109,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J6")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -17126,7 +17126,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c96e8701-333b-4220-942c-ff74abd91a0b")
-		(property "Reference" "R8"
+		(property "Reference" "R6"
 			(at 197.104 237.998 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17276,7 +17276,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "R8")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -17295,7 +17295,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd8342fc-3fbf-4533-9af3-3ce20a5fb59c")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 26.67 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17469,7 +17469,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J2")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -17487,7 +17487,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e6b9be46-3fda-4c57-a95b-f2d986ee6c48")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR09"
 			(at 118.11 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -17547,7 +17547,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR020")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -17732,7 +17732,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f03aaf2e-ff8f-469a-b54c-6ef3c4f749f9")
-		(property "Reference" "J12"
+		(property "Reference" "J6"
 			(at 267.462 142.748 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17908,7 +17908,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J12")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -17925,7 +17925,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f38f3f1f-6c55-4c9c-9942-866bc1d4c87b")
-		(property "Reference" "R5"
+		(property "Reference" "R3"
 			(at 151.384 180.848 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18075,7 +18075,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "R5")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -18093,7 +18093,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5b365d7-487c-4f74-b59b-ad0e954c60da")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR017"
 			(at 199.39 260.35 0)
 			(hide yes)
 			(show_name no)
@@ -18153,7 +18153,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#PWR028")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -18170,7 +18170,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f800f5e5-27ce-4daf-affd-33cdc0cb3611")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG05"
 			(at 64.135 252.73 0)
 			(hide yes)
 			(show_name no)
@@ -18231,7 +18231,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#FLG04")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -18428,7 +18428,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fb5bf155-ba9e-4693-9b9c-4493c4f51fad")
-		(property "Reference" "#FLG02"
+		(property "Reference" "#FLG04"
 			(at 20.955 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -18489,7 +18489,7 @@
 		(instances
 			(project "VCU_Module"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "#FLG02")
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)

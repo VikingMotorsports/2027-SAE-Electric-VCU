@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "VMS_Symbols") (type "KiCad") (uri "${KIPRJMOD}/../Libraries/VMS_Symbols") (options "") (descr ""))
+)

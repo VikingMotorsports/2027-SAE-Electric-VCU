@@ -1,0 +1,971 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "1f56e37d-ff79-4f8b-90df-5494b71fe821")
+	(paper "A4")
+	(lib_symbols)
+	(text "SAE Formula EV\nLow-Voltage Wiring Overview"
+		(exclude_from_sim no)
+		(at 224.79 21.59 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "ed1e6d4e-284f-46b8-aace-1634799b0542")
+	)
+	(text_box "yellow = CAN High\ngreen = CAN Low\nred = LV Power (12-36 V)\nblack = LV Ground\n\nModules are powered via the main Low-Voltage bus (red and black) and communicate\nwith each other with CAN via the main CAN bus (green and yellow)\n\nEach module sheet contains the wiring and components specific to that circuit.\n\nTo add a new module:\n1.) Create a new hierarchical sheet (or copy an existing one) and label it appropriately \n2.) Implement module specific components and connections within sheet\n3.) Place VDD, GND, CANH, and CANL sheet pins and connect to main bus\n"
+		(exclude_from_sim no)
+		(at 173.99 29.21 0)
+		(size 107.95 114.2999)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width -0.0001)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left top)
+		)
+		(uuid "eca24633-cefd-4a01-8405-1cba87359a90")
+	)
+	(bus_entry
+		(at 81.28 40.64)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "1577159d-6969-4391-942a-62dccad6fc0c")
+	)
+	(bus_entry
+		(at 86.36 82.55)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "16f8eb8e-5707-4446-a58d-a664f6a702f9")
+	)
+	(bus_entry
+		(at 86.36 120.65)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "2246ea49-a8b5-44d9-9b82-55fd634b3e03")
+	)
+	(bus_entry
+		(at 76.2 114.3)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "23c78ca7-f24c-4edd-b0c2-c13e4f279b3a")
+	)
+	(bus_entry
+		(at 76.2 152.4)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "28a64296-730f-45ab-a13d-0cc114cb9755")
+	)
+	(bus_entry
+		(at 81.28 154.94)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "6319762b-65c1-4bb7-8c23-1641b308b8c5")
+	)
+	(bus_entry
+		(at 76.2 38.1)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "71332928-074b-4da0-91d7-8b13e2d08947")
+	)
+	(bus_entry
+		(at 81.28 116.84)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "8469362c-005c-4e78-aa4d-f29368c91d4f")
+	)
+	(bus_entry
+		(at 81.28 78.74)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "9a4af0c9-74ad-4acf-b47d-24ddc4f2d868")
+	)
+	(bus_entry
+		(at 91.44 85.09)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "cb2568e6-d7e7-4afa-b9fa-70f66cbaf52f")
+	)
+	(bus_entry
+		(at 76.2 76.2)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "d8612c55-09ca-4c65-8603-809c034ad3f9")
+	)
+	(bus_entry
+		(at 91.44 123.19)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "f46f1d79-4dd5-4238-b3bc-dd87479e78f2")
+	)
+	(wire
+		(pts
+			(xy 58.42 123.19) (xy 83.82 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "026110fc-2023-4348-b31d-d3172ec90358")
+	)
+	(bus
+		(pts
+			(xy 86.36 161.29) (xy 58.42 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "04044447-89e6-4f52-9f2d-9ed180d3e8aa")
+	)
+	(wire
+		(pts
+			(xy 58.42 40.64) (xy 73.66 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "094517d5-3831-4e16-b242-4388d766763a")
+	)
+	(bus
+		(pts
+			(xy 91.44 49.53) (xy 91.44 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "0da8ec56-0313-4e5d-840a-6b8efc24d327")
+	)
+	(bus
+		(pts
+			(xy 58.42 46.99) (xy 86.36 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "1285d578-d6b6-4fc6-9479-83189f4e95f5")
+	)
+	(wire
+		(pts
+			(xy 58.42 125.73) (xy 88.9 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "15ba1698-87e7-4538-8563-767572626ed7")
+	)
+	(wire
+		(pts
+			(xy 58.42 157.48) (xy 78.74 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "25154d0e-ac0b-4ffa-9f2d-ebd7fdc1d70a")
+	)
+	(bus
+		(pts
+			(xy 81.28 27.94) (xy 81.28 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "26131d74-d6d0-4dd6-bc2e-005e9e183d3a")
+	)
+	(bus
+		(pts
+			(xy 91.44 163.83) (xy 58.42 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "3298329b-557f-4a42-943b-6ccb555cbf81")
+	)
+	(wire
+		(pts
+			(xy 58.42 78.74) (xy 73.66 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "3edfcdb1-2754-4107-b3a1-85fd6276690e")
+	)
+	(bus
+		(pts
+			(xy 76.2 25.4) (xy 93.98 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "52696b4c-7647-4a5e-85b8-71c2ae01edf1")
+	)
+	(wire
+		(pts
+			(xy 58.42 154.94) (xy 73.66 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "533ae254-da82-4733-b099-38066d561bf7")
+	)
+	(wire
+		(pts
+			(xy 58.42 43.18) (xy 78.74 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "7d3ed268-51df-4d5d-9ebc-645ed18a10ff")
+	)
+	(wire
+		(pts
+			(xy 58.42 81.28) (xy 78.74 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "84b49b07-7718-41e1-9b93-2039db417eb5")
+	)
+	(bus
+		(pts
+			(xy 81.28 27.94) (xy 93.98 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "99d2366e-af88-41bd-81d2-647c14bf334d")
+	)
+	(wire
+		(pts
+			(xy 58.42 116.84) (xy 73.66 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "a175e12b-3ad8-499a-9442-5377930b095e")
+	)
+	(wire
+		(pts
+			(xy 58.42 85.09) (xy 83.82 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "a2d5338e-4793-493c-9a97-a82909e541e9")
+	)
+	(bus
+		(pts
+			(xy 86.36 46.99) (xy 86.36 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "b50b76e7-0dac-4519-9a20-84d23b0cd8c5")
+	)
+	(wire
+		(pts
+			(xy 58.42 119.38) (xy 78.74 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "b59e52fb-059a-4d0a-acb2-311c78d80417")
+	)
+	(bus
+		(pts
+			(xy 58.42 49.53) (xy 91.44 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "c79cf97c-26a8-4e12-a090-1f7bc4e2b43e")
+	)
+	(bus
+		(pts
+			(xy 76.2 25.4) (xy 76.2 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "c84d6b03-479f-43ac-a3fa-4f6653bdcbf6")
+	)
+	(wire
+		(pts
+			(xy 58.42 87.63) (xy 88.9 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "d86918de-2acf-4a7e-ac57-9991ee355f11")
+	)
+	(sheet
+		(at 27.94 76.2)
+		(size 30.48 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "35616e6a-6d04-4acd-ac41-e3f2daea0889")
+		(property "Sheetname" "Motor Controller"
+			(at 35.56 75.184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Motor Controller.kicad_sch"
+			(at 27.94 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VDD" bidirectional
+			(at 58.42 78.74 0)
+			(uuid "26914d27-80ce-4add-98d9-10df42b05aea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 58.42 85.09 0)
+			(uuid "c39a1287-42ee-4024-a7bd-1c76e29d332b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 58.42 87.63 0)
+			(uuid "11df5e7d-44c3-433a-804f-4b73bbba9333")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" bidirectional
+			(at 58.42 81.28 0)
+			(uuid "ef4bf184-8291-4803-a8b0-ab2f98ac76bd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO1" bidirectional
+			(at 58.42 91.44 0)
+			(uuid "38e2641a-e4ad-45a7-94e5-2079d8789e5e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO2" bidirectional
+			(at 58.42 93.98 0)
+			(uuid "03ead03e-ba0a-46dd-93e6-46e0236e5b2e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO3" bidirectional
+			(at 58.42 96.52 0)
+			(uuid "7faa4ae0-4113-435c-8fdf-f5e3c45ab2f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO4" bidirectional
+			(at 58.42 99.06 0)
+			(uuid "e46c1d70-34fb-4e8f-a818-2c1c5494a122")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Wire_Harness"
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 152.4)
+		(size 30.48 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "723296d1-3926-40b4-9add-5a2270957c7f")
+		(property "Sheetname" "Additional Module"
+			(at 34.29 150.114 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Additional Module.kicad_sch"
+			(at 27.94 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VDD" bidirectional
+			(at 58.42 154.94 0)
+			(uuid "7a6e8da5-7bea-4080-b4bf-e482bee43d3a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 58.42 161.29 0)
+			(uuid "ad6d0769-5176-4d62-aa0b-dfe630ee3915")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 58.42 163.83 0)
+			(uuid "ef7b80a3-1dbd-4e36-bf53-7d36c42cd40d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" bidirectional
+			(at 58.42 157.48 0)
+			(uuid "22ee1ece-6080-4258-95c4-9243d1cf55f3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO1" bidirectional
+			(at 58.42 167.64 0)
+			(uuid "6ec694ae-cf45-47eb-b2f6-4a40af9b7221")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO2" bidirectional
+			(at 58.42 170.18 0)
+			(uuid "f63c7999-e4d0-48cf-afb7-4cbc28825eb8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO3" bidirectional
+			(at 58.42 172.72 0)
+			(uuid "17ef5b29-f13f-41c6-88c2-7485d05aada3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO4" bidirectional
+			(at 58.42 175.26 0)
+			(uuid "e8ead7f5-3ff4-4276-a645-6f93354f65cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Wire_Harness"
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 38.1)
+		(size 30.48 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "99d251a0-09c3-46d2-90b3-b7f2f265e49e")
+		(property "Sheetname" "Driver Display + Telemetry"
+			(at 30.734 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Driver Display + Telemetry.kicad_sch"
+			(at 27.94 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VDD" bidirectional
+			(at 58.42 40.64 0)
+			(uuid "9271fdbf-20c7-483e-ba23-278f6c1da879")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 58.42 46.99 0)
+			(uuid "657917b7-1da0-4877-a882-ba9f080e78ff")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 58.42 49.53 0)
+			(uuid "59046a7f-9a35-430a-a4e9-0263d53459c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" bidirectional
+			(at 58.42 43.18 0)
+			(uuid "29e29c4d-cc1c-491d-ba34-03d6142efc4e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO1" bidirectional
+			(at 58.42 53.34 0)
+			(uuid "f35c357a-7232-43d8-b508-b6ff90bef3af")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO2" bidirectional
+			(at 58.42 55.88 0)
+			(uuid "50319e9d-dcff-4492-9d55-3b58e91bd70f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO3" bidirectional
+			(at 58.42 58.42 0)
+			(uuid "a6e003de-8367-4b90-b17f-42620511ff6c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO4" bidirectional
+			(at 58.42 60.96 0)
+			(uuid "1396bf11-002f-49de-908a-0ed4b4dc1e82")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Wire_Harness"
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 93.98 22.86)
+		(size 21.59 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ef7d0169-2c10-4e8d-930b-85c511b4217e")
+		(property "Sheetname" "LV Battery (12V - 36V)"
+			(at 93.472 22.098 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LV Battery.kicad_sch"
+			(at 93.98 32.258 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Battery +" bidirectional
+			(at 93.98 25.4 180)
+			(uuid "2cfc08cd-f203-42e1-aee9-fc8c7c40b187")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Battery -" bidirectional
+			(at 93.98 27.94 180)
+			(uuid "66edd9a4-b2e8-4a0b-9585-316eac91c576")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Wire_Harness"
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 114.3)
+		(size 30.48 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f50f96cf-2f6e-4470-869e-8316e17c586a")
+		(property "Sheetname" "Pedal Module"
+			(at 34.29 112.014 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Pedal Module.kicad_sch"
+			(at 27.94 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VDD" bidirectional
+			(at 58.42 116.84 0)
+			(uuid "0c53b60f-8941-483b-ab0a-cfd190f6723c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_H" bidirectional
+			(at 58.42 123.19 0)
+			(uuid "b630f1ac-1b67-428f-ba02-48db356a3f8a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN_L" bidirectional
+			(at 58.42 125.73 0)
+			(uuid "9b34ab53-b50e-450c-97fd-958ecd192dc6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" bidirectional
+			(at 58.42 119.38 0)
+			(uuid "2e5a5f77-e3d9-4e54-bb92-97972ff27ce8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO1" bidirectional
+			(at 58.42 129.54 0)
+			(uuid "d5496bd2-c129-4046-b8dc-e0a64747e616")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO2" bidirectional
+			(at 58.42 132.08 0)
+			(uuid "4ced1383-c7f1-4af5-a538-9c207f32c595")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO3" bidirectional
+			(at 58.42 134.62 0)
+			(uuid "d77fd436-e2de-4465-afc0-d13e7e3a8671")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO4" bidirectional
+			(at 58.42 137.16 0)
+			(uuid "67235181-812d-43ad-8aea-9279ac421e9c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Wire_Harness"
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

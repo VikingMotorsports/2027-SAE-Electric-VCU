@@ -10791,7 +10791,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://suddendocs.samtec.com/catalog_english/td.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8890/PdfFile_256753.pdf"
 			(at 115.57 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -10857,7 +10857,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/TS-102-T-A/1105492"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/310-87-104-41-001101/3757342"
 			(at 115.57 227.33 0)
 			(hide yes)
 			(show_name no)

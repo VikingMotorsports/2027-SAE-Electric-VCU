@@ -8944,10 +8944,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1dba1601-120b-4696-9727-0dac5d096621")
 		(property "Reference" "J15"
-			(at 40.64 246.3799 0)
+			(at 39.624 244.856 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8957,8 +8956,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "3V3"
-			(at 40.64 248.9199 0)
+		(property "Value" "310-87-104-41-001101"
+			(at 26.924 254.508 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8990,7 +8989,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 38.1 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -9012,7 +9011,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 38.1 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -9023,7 +9022,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 38.1 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -9034,7 +9033,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 38.1 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -9122,7 +9121,7 @@
 		(dnp no)
 		(uuid "1fe2bde6-9ecc-4f25-a7bd-215bd0e9c9ab")
 		(property "Reference" "J17"
-			(at 355.346 211.582 0)
+			(at 374.904 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9132,8 +9131,8 @@
 				(justify left top)
 			)
 		)
-		(property "Value" "MCU4"
-			(at 359.41 214.376 0)
+		(property "Value" "801-87-010-10-012101"
+			(at 378.968 214.884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9154,7 +9153,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -9165,7 +9164,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -9187,7 +9186,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -9198,7 +9197,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -9209,7 +9208,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -9220,7 +9219,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 350.52 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -9485,7 +9484,7 @@
 		(dnp no)
 		(uuid "243467ea-91e2-403b-b043-704880ae901b")
 		(property "Reference" "J3"
-			(at 67.818 41.656 0)
+			(at 70.104 47.498 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9495,8 +9494,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CN2"
-			(at 67.818 44.196 0)
+		(property "Value" "801-87-010-10-012101"
+			(at 70.104 50.038 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9517,7 +9516,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9528,7 +9527,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9550,7 +9549,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9561,7 +9560,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9572,7 +9571,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9583,7 +9582,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -10019,7 +10018,7 @@
 		(dnp no)
 		(uuid "3271a21f-4b90-4086-bb9d-56249dba83c4")
 		(property "Reference" "J9"
-			(at 50.546 240.284 0)
+			(at 50.8 239.268 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10028,8 +10027,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 50.546 242.824 0)
+		(property "Value" "310-87-104-41-001101"
+			(at 54.102 248.92 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10060,7 +10059,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 53.34 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10082,7 +10081,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 53.34 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10093,7 +10092,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 53.34 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10104,7 +10103,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 53.34 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -11402,7 +11401,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MCU6"
+		(property "Value" "310-87-104-41-001101"
 			(at 351.79 173.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11435,7 +11434,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 349.25 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -11457,7 +11456,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 349.25 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -11468,7 +11467,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 349.25 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -11479,7 +11478,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 349.25 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -11565,10 +11564,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4ed5cc49-754c-4036-88e2-8aaa3bc0d1c3")
 		(property "Reference" "J14"
-			(at 40.64 233.6799 0)
+			(at 36.068 228.346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11578,8 +11576,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5V"
-			(at 40.64 236.2199 0)
+		(property "Value" "310-87-104-41-001101"
+			(at 22.86 241.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11611,7 +11609,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 38.1 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -11633,7 +11631,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 38.1 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -11644,7 +11642,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 38.1 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -11655,7 +11653,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 38.1 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -11744,7 +11742,7 @@
 		(dnp no)
 		(uuid "4fdbef09-2ce0-49d6-a1ec-c7e45a5ce3eb")
 		(property "Reference" "J13"
-			(at 287.02 172.974 0)
+			(at 265.176 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11754,8 +11752,8 @@
 				(justify left top)
 			)
 		)
-		(property "Value" "MCU2"
-			(at 282.956 175.768 0)
+		(property "Value" "801-87-010-10-012101"
+			(at 261.112 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11776,7 +11774,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 290.83 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -11787,7 +11785,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 290.83 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -11809,7 +11807,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 290.83 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -11820,7 +11818,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 290.83 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -11831,7 +11829,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 290.83 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -11842,7 +11840,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 290.83 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -12870,7 +12868,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MCU5"
+		(property "Value" "801-87-006-10-012101"
 			(at 352.552 188.468 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12892,7 +12890,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 349.25 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -12903,7 +12901,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "6 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 349.25 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -12925,7 +12923,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7039-ND"
+		(property "DPN" "801-87-006-10-012101-ND"
 			(at 349.25 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -12936,7 +12934,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 349.25 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -12947,7 +12945,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC061LFBN-RC"
+		(property "MPN" "801-87-006-10-012101"
 			(at 349.25 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -12958,7 +12956,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-006-10-012101/4125888"
 			(at 349.25 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -14188,7 +14186,7 @@
 		(dnp no)
 		(uuid "7fb240bc-88d2-4f06-bc64-ac77d652cc16")
 		(property "Reference" "J10"
-			(at 51.308 230.632 0)
+			(at 54.356 228.346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14198,8 +14196,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12V"
-			(at 50.8 233.172 0)
+		(property "Value" "310-83-102-41-001101-ND"
+			(at 76.2 235.966 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14220,7 +14218,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8890/PdfFile_256753.pdf"
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14231,7 +14229,7 @@
 				)
 			)
 		)
-		(property "Description" "2 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "2 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14253,7 +14251,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7035-ND"
+		(property "DPN" "310-83-102-41-001101-ND"
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14264,7 +14262,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14275,7 +14273,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC021LFBN-RC"
+		(property "MPN" "310-83-102-41-001101"
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14286,7 +14284,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC021LFBN-RC/810174"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/310-83-102-41-001101/4095638"
 			(at 53.34 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -14777,7 +14775,7 @@
 		(dnp no)
 		(uuid "9b981b75-f7df-4756-b28e-28e755ccfebb")
 		(property "Reference" "J16"
-			(at 287.274 211.328 0)
+			(at 264.668 211.582 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14787,8 +14785,8 @@
 				(justify left top)
 			)
 		)
-		(property "Value" "MCU3"
-			(at 283.21 214.122 0)
+		(property "Value" "801-87-010-10-012101"
+			(at 260.604 214.376 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14809,7 +14807,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 290.83 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -14820,7 +14818,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 290.83 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -14842,7 +14840,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 290.83 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -14853,7 +14851,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 290.83 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -14864,7 +14862,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 290.83 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -14875,7 +14873,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 290.83 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -16948,7 +16946,7 @@
 		(dnp no)
 		(uuid "c680f550-bfe5-42f9-8c90-97d5c6015124")
 		(property "Reference" "J6"
-			(at 65.786 75.946 0)
+			(at 69.596 96.266 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16958,8 +16956,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CN4"
-			(at 65.786 78.486 0)
+		(property "Value" "801-87-006-10-012101"
+			(at 69.596 98.806 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16980,7 +16978,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -16991,7 +16989,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "6 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17013,7 +17011,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7039-ND"
+		(property "DPN" "801-87-006-10-012101-ND"
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17024,7 +17022,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17035,7 +17033,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC061LFBN-RC"
+		(property "MPN" "801-87-006-10-012101"
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17046,7 +17044,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-006-10-012101/4125888"
 			(at 67.31 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17307,7 +17305,7 @@
 				)
 			)
 		)
-		(property "Value" "CN1"
+		(property "Value" "801-87-010-10-012101"
 			(at 26.67 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17328,7 +17326,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17339,7 +17337,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17361,7 +17359,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17372,7 +17370,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17383,7 +17381,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17394,7 +17392,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 26.67 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17735,7 +17733,7 @@
 		(dnp no)
 		(uuid "f03aaf2e-ff8f-469a-b54c-6ef3c4f749f9")
 		(property "Reference" "J12"
-			(at 286.766 146.05 0)
+			(at 267.462 142.748 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17745,8 +17743,8 @@
 				(justify left top)
 			)
 		)
-		(property "Value" "MCU1"
-			(at 282.702 148.844 0)
+		(property "Value" "801-87-010-10-012101"
+			(at 263.398 145.542 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17767,7 +17765,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17778,7 +17776,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17800,7 +17798,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17811,7 +17809,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17822,7 +17820,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17833,7 +17831,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 290.83 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -18252,7 +18250,7 @@
 		(dnp no)
 		(uuid "fb230cd1-a659-43e3-bc27-2acc7f872417")
 		(property "Reference" "J4"
-			(at 26.67 76.2 0)
+			(at 19.558 76.708 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18261,8 +18259,8 @@
 				)
 			)
 		)
-		(property "Value" "CN3"
-			(at 26.67 78.74 0)
+		(property "Value" "801-87-006-10-012101"
+			(at 19.558 79.248 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18282,7 +18280,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 26.67 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -18293,7 +18291,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "6 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 26.67 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -18315,7 +18313,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7039-ND"
+		(property "DPN" "801-87-006-10-012101-ND"
 			(at 26.67 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -18326,7 +18324,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 26.67 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -18337,7 +18335,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC061LFBN-RC"
+		(property "MPN" "801-87-006-10-012101"
 			(at 26.67 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -18348,7 +18346,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-006-10-012101/4125888"
 			(at 26.67 87.63 0)
 			(hide yes)
 			(show_name no)

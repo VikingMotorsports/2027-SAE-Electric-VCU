@@ -915,7 +915,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://suddendocs.samtec.com/catalog_english/td.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8890/PdfFile_256753.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -989,7 +989,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/samtec-inc/TS-102-T-A/1105492"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/310-87-104-41-001101/3757342"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1045,12 +1045,6 @@
 		(path "/f115f1df-fd74-4b87-bcb3-90c9dd231c01/d19c682a-a71d-4a84-aee1-39b486231366")
 		(sheetname "/MCU/")
 		(sheetfile "MCU.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1208,7 +1202,7 @@
 			(uuid "cf28aadd-3e3e-4c8c-aa41-8f7a93fdb28c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.step"
+		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2952,9 +2946,9 @@
 				)
 			)
 		)
-		(property "Value" "3V3"
+		(property "Value" "310-87-104-41-001101"
 			(at 3.1 4.31 0)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "b72da260-882f-4ebb-ad93-540e0e4b6f35")
 			(effects
 				(font
@@ -2974,7 +2968,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2982,6 +2976,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dd0c60f0-fd8d-4c2a-9330-08b8c7b7bfd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2998,7 +3005,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3011,7 +3018,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3024,25 +3031,12 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "606467d5-7b03-4990-8df6-1407e1f23b25")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "dd0c60f0-fd8d-4c2a-9330-08b8c7b7bfd7")
 			(effects
 				(font
 					(size 1 1)
@@ -3093,12 +3087,6 @@
 		(path "/1dba1601-120b-4696-9727-0dac5d096621")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3278,15 +3266,15 @@
 			(uuid "f5c12a1f-e6f0-40f6-b654-b8d33809bafe")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_310-87-104-41-001101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -3.75 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -4503,7 +4491,7 @@
 				)
 			)
 		)
-		(property "Value" "CN3"
+		(property "Value" "801-87-006-10-012101"
 			(at 0 15.08 90)
 			(layer "F.Fab")
 			(uuid "b179b188-d0e7-4575-86af-10c65ef2809a")
@@ -4514,7 +4502,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4525,7 +4513,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "6 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4533,6 +4521,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "Preci-Dip"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "84531c00-a38b-468b-b68b-6b4a8803b71c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4549,7 +4550,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7039-ND"
+		(property "DPN" "801-87-006-10-012101-ND"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4562,20 +4563,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "84531c00-a38b-468b-b68b-6b4a8803b71c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "PPPC061LFBN-RC"
+		(property "MPN" "801-87-006-10-012101"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4588,7 +4576,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-006-10-012101/4125888"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4644,12 +4632,6 @@
 		(path "/fb230cd1-a659-43e3-bc27-2acc7f872417")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4851,15 +4833,15 @@
 			(uuid "1597920e-591f-4493-b40c-a275d885c870")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x06_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-006-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -6.35 0.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -4880,7 +4862,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU6"
+		(property "Value" "310-87-104-41-001101"
 			(at 0 10 0)
 			(layer "F.Fab")
 			(uuid "65c7e8ef-acee-4ecf-a822-b32f920ec483")
@@ -4902,7 +4884,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4910,6 +4892,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "75ed3100-1ed7-4af9-8959-8a45319b4279")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4926,7 +4921,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4939,7 +4934,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4952,25 +4947,12 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6402a9b9-3c14-4c2a-ab31-36971477b956")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "75ed3100-1ed7-4af9-8959-8a45319b4279")
 			(effects
 				(font
 					(size 1 1)
@@ -5021,12 +5003,6 @@
 		(path "/4b55d790-e240-46ee-8032-cdeec58768a5")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5206,15 +5182,15 @@
 			(uuid "f0ca6a3b-97a5-4a44-afaa-22270afefcac")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_310-87-104-41-001101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -3.75 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -5485,9 +5461,9 @@
 				)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "310-87-104-41-001101"
 			(at 2.85 3.21 0)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "77028063-46d0-495a-9b03-55691333f3b9")
 			(effects
 				(font
@@ -5507,7 +5483,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5515,6 +5491,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "32ea0de8-bd04-4d93-b7c8-88b2f3130ba0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5531,7 +5520,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5544,7 +5533,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5557,25 +5546,12 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "45ff8266-2204-4127-b3f1-9a28ed7bd69a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "32ea0de8-bd04-4d93-b7c8-88b2f3130ba0")
 			(effects
 				(font
 					(size 1 1)
@@ -5626,12 +5602,6 @@
 		(path "/4ed5cc49-754c-4036-88e2-8aaa3bc0d1c3")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5811,15 +5781,15 @@
 			(uuid "300af4f6-9a50-47fc-b8f1-340babbcc64a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_310-87-104-41-001101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -3.75 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -6753,7 +6723,7 @@
 				)
 			)
 		)
-		(property "Value" "CN2"
+		(property "Value" "801-87-010-10-012101"
 			(at 11.34 2.28 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6765,7 +6735,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6776,7 +6746,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6800,7 +6770,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6813,7 +6783,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6826,7 +6796,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6839,7 +6809,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6895,12 +6865,6 @@
 		(path "/243467ea-91e2-403b-b043-704880ae901b")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7179,15 +7143,15 @@
 			(uuid "46da7e92-d318-4b1d-bb66-f6444faf7001")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x10_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-010-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11.5 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -90)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -8208,7 +8172,7 @@
 				)
 			)
 		)
-		(property "Value" "CN1"
+		(property "Value" "801-87-010-10-012101"
 			(at 12.85 -2.93 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8220,7 +8184,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8231,7 +8195,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8255,7 +8219,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8268,7 +8232,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8281,7 +8245,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8294,7 +8258,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8350,12 +8314,6 @@
 		(path "/dd8342fc-3fbf-4533-9af3-3ce20a5fb59c")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8634,15 +8592,15 @@
 			(uuid "5071263c-9a1f-41bb-bb03-aff9b799c9f9")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x10_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-010-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11.5 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -90)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -10277,7 +10235,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU2"
+		(property "Value" "801-87-010-10-012101"
 			(at 15.3251 -2.3199 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10289,7 +10247,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10300,7 +10258,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10324,7 +10282,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10337,7 +10295,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10350,7 +10308,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10363,7 +10321,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10419,12 +10377,6 @@
 		(path "/4fdbef09-2ce0-49d6-a1ec-c7e45a5ce3eb")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10703,15 +10655,15 @@
 			(uuid "5e901ec3-381a-4cf7-bbbb-d7782a04bc23")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x10_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-010-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11.5 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -90)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -14293,7 +14245,7 @@
 				)
 			)
 		)
-		(property "Value" "CN4"
+		(property "Value" "801-87-006-10-012101"
 			(at 0 15.08 90)
 			(layer "F.Fab")
 			(uuid "3363de69-0143-41b6-befd-650b32647db5")
@@ -14304,7 +14256,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14315,7 +14267,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "6 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14323,6 +14275,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "Preci-Dip"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "998d7599-4445-435c-b2ee-d939523a00c8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14339,7 +14304,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7039-ND"
+		(property "DPN" "801-87-006-10-012101-ND"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14352,20 +14317,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "998d7599-4445-435c-b2ee-d939523a00c8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "PPPC061LFBN-RC"
+		(property "MPN" "801-87-006-10-012101"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14378,7 +14330,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-006-10-012101/4125888"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14434,12 +14386,6 @@
 		(path "/c680f550-bfe5-42f9-8c90-97d5c6015124")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14641,15 +14587,15 @@
 			(uuid "92ae02a8-c4c7-40e3-8d62-712ad8ed04ab")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x06_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-006-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -6.35 0.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -15217,7 +15163,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU4"
+		(property "Value" "801-87-010-10-012101"
 			(at 10.26 2.35 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15229,7 +15175,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15240,7 +15186,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15264,7 +15210,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15277,7 +15223,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15290,7 +15236,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15303,7 +15249,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15359,12 +15305,6 @@
 		(path "/1fe2bde6-9ecc-4f25-a7bd-215bd0e9c9ab")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15643,15 +15583,15 @@
 			(uuid "d659fb86-c33c-4ad6-ae1e-3c4e841bfe39")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x10_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-010-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11.5 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -90)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -16202,7 +16142,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU3"
+		(property "Value" "801-87-010-10-012101"
 			(at 25.4751 0.5301 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16214,7 +16154,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -16225,7 +16165,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -16249,7 +16189,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16262,7 +16202,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16275,7 +16215,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16288,7 +16228,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16344,12 +16284,6 @@
 		(path "/9b981b75-f7df-4756-b28e-28e755ccfebb")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16628,15 +16562,15 @@
 			(uuid "e9e77779-1ee5-422a-8f30-e025a4390835")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x10_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-010-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11.5 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -90)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -17803,6 +17737,18 @@
 		(path "/a3481084-1924-41e5-b0cd-a4c6807b84ac")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "A1" "A2" "A3" "A4" "A5" "A6" "A7" "A8" "A9" "A10" "A11" "A12"
+					"A13" "A14" "A15" "A16" "A17" "A18" "A19" "A20"
+				)
+			)
+			(unit
+				(name "B")
+				(pins "B1" "B2" "B3" "B4" "B5" "B6" "B7" "B8" "B9" "B10" "B11" "B12")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19305,7 +19251,7 @@
 				)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "310-87-104-41-001101"
 			(at 0 10 90)
 			(layer "F.Fab")
 			(uuid "168b07e8-ece4-4de0-9599-370ce00da7e1")
@@ -19327,7 +19273,7 @@
 				)
 			)
 		)
-		(property "Description" "4 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "4 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19335,6 +19281,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0c80ae42-2618-4aad-9f9f-de786eba7ca3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19351,7 +19310,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7037-ND"
+		(property "DPN" "1212-1092-ND"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19364,7 +19323,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19377,25 +19336,12 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC041LFBN-RC"
+		(property "MPN" "310-87-104-41-001101"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f9029b15-b62a-420b-9fd2-6f137c49089f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC041LFBN-RC/810176"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0c80ae42-2618-4aad-9f9f-de786eba7ca3")
 			(effects
 				(font
 					(size 1 1)
@@ -19446,12 +19392,6 @@
 		(path "/3271a21f-4b90-4086-bb9d-56249dba83c4")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19631,15 +19571,15 @@
 			(uuid "682f8ebc-d72e-4c14-b296-3bdddf367d11")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_310-87-104-41-001101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -3.75 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -19910,7 +19850,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU1"
+		(property "Value" "801-87-010-10-012101"
 			(at 16.8751 3.6801 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19922,7 +19862,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19933,7 +19873,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "10 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19957,7 +19897,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7043-ND"
+		(property "DPN" "1212-1197-ND"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19970,7 +19910,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
+		(property "MFR" "Preci-Dip"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19983,7 +19923,7 @@
 				)
 			)
 		)
-		(property "MPN" "PPPC101LFBN-RC"
+		(property "MPN" "801-87-010-10-012101"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19996,7 +19936,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC101LFBN-RC/810182"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-010-10-012101/3757447"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20052,12 +19992,6 @@
 		(path "/f03aaf2e-ff8f-469a-b54c-6ef3c4f749f9")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20336,15 +20270,15 @@
 			(uuid "4deee2f4-aa1f-4aab-ad45-b3427c9226d4")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x10_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-010-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11.5 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -90)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -20365,7 +20299,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU5"
+		(property "Value" "801-87-006-10-012101"
 			(at -0.15 16.35 0)
 			(layer "F.Fab")
 			(uuid "6edfba24-da67-4466-b1e6-f99a66b59f7b")
@@ -20376,7 +20310,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7135/PdfFile_247581.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20387,7 +20321,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "6 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20395,6 +20329,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "Preci-Dip"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "04af5bb3-7bf7-402b-a7de-b1aac9baf677")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20411,7 +20358,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7039-ND"
+		(property "DPN" "801-87-006-10-012101-ND"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20424,20 +20371,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "04af5bb3-7bf7-402b-a7de-b1aac9baf677")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "PPPC061LFBN-RC"
+		(property "MPN" "801-87-006-10-012101"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20450,7 +20384,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC061LFBN-RC/810178"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/801-87-006-10-012101/4125888"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20506,12 +20440,6 @@
 		(path "/69174477-052f-47a4-9b8b-4107a5fc34d1")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20713,15 +20641,15 @@
 			(uuid "1a5a8ae7-e9b1-40f0-921a-19d3661e2f06")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x06_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_801-87-006-10-012101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -6.35 0.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -20742,9 +20670,9 @@
 				)
 			)
 		)
-		(property "Value" "12V"
-			(at 2.8 1.075 180)
-			(layer "F.SilkS")
+		(property "Value" "310-83-102-41-001101-ND"
+			(at -2.5 0.675 180)
+			(layer "F.Fab")
 			(uuid "d15cb21b-a50b-4cbf-a6c0-cb47e7ab17e5")
 			(effects
 				(font
@@ -20753,7 +20681,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8890/PdfFile_256753.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20764,7 +20692,7 @@
 				)
 			)
 		)
-		(property "Description" "2 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "2 Position Socket Connector 0.100\" (2.54mm) Through Hole Gold"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20772,6 +20700,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "Preci-Dip"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0ecc3996-1128-472f-a1a4-4b5ddd9511bf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20788,7 +20729,7 @@
 				)
 			)
 		)
-		(property "DPN" "S7035-ND"
+		(property "DPN" "310-83-102-41-001101-ND"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20801,20 +20742,7 @@
 				)
 			)
 		)
-		(property "MFR" "Sullins Connector Solutions"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0ecc3996-1128-472f-a1a4-4b5ddd9511bf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "MPN" "PPPC021LFBN-RC"
+		(property "MPN" "310-83-102-41-001101"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20827,7 +20755,7 @@
 				)
 			)
 		)
-		(property "Purchase Link" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPPC021LFBN-RC/810174"
+		(property "Purchase Link" "https://www.digikey.com/en/products/detail/preci-dip/310-83-102-41-001101/4095638"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20883,12 +20811,6 @@
 		(path "/7fb240bc-88d2-4f06-bc64-ac77d652cc16")
 		(sheetname "/")
 		(sheetfile "VCU_Module.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21046,15 +20968,15 @@
 			(uuid "381c0a9b-c96a-46bf-b754-f5ad2d7e8722")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x02_P2.54mm_Vertical.step"
+		(model "${VMS_LIBRARIES}/VMS_3DModels/pcb_connector_310-83-102-41-001101.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 -1.25 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -23358,6 +23280,42 @@
 		(at 116.5 154.5 0)
 		(layer "F.SilkS")
 		(uuid "6d90a836-2ce8-4850-af8c-38ed1d552e25")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.125)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "12V"
+		(at 140.1 69.7 0)
+		(layer "F.SilkS")
+		(uuid "5f4497f6-8ab9-482c-82b3-3de9e98fc594")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.125)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "3V"
+		(at 146.65 116.35 0)
+		(layer "F.SilkS")
+		(uuid "3c3720cf-2fd3-4dda-a067-f0f4955aff56")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.125)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "5V"
+		(at 147 100.95 0)
+		(layer "F.SilkS")
+		(uuid "af23731c-3da4-4e12-a99d-b81a9ad22a12")
 		(effects
 			(font
 				(size 1 1)

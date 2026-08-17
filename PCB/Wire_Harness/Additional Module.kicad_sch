@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "52fa293d-055e-49ba-8632-8321920f9244")
+	(uuid "d2a76be5-cb18-44cf-872e-4a898b8d581e")
 	(paper "A4")
 	(title_block
 		(title "Formula EV Wiring Diagram")
@@ -1141,450 +1141,340 @@
 		)
 	)
 	(junction
-		(at 50.8 38.1)
+		(at 58.42 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0a6e1cd2-f776-4950-abfb-daec27d218c5")
+		(uuid "3c175b31-e12a-47b3-a365-9ae406bee7d2")
 	)
 	(junction
-		(at 50.8 27.94)
-		(diameter 0)
-		(color 0 0 0 1)
-		(uuid "1667dc28-18d2-4291-99b0-6d47e78de92e")
-	)
-	(junction
-		(at 50.8 22.86)
+		(at 58.42 24.13)
 		(diameter 0)
 		(color 194 0 0 1)
-		(uuid "a02bccc7-9aeb-46fd-8e8f-53b5ccb4e71e")
+		(uuid "6be0bb1b-67f4-4551-bf26-de61f27751d4")
 	)
 	(junction
-		(at 50.8 33.02)
+		(at 58.42 34.29)
 		(diameter 0)
 		(color 194 194 0 1)
-		(uuid "b9c800f8-ec81-44bf-8f8f-08f28ac64470")
+		(uuid "a0250c77-7d1e-4ead-8393-ad0dd523819c")
+	)
+	(junction
+		(at 58.42 29.21)
+		(diameter 0)
+		(color 0 0 0 1)
+		(uuid "ecbecde0-4b5d-4fed-9727-495d26f915bc")
 	)
 	(wire
 		(pts
-			(xy 48.26 27.94) (xy 50.8 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 0 1)
-		)
-		(uuid "0894fd57-33e9-43d2-9401-06e938ba0c3e")
-	)
-	(wire
-		(pts
-			(xy 50.8 40.64) (xy 48.26 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 194 0 1)
-		)
-		(uuid "1d4af41f-b0e7-4680-94ce-7942ea335f85")
-	)
-	(wire
-		(pts
-			(xy 50.8 38.1) (xy 48.26 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 194 0 1)
-		)
-		(uuid "26dc25c9-ba99-4a7c-957e-ec10efa462c1")
-	)
-	(wire
-		(pts
-			(xy 50.8 35.56) (xy 48.26 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 194 194 0 1)
-		)
-		(uuid "361c49ff-c7cc-4fdd-88a5-21daa0bc7cfd")
-	)
-	(wire
-		(pts
-			(xy 50.8 22.86) (xy 50.8 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 194 0 0 1)
-		)
-		(uuid "3ee99a8e-ba11-4c87-ac20-2ca396f9d1d7")
-	)
-	(wire
-		(pts
-			(xy 48.26 48.26) (xy 66.04 48.26)
+			(xy 55.88 46.99) (xy 73.66 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 0 0 194 1)
 		)
-		(uuid "4d0b3d18-3d70-477d-af9b-32c1afbe7377")
+		(uuid "01697b6f-1fc1-4427-b55d-61db0d72b2cf")
 	)
 	(wire
 		(pts
-			(xy 48.26 45.72) (xy 66.04 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 194 1)
-		)
-		(uuid "4ec5d7f7-d462-48bc-94d0-5f2d6f1f7e9c")
-	)
-	(wire
-		(pts
-			(xy 50.8 27.94) (xy 50.8 30.48)
+			(xy 58.42 31.75) (xy 55.88 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 0 0 0 1)
 		)
-		(uuid "58e244cf-04f9-4555-b4a6-a8945eae353b")
+		(uuid "102cbe55-6718-4801-9596-8c58583cb5e7")
 	)
 	(wire
 		(pts
-			(xy 50.8 22.86) (xy 66.04 22.86)
+			(xy 55.88 29.21) (xy 58.42 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "13edd54e-df7f-468d-9480-7f65394bf4e8")
+	)
+	(wire
+		(pts
+			(xy 58.42 24.13) (xy 73.66 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 194 0 0 1)
 		)
-		(uuid "60f3e527-ff19-4b77-8726-adebd55f4cd5")
+		(uuid "36c3dc01-3e2c-4d1a-ba3c-d7d62bc834bc")
 	)
 	(wire
 		(pts
-			(xy 50.8 30.48) (xy 48.26 30.48)
+			(xy 58.42 24.13) (xy 58.42 26.67)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 0 0 0 1)
+			(color 194 0 0 1)
 		)
-		(uuid "763947a6-3893-44dc-ae20-547bfa6c09aa")
+		(uuid "44d2935a-d9a3-468b-a140-c761ff82d650")
 	)
 	(wire
 		(pts
-			(xy 50.8 33.02) (xy 66.04 33.02)
+			(xy 55.88 34.29) (xy 58.42 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 194 194 0 1)
 		)
-		(uuid "78ef8d80-2b42-48ad-b9cc-3857e5baab37")
+		(uuid "455aca9a-269c-467f-8819-6d0b12bf1004")
 	)
 	(wire
 		(pts
-			(xy 50.8 25.4) (xy 48.26 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 194 0 0 1)
-		)
-		(uuid "810d55c5-a327-4993-b943-25177a3d24ee")
-	)
-	(wire
-		(pts
-			(xy 66.04 38.1) (xy 50.8 38.1)
+			(xy 73.66 39.37) (xy 58.42 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 0 194 0 1)
 		)
-		(uuid "a84dc46c-5ce9-4e9a-b661-07a8958fdd41")
+		(uuid "4eb77305-61e6-4293-add1-1632ae66b630")
 	)
 	(wire
 		(pts
-			(xy 48.26 43.18) (xy 66.04 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 194 1)
-		)
-		(uuid "ac9a5326-a4d5-4aae-a74a-175e268cd560")
-	)
-	(wire
-		(pts
-			(xy 48.26 50.8) (xy 66.04 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 194 1)
-		)
-		(uuid "b008d0cb-2f50-48a8-82e9-ee8837b32dd3")
-	)
-	(wire
-		(pts
-			(xy 48.26 33.02) (xy 50.8 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 194 194 0 1)
-		)
-		(uuid "bcd418c4-a5ba-4bd3-b774-050bedc0cc45")
-	)
-	(wire
-		(pts
-			(xy 48.26 22.86) (xy 50.8 22.86)
+			(xy 58.42 26.67) (xy 55.88 26.67)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 194 0 0 1)
 		)
-		(uuid "bf248bad-d8bd-4b95-a5b9-11512d2a6b10")
+		(uuid "6245ec81-b8ad-445f-a927-cfb32442ddc4")
 	)
 	(wire
 		(pts
-			(xy 50.8 27.94) (xy 66.04 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 0 1)
-		)
-		(uuid "e029f6c2-ba6e-433e-b22c-01413654ee2d")
-	)
-	(wire
-		(pts
-			(xy 50.8 38.1) (xy 50.8 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 194 0 1)
-		)
-		(uuid "e961fbd5-0e31-4068-a761-1126b8bba60a")
-	)
-	(wire
-		(pts
-			(xy 50.8 33.02) (xy 50.8 35.56)
+			(xy 58.42 36.83) (xy 55.88 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 194 194 0 1)
 		)
-		(uuid "f10c8c26-8516-4623-b360-f6c493d3f061")
+		(uuid "6592bc62-df82-4f3f-b046-faf0de6ef2c4")
 	)
-	(hierarchical_label "GND"
-		(shape bidirectional)
-		(at 66.04 27.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 55.88 24.13) (xy 58.42 24.13)
 		)
-		(uuid "6f756ca1-2bc1-49d7-b1cc-ef72297e6528")
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 0 0 1)
+		)
+		(uuid "68146f74-1a91-492a-844b-69b258552a38")
 	)
-	(hierarchical_label "GPIO2"
-		(shape bidirectional)
-		(at 66.04 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 55.88 44.45) (xy 73.66 44.45)
 		)
-		(uuid "735b96ea-5958-4689-8ae4-b63225f8a6af")
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 194 1)
+		)
+		(uuid "6f4ad45d-3141-4dc8-b521-d316ad3acc8f")
 	)
-	(hierarchical_label "GPIO4"
-		(shape bidirectional)
-		(at 66.04 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 58.42 29.21) (xy 73.66 29.21)
 		)
-		(uuid "8ce5c2f5-6cb0-4ecb-8f42-54736e1c1f78")
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "71a3541d-b87f-41e6-bac7-3c23fa6244af")
 	)
-	(hierarchical_label "GPIO3"
-		(shape bidirectional)
-		(at 66.04 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 58.42 39.37) (xy 58.42 41.91)
 		)
-		(uuid "96e5171f-0912-443d-9508-b1e0daf16074")
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "72c972f8-8bfa-41b7-bb41-3a958f3881ae")
 	)
-	(hierarchical_label "12V"
-		(shape bidirectional)
-		(at 66.04 22.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 58.42 34.29) (xy 73.66 34.29)
 		)
-		(uuid "9a71de8f-68af-44a3-bb19-75080b15046e")
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "8500640b-def6-4445-a13f-7d0a6145d171")
 	)
-	(hierarchical_label "CAN_L"
-		(shape bidirectional)
-		(at 66.04 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 58.42 39.37) (xy 55.88 39.37)
 		)
-		(uuid "db04656a-746a-4282-95be-b355bb5541ae")
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "9e57c4dc-a973-43d7-bc48-025914a8db2b")
+	)
+	(wire
+		(pts
+			(xy 55.88 49.53) (xy 73.66 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 194 1)
+		)
+		(uuid "a2809d58-9645-479b-9194-3e6c0d08d7f9")
+	)
+	(wire
+		(pts
+			(xy 58.42 41.91) (xy 55.88 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 194 0 1)
+		)
+		(uuid "b4758a58-71c7-4f32-9d4a-3add65e0a401")
+	)
+	(wire
+		(pts
+			(xy 55.88 52.07) (xy 73.66 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 194 1)
+		)
+		(uuid "ea1fad27-5121-4935-8f70-ee3318d1b3b0")
+	)
+	(wire
+		(pts
+			(xy 58.42 29.21) (xy 58.42 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "ea260e5c-787a-486b-b353-4b6102d11187")
+	)
+	(wire
+		(pts
+			(xy 58.42 34.29) (xy 58.42 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 194 194 0 1)
+		)
+		(uuid "f3476a9c-ea1d-4285-bf9f-eaa59153eded")
 	)
 	(hierarchical_label "GPIO1"
 		(shape bidirectional)
-		(at 66.04 43.18 0)
+		(at 73.66 44.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "dc856cbc-8866-486e-8eb9-c1c74daec6eb")
+		(uuid "0ae05caa-5955-45f9-a707-c80334d2140c")
+	)
+	(hierarchical_label "12V"
+		(shape bidirectional)
+		(at 73.66 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "21379407-d74f-4791-8f33-fc38d46e09a7")
+	)
+	(hierarchical_label "GPIO3"
+		(shape bidirectional)
+		(at 73.66 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "31f1722a-1464-464b-b1e4-0de395e35dab")
+	)
+	(hierarchical_label "GPIO2"
+		(shape bidirectional)
+		(at 73.66 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5f1ee029-b0f6-4f62-9621-6d256d3a9aca")
+	)
+	(hierarchical_label "GPIO4"
+		(shape bidirectional)
+		(at 73.66 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ac34c25f-0b3a-4d4d-834e-485b911bcfe6")
+	)
+	(hierarchical_label "CAN_L"
+		(shape bidirectional)
+		(at 73.66 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d48eca1e-e0d9-4493-bdb0-16e42ee6a11c")
 	)
 	(hierarchical_label "CAN_H"
 		(shape bidirectional)
-		(at 66.04 33.02 0)
+		(at 73.66 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "f537747b-4a13-4274-802b-9a1a2b194a61")
+		(uuid "fba55b2b-741a-4a13-a338-ca7f0ec24646")
 	)
-	(symbol
-		(lib_id "VMS_Symbols:Conn_01x12")
-		(at 43.18 35.56 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c661de33-ca35-45d8-bbfc-22381969dd98")
-		(property "Reference" "J13"
-			(at 31.242 32.258 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(hierarchical_label "GND"
+		(shape bidirectional)
+		(at 73.66 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(property "Value" "Motor Controller 12-pin"
-			(at 28.8736 35.3445 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 43.18 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "22133e3c-72d4-4f83-9442-fbf3d8e7af93")
-		)
-		(pin "1"
-			(uuid "6924f8a9-c757-4121-9e16-6431ebda58bc")
-		)
-		(pin "9"
-			(uuid "39a5b622-ed5a-4edb-acff-13451090d791")
-		)
-		(pin "6"
-			(uuid "70abdf8f-00c5-476f-8d24-0e4a5b674b64")
-		)
-		(pin "10"
-			(uuid "0c36dd9b-936d-4e6d-b6e3-3dbb3f4957a4")
-		)
-		(pin "5"
-			(uuid "aabe5b93-42ec-4877-8701-a5a129fd4047")
-		)
-		(pin "12"
-			(uuid "1c051bd8-3ae8-4d7a-85f6-7b22b5d1c8bf")
-		)
-		(pin "7"
-			(uuid "9766b30c-aefb-47c6-bd98-bee25f34ac2f")
-		)
-		(pin "4"
-			(uuid "b5e8aecc-97ba-4ffa-bf0f-720c4c0e6948")
-		)
-		(pin "3"
-			(uuid "4027f396-c0db-41c3-a64d-ecdb5985bf27")
-		)
-		(pin "11"
-			(uuid "eea6f406-3b40-426f-9510-dcc845e04916")
-		)
-		(pin "8"
-			(uuid "e1bac9c5-d875-4ab2-90da-176d5f2224f6")
-		)
-		(instances
-			(project "Wire_Harness"
-				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821/35616e6a-6d04-4acd-ac41-e3f2daea0889"
-					(reference "J13")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "fc1f4c27-a18d-4f23-8396-06388aee826d")
 	)
 	(symbol
 		(lib_id "VMS_Symbols:Conn_01x20")
-		(at 43.18 90.17 0)
+		(at 50.8 91.44 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -1593,9 +1483,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f33a3fe4-2148-432a-98ec-56ebc223242e")
-		(property "Reference" "J14"
-			(at 31.75 86.614 0)
+		(uuid "1b9c57c8-ec32-4a1d-ac69-b979085b4034")
+		(property "Reference" "J10"
+			(at 39.37 87.884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1605,7 +1495,7 @@
 			)
 		)
 		(property "Value" "Motor Controller 20-pin"
-			(at 28.8736 88.9385 0)
+			(at 36.4936 90.2085 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1615,7 +1505,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 43.18 90.17 0)
+			(at 50.8 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1626,7 +1516,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 90.17 0)
+			(at 50.8 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1637,7 +1527,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 43.18 90.17 0)
+			(at 50.8 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1648,69 +1538,179 @@
 			)
 		)
 		(pin "12"
-			(uuid "59bce249-9bee-49ad-b042-3f44cf85c89a")
+			(uuid "e04873f0-8fd8-4969-878f-eb97b3dffd65")
 		)
 		(pin "4"
-			(uuid "9764ec47-e2ab-4364-a333-ec498d5928fb")
+			(uuid "99a72217-e379-446c-9ae7-95723eeafab8")
 		)
 		(pin "3"
-			(uuid "99446067-7a6e-43ee-8585-fe6d9edd61db")
+			(uuid "4886efd7-79ad-491e-9745-592fa7535812")
 		)
 		(pin "1"
-			(uuid "9677d341-1da0-4271-9bb1-19ba058b8679")
+			(uuid "4367cc75-509e-449d-bb7a-38afe8f99c24")
 		)
 		(pin "5"
-			(uuid "97884e53-f39b-4f70-9b14-8debd8a7a263")
+			(uuid "1da01a5e-aba5-44da-a8e3-640edf43f657")
 		)
 		(pin "6"
-			(uuid "42b75a76-6a55-4cd0-9aa2-9516e311fd20")
+			(uuid "62b1522e-10bf-4dc0-a2c6-8de84cf7abc7")
 		)
 		(pin "2"
-			(uuid "3aa8a5b6-ca81-4524-bc90-ff8facfeaeff")
+			(uuid "f7d4a08a-6d42-4419-9277-dcd9efcb7b83")
 		)
 		(pin "8"
-			(uuid "e182f543-f33b-4e77-a860-3b49b09b3866")
+			(uuid "cccf99aa-119f-4025-9e9c-0ae62f1863f4")
 		)
 		(pin "9"
-			(uuid "5460de59-26ee-4930-95f6-ed97bab40100")
+			(uuid "cdcb7654-ec55-4a6e-ba08-b0b8a5195bb8")
 		)
 		(pin "10"
-			(uuid "93f9653f-55f2-407e-bedb-68f2b977d13e")
+			(uuid "e1233e1b-3fe8-44d3-92b4-27194e61fc0b")
 		)
 		(pin "7"
-			(uuid "19c2516d-09d1-45ea-90ab-0278ba38097e")
+			(uuid "043a18f7-a118-4ced-855a-f7b5a674eea2")
 		)
 		(pin "13"
-			(uuid "23114517-8763-4c29-a6e3-5fe37a29b214")
+			(uuid "f73c9234-1681-410c-808a-c23670409b8b")
 		)
 		(pin "15"
-			(uuid "db4e0edb-c1e3-4d53-ad85-4577981aaf1c")
+			(uuid "d4abbf06-2cb1-48f3-a79d-0cd5344a4a40")
 		)
 		(pin "17"
-			(uuid "eb380871-e369-4268-bbdd-4d72b4c395e1")
+			(uuid "2e4d245d-cb20-45a4-a772-b6e00f491acc")
 		)
 		(pin "11"
-			(uuid "ef91ad39-71be-42a1-8259-0d46e31bb45b")
+			(uuid "57146231-f6fe-476e-890e-db08a7cb4eaf")
 		)
 		(pin "18"
-			(uuid "2e9acfdd-886b-4d55-a819-b430649cd0b8")
+			(uuid "8b9197c4-e2d9-4134-afc3-463ce1f05e30")
 		)
 		(pin "20"
-			(uuid "6507e92a-4592-404d-a618-e28b4eb84429")
+			(uuid "cfa83e96-fed4-4cd4-9b79-51f978ba2bcb")
 		)
 		(pin "19"
-			(uuid "87f6c1d4-b50a-4bc8-8e8d-83dc4fb03c7e")
+			(uuid "6fd7035c-bd30-4c5f-a4be-54d41c86913b")
 		)
 		(pin "16"
-			(uuid "7ab8fae3-ef3e-47ec-8dc9-ee6f10e6b087")
+			(uuid "eb2c4c19-f019-4313-b106-d85db1cee2eb")
 		)
 		(pin "14"
-			(uuid "c4fd7ad1-1f69-4802-8061-e9f33b9e1d1d")
+			(uuid "92d422a8-800b-4809-9408-23cdef10523c")
 		)
 		(instances
 			(project "Wire_Harness"
-				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821/35616e6a-6d04-4acd-ac41-e3f2daea0889"
-					(reference "J14")
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821/723296d1-3926-40b4-9add-5a2270957c7f"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "VMS_Symbols:Conn_01x12")
+		(at 50.8 36.83 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c15795c6-24c5-4fb7-b88d-a7ea4f2586d6")
+		(property "Reference" "J9"
+			(at 38.862 33.528 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Motor Controller 12-pin"
+			(at 36.4936 36.6145 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 50.8 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1fd401f2-18aa-44b8-9e86-1d9424be3dd5")
+		)
+		(pin "1"
+			(uuid "5d29d737-ae1d-4c8f-9f93-a307cc1e39f2")
+		)
+		(pin "9"
+			(uuid "ec40fb66-79c5-41c3-b0c8-f7876e0d5a4a")
+		)
+		(pin "6"
+			(uuid "fe537783-9551-46a6-b7a7-ffcdf7e65498")
+		)
+		(pin "10"
+			(uuid "8f88a995-a870-4233-84b8-446acff00098")
+		)
+		(pin "5"
+			(uuid "77fb0870-cc0d-4b4c-93db-8e7f8e1b07e9")
+		)
+		(pin "12"
+			(uuid "13b16883-8a29-442e-a516-7dab8c887e0f")
+		)
+		(pin "7"
+			(uuid "8b6ff707-555f-4f0b-adde-0d8e7bba223a")
+		)
+		(pin "4"
+			(uuid "026c5467-218a-4d2b-b838-edc902a89872")
+		)
+		(pin "3"
+			(uuid "ab4e268f-056c-4cd4-9171-11ef7ff91711")
+		)
+		(pin "11"
+			(uuid "2e88b799-4739-4f09-a654-9b8233b2ccf5")
+		)
+		(pin "8"
+			(uuid "016f2910-1757-48e7-b5e1-4d68a8d1690f")
+		)
+		(instances
+			(project "Wire_Harness"
+				(path "/1f56e37d-ff79-4f8b-90df-5494b71fe821/723296d1-3926-40b4-9add-5a2270957c7f"
+					(reference "J9")
 					(unit 1)
 				)
 			)

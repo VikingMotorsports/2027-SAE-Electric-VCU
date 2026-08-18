@@ -1,3 +1,25 @@
+---
+title: "**Viking MotorSports VCU Module**"
+subtitle: |
+  **Fabrication and Assembly Information**\
+  For build TIME-STAMP
+fontsize: 10pt
+geometry:
+  - margin=0.5in
+toc: true
+toc-depth: 2
+colorlinks: true
+urlcolor: blue
+---
+
+\newpage
+
+# About this Board
+
+## Board Description
+
+## Documentation Links
+
 
 ## Documentation Files
 
@@ -23,27 +45,6 @@
 \newpage
 
 # Printed Circuit Board (PCB) Fabrication Information
-
----
-title: "**Viking MotorSports VCU Module**"
-subtitle: |
-  **Fabrication and Assembly Information**\
-  For build TIME-STAMP
-fontsize: 10pt
-geometry:
-  - margin=0.5in
-toc: true
-toc-depth: 2
-colorlinks: true
-urlcolor: blue
----
-
-\newpage
-
-# About this Board
-
-## Board Description
-
 
 ## Board Info
 

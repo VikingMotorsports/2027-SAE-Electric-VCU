@@ -38,9 +38,5 @@ fp-info-cache
 *.kicad_prl
 
 # Build and archive files
-#build
-*.zip
-assembly
-cad
-fabrication
+build
 archive

@@ -38,6 +38,13 @@ colorlinks: true
 urlcolor: blue
 ---
 
+\newpage
+
+# About this Board
+
+## Board Description
+
+
 ## Board Info
 
 - 2 layer board

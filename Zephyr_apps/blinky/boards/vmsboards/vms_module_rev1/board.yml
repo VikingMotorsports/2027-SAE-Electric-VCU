@@ -1,0 +1,5 @@
+board:
+  name: vms_module_rev1
+  vendor: vmsboards
+  socs:
+    - name: stm32c092xx

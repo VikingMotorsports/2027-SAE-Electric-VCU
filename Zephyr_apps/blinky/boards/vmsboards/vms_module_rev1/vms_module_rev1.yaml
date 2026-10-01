@@ -1,0 +1,14 @@
+identifier: vms_module_rev1
+name: VMS Module Rev1
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 30
+flash: 256
+supported:
+  - gpio
+  - uart
+  - i2c
+  - spi

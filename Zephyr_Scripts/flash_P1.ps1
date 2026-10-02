@@ -5,7 +5,7 @@ $projectname = 'zephyrproject'
 $projectdir = '~\zephyr'
 
 #Target board to flash
-$board = 'nucleo_c092rc'
+$board = 'vms_module_rev1'
 
 #Application title
 $app = 'counter'

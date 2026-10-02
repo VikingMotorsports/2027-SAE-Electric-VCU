@@ -1,0 +1,63 @@
+cmake:
+  application:
+    configuration-dir: 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/blinky'
+    source-dir: 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/blinky'
+  board:
+    name: 'vms_module_rev1'
+    path:
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/boards/vmsboards/vms_module_rev1'
+    qualifiers: 'stm32c092xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/dts/bindings'
+     - 'C:/Users/casey/zephyr/zephyrproject/cutom/cannectivity/dts/bindings'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/bindings'
+    files:
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/boards/vmsboards/vms_module_rev1/vms_module_rev1.dts'
+    include-dirs:
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/cutom/cannectivity/include'
+     - 'C:/Users/casey/zephyr/zephyrproject/cutom/cannectivity/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/ambiq/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/atmel/include'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/bouffalolab/include'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/gigadevice/include'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/microchip/include'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/microchip/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/nuvoton/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/nxp/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/stm32/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/modules/hal/ti/dts'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/include'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/common'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/vendor'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/rx'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/x86'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/xtensa'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/sparc'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/riscv'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/posix'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm64'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arc'
+     - 'C:/Users/casey/zephyr/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/boards/vmsboards/vms_module_rev1/vms_module_rev1_defconfig'
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/blinky/prj.conf'
+    user-files:
+     - 'C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/blinky/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: 'C:/Users/casey/zephyr-sdk-1.0.0'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: 'C:/Users/casey/zephyr/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: 'C:\Users\casey\zephyr\zephyrproject\.venv\Scripts\west build -p always -b vms_module_rev1 C:\Users\casey\github\2027-SAE-Electric-VCU\Zephyr_apps\blinky -d C:\Users\casey\github\2027-SAE-Electric-VCU\Zephyr_apps\blinky\build'
+  topdir: 'C:\Users\casey\zephyr\zephyrproject'
+  version: '1.5.0'

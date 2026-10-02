@@ -1,7 +1,8 @@
 /*
- * Overlay: run the Nucleo-C092RC build on a custom PCB with
+ * Overlay: run the Nucleo-C092RC build on the VMS custom PCB with
  *  - no HSE / LSE crystals (use HSI 48 MHz and LSI)
- *  - user LEDs that are active low
+ *  - active-low user LEDs (LED0 = PA5, LED1 = PC9)
+ *  - FDCAN kernel clock moved off the (absent) HSE
  *
  * Zephyr picks this file up automatically when building
  *   west build -b nucleo_c092rc
@@ -47,4 +48,15 @@
 	clock-frequency = <DT_FREQ_M(48)>;
 	ahb-prescaler = <1>;
 	apb1-prescaler = <1>;
+};
+
+/*
+ * The Nucleo clocks FDCAN from HSE (FDCAN_SEL(2)). Without HSE the driver
+ * can't start, so use PCLK instead (= 48 MHz with apb1-prescaler = 1, the same
+ * frequency the Nucleo build gives the CAN core).
+ * Both clock entries must be given because this replaces the whole property.
+ */
+&fdcan1 {
+	clocks = <&rcc STM32_CLOCK(APB1, 12)>,
+		 <&rcc STM32_SRC_PCLK FDCAN_SEL(0)>;
 };

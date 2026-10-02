@@ -1,0 +1,36 @@
+empty_file.o: \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/misc/empty_file.c \
+ C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/boards/vmsboards/vms_module_rev1/vms_module_rev1.dts \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/st/c0/stm32c092Xc.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/st/c0/stm32c092.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/st/c0/stm32c091.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/st/c0/stm32c051.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/st/c0/stm32c031.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/st/c0/stm32c0.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/arm/armv6-m.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/common/skeleton.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_macro.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_internal.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_loops.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_listify.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_internal_is_eq.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/stm32c0_clock.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/stm32_common_clocks.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/dma/stm32_dma.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/pwm/pwm.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/pwm/stm32_pwm.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/stm32c0_reset.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/stm32-common.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/power/stm32_pwr.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/common/freq.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/dts/common/mem.h \
+ C:/Users/casey/zephyr/zephyrproject/modules/hal/stm32/dts/st/c0/stm32c092rctx-pinctrl.dtsi \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl.h \
+ C:/Users/casey/zephyr/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl-common.h

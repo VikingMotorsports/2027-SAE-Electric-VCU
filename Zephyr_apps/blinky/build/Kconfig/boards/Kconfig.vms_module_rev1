@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "C:/Users/casey/github/2027-SAE-Electric-VCU/Zephyr_apps/boards/vmsboards/vms_module_rev1/Kconfig.vms_module_rev1"

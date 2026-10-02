@@ -1,0 +1,111 @@
+/*
+ * VMS Module Rev1 - STM32C092RCT6 (LQFP64)
+ * Based on NUCLEO-C092RC, with:
+ *  - no HSE / LSE crystals (HSI 48 MHz, LSI)
+ *  - active-low user LEDs on PA5 and PC9
+ *  - ST-LINK V3 MINI via STDC14
+ */
+/dts-v1/;
+#include <st/c0/stm32c092Xc.dtsi>
+#include <st/c0/stm32c092rctx-pinctrl.dtsi>
+
+/ {
+	model = "VMS Module Rev1";
+	compatible = "vmsboards,vms-module-rev1";
+
+	chosen {
+		zephyr,console = &usart2;
+		zephyr,shell-uart = &usart2;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,canbus = &fdcan1;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+
+		led_1: led_1 {
+			gpios = <&gpioa 5 GPIO_ACTIVE_LOW>;
+			label = "User LED0";
+		};
+
+		led_2: led_2 {
+			gpios = <&gpioc 9 GPIO_ACTIVE_LOW>;
+			label = "User LED1";
+		};
+	};
+
+	/* Same CAN-FD transceiver wiring as the Nucleo (standby on PD2) */
+	transceiver0: can-phy0 {
+		compatible = "microchip,mcp2562fd", "can-transceiver-gpio";
+		standby-gpios = <&gpiod 2 GPIO_ACTIVE_HIGH>;
+		max-bitrate = <5000000>;
+		#phy-cells = <0>;
+	};
+
+	aliases {
+		led0 = &led_1;
+		led1 = &led_2;
+		watchdog0 = &iwdg;
+		die-temp0 = &die_temp;
+		volt-sensor0 = &vref;
+	};
+};
+
+/* No external oscillators fitted: HSE and LSE stay disabled */
+&clk_hsi {
+	status = "okay";
+	hsi-div = <1>;
+};
+
+&clk_lsi {
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&clk_hsi>;
+	clock-frequency = <DT_FREQ_M(48)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <1>;
+};
+
+/* ST-LINK virtual COM port (same pins as the Nucleo) */
+&usart2 {
+	pinctrl-0 = <&usart2_tx_pa2 &usart2_rx_pa3>;
+	pinctrl-names = "default";
+	current-speed = <115200>;
+	status = "okay";
+};
+
+&iwdg {
+	status = "okay";
+};
+
+&die_temp {
+	status = "okay";
+};
+
+&vref {
+	status = "okay";
+};
+
+&dma1 {
+	status = "okay";
+};
+
+&dmamux1 {
+	status = "okay";
+};
+
+/*
+ * The Nucleo clocks FDCAN from HSE; with no HSE we use PCLK (48 MHz).
+ * Note: HSI accuracy is ~1%, fine for bench use, marginal for production CAN.
+ */
+&fdcan1 {
+	clocks = <&rcc STM32_CLOCK(APB1, 12)>,
+		 <&rcc STM32_SRC_PCLK FDCAN_SEL(0)>;
+	pinctrl-0 = <&fdcan1_rx_pd0 &fdcan1_tx_pd1>;
+	pinctrl-names = "default";
+	phys = <&transceiver0>;
+	status = "okay";
+};

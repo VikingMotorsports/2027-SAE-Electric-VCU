@@ -8,7 +8,7 @@ $projectdir = '~\zephyr'
 $board = 'nucleo_c092rc'
 
 #Application title
-$app = 'blinky'
+$app = 'counter'
 
 #Application directory (from main repo folder)
 $dir = '/Zephyr_apps'

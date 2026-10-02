@@ -1,0 +1,50 @@
+/*
+ * Overlay: run the Nucleo-C092RC build on a custom PCB with
+ *  - no HSE / LSE crystals (use HSI 48 MHz and LSI)
+ *  - user LEDs that are active low
+ *
+ * Zephyr picks this file up automatically when building
+ *   west build -b nucleo_c092rc
+ */
+
+/ {
+	leds {
+		vms_led0: vms_led_0 {
+			gpios = <&gpioa 5 GPIO_ACTIVE_LOW>;
+		};
+		vms_led1: vms_led_1 {
+			gpios = <&gpioc 9 GPIO_ACTIVE_LOW>;
+		};
+	};
+
+	aliases {
+		led0 = &vms_led0;
+		led1 = &vms_led1;
+	};
+};
+
+/* Turn off the external oscillators that don't exist on the custom PCB */
+&clk_hse {
+	status = "disabled";
+};
+
+&clk_lse {
+	status = "disabled";
+};
+
+/* Use internal oscillators instead */
+&clk_hsi {
+	status = "okay";
+	hsi-div = <1>;
+};
+
+&clk_lsi {
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&clk_hsi>;
+	clock-frequency = <DT_FREQ_M(48)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <1>;
+};

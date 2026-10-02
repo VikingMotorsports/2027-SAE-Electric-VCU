@@ -21,7 +21,7 @@
 #define COUNTER_MSG_ID 0x12345
 #define SET_LED 1
 #define RESET_LED 0
-#define SLEEP_TIME K_MSEC(250)
+#define SLEEP_TIME K_MSEC(1000)
 
 K_THREAD_STACK_DEFINE(rx_thread_stack, RX_THREAD_STACK_SIZE);
 K_THREAD_STACK_DEFINE(poll_state_stack, STATE_POLL_THREAD_STACK_SIZE);
@@ -210,9 +210,11 @@ int main(void)
 	int ret;
 
 	if (!device_is_ready(can_dev)) {
-		printf("CAN: Device %s not ready.\n", can_dev->name);
-		return 0;
-	}
+		while(!device_is_ready(can_dev)){
+			printf("CAN: Device %s not ready.\n", can_dev->name);
+			k_sleep(SLEEP_TIME);
+		}
+	}	
 
 #ifdef CONFIG_LOOPBACK_MODE
 	ret = can_set_mode(can_dev, CAN_MODE_LOOPBACK);
